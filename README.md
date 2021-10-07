@@ -20,3 +20,9 @@ route. The template is editable and found in `templates/includes/styleguide.html
 - Run `npm run lint` to check styling errors in js/css files. This is ran
   automatically if you commit files while inside the theme directory.
 
+## Configure PhpStorm for PostCSS
+
+- Install Plugin [phpstorm](https://plugins.jetbrains.com/plugin/8578-postcss)
+- Install Plugin. Save and exit preferences.
+- Reopen preferences. Go to Languages & Frameworks / Style Sheets / Dialects
+- Add PostCSS as the dialect for the theme directory

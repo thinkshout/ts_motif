@@ -45,30 +45,24 @@
 #}
 
 <header role="banner">
-  <edi-header>
     {{ page.header }}
-    {{ page.drawer }}
-  </edi-header>
-
+    {{ page.primary_navigation }}
+    {{ page.secondary_navigation }}
 </header>
 
 <div class="container">
+  {{ page.hero }}
   {{ page.highlighted }}
-
   {{ page.breadcrumb }}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>
-    <ts-grid variant="one">
-      <div slot="one" class="layout-content">
-        {{ page.content }}
-      </div>
-    </ts-grid>
-
+      {{ page.aside }}
+      {{ page.content }}
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo" class="footer pt-2xs border-b-2 border-brand-orange-base">
+    <footer role="contentinfo" class="footer">
       {{ page.footer }}
     </footer>
     <div class="text-center mt-4xl">ThinkShout, {{ 'now' | date('Y') }}</div>
