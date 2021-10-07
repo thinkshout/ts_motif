@@ -1,0 +1,84 @@
+/***
+ * @file
+ * BASE - HTML overrides
+ */
+html {
+  background-color: var(--color-gray-lt);
+  font-family: var(--font-family-sans);
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-white);
+  font-style: normal;
+  font-weight: var(--font-weight-light);
+  margin: 0 auto;
+  max-width: 2000px;
+  position: relative;
+}
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}
+
+fieldset {
+  border: unset;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: unset;
+}
+
+/* Table */
+table {
+  text-align: left;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0.25rem 0.5rem;
+
+  /*@include mq(md) {*/
+  /*  padding: 0.5rem 0.75rem;*/
+  /*}*/
+}
+
+td.padding-vert-none,
+th.padding-vert-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+dl {
+  margin-top: 0;
+}
+
+dd {
+  margin-left: 0;
+}
+
+th,
+.filler-cell {
+  background-color: var(--color-gray-lt);
+}
+
+blockquote {
+  margin-left: 0;
+}

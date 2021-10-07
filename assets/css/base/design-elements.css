@@ -1,0 +1,17 @@
+/* Color modifiers */
+.outline {
+  border: 1px solid var(--color-gray-lt);
+  border-radius: 10px;
+}
+
+/* Wrap with .relative, eg: Hero photo style */
+.bg-overlay-black {
+  background-color: var(--color-black);
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
