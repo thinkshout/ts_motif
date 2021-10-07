@@ -1,0 +1,55 @@
+/* Paragraph or section-level spacing. */
+/* See the wiki for detailed variations: https://github.com/thinkshout/ts_grid/wiki/Vertical-Spacing*/
+.friendly {
+  @apply my-xl;
+}
+.unfriendly {
+  @apply py-xl;
+}
+@media (min-width: 769px) {
+  .unfriendly {
+    @apply py-3xl;
+  }
+  .friendly {
+    @apply my-3xl;
+  }
+}
+
+/* GRID */
+@media (min-width: 769px) {
+  .grid-col-2 {
+    @apply grid grid-cols-2;
+    grid-gap: var(--spacer-gutter);
+  }
+
+  .grid-col-3 {
+    @apply grid grid-cols-3;
+    grid-gap: var(--spacer-gutter);
+  }
+  .grid-col-4 {
+    @apply grid grid-cols-4;
+    grid-gap: var(--spacer-gutter);
+  }
+}
+
+/* Sets the limitations of the full site container. Do not set if you want an*/
+/* element to stretch the full width of the site.*/
+.site-container {
+  margin: 0 auto;
+  max-width: 1260px;
+}
+
+/* Mobile Padding .*/
+.content-side-padding {
+  padding-left: var(--spacer-gutter);
+  padding-right: var(--spacer-gutter);
+}
+
+/* Components */
+.p-card {
+  @apply px-sm py-sm md:px-md md:py-md;
+}
+
+.m-card {
+  @apply mx-md my-md;
+}
