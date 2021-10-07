@@ -1,0 +1,40 @@
+{
+  "name": "@thinkshout/ts_motif",
+  "version": "0.0.1-dev",
+  "description": "A Starterkit Drupal Theme with Parcel, Style Dictionary, and Tailwind.",
+  "license": "GPL-3.0",
+  "author": "ThinkShout, Inc",
+  "scripts": {
+    "build": "concurrently -c \"magenta,blue\" \"npm:theme.bundle.dev\" \"npm:print.bundle\"",
+    "format": "concurrently -c \"magenta,blue\" \"npm:format.tokens\" \"npm:format.assets\"",
+    "format.assets": "eslint assets --fix && prettier --write assets",
+    "format.tokens": "style-dictionary build --config style-dictionary.config.json",
+    "preinstall": "npx check-node-version --node $(cat .nvmrc)",
+    "lint": "eslint assets --fix && prettier --check assets",
+    "prepare": "husky install",
+    "start": "npm run theme.watch",
+    "theme.bundle.dev": "parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
+    "theme.bundle.prod": "NODE_ENV=production parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
+    "theme.watch": "parcel watch ./assets/motif.js --dist-dir ./dist --public-url ./dist",
+    "print.bundle": "NODE_ENV=production parcel build ./assets/css/print.css --dist-dir ./dist --public-url ./dist"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "concurrently": "^6.3.0",
+    "cssnano": "^5.0.8",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.2",
+    "parcel": "^2.0.0-rc.0",
+    "postcss": "^8.3.9",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
+    "style-dictionary": "^3.0.2",
+    "tailwindcss": "^2.2.16"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

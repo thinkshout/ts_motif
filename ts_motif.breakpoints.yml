@@ -1,0 +1,43 @@
+# Optional Config for Responsive Image
+ts_motif.default:
+  label: xs
+  mediaQuery: "(min-width: 0px)"
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+ts_motif.sm:
+  label: sm
+  mediaQuery: "(min-width: 501px)"
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+ts_motif.md:
+  label: md
+  mediaQuery: "(min-width: 769px)"
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+ts_motif.lg:
+  label: lg
+  mediaQuery: "(min-width: 1025px)"
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+ts_motif.xl:
+  label: xl
+  mediaQuery: "(min-width: 1442px)"
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+ts_motif.2xl:
+  label: xl
+  mediaQuery: "(min-width: 2000px)"
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x

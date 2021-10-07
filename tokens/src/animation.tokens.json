@@ -1,0 +1,7 @@
+{
+  "transition": {
+    "default": {
+      "value": "all 300ms ease-in-out"
+    }
+  }
+}

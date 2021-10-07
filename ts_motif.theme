@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the ThinkShout Design System theme.
+ */
+
+/**
+ * Place any preprocess functions in .theme.inc files, or make a new one.
+ *
+ * The .theme files should contain logic for the elements in their corresponding
+ * template directories (ie 'blocks.theme.inc' should modify templates in
+ * 'templates/blocks'.)
+ */
+
+include 'includes/block.theme.inc';
+include 'includes/dataset.theme.inc';
+include 'includes/field.theme.inc';
+include 'includes/form.theme.inc';
+include 'includes/layout.theme.inc';
+include 'includes/media.theme.inc';
+include 'includes/misc.theme.inc';
+include 'includes/navigation.theme.inc';
+include 'includes/node.theme.inc';
+include 'includes/taxonomy_term.theme.inc';
+include 'includes/view.theme.inc';

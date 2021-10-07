@@ -1,0 +1,9 @@
+# Ignore Front-End Assets
+dist/
+lib/
+/node_modules
+/.parcel-cache
+
+# Ignore OS Directories
+.DS_Store
+.idea

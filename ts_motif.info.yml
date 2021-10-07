@@ -1,0 +1,20 @@
+name: Motif
+type: theme
+base theme: stable
+description: A Starterkit Theme with Parcel, Style Dictionary, and Tailwind.
+package: ThinkShout
+core_version_requirement: ^8 || ^9
+libraries:
+  - ts_motif/theme
+libraries-override:
+  core/jquery: ts_motif/jquery
+regions:
+  header: Header
+  primary_navigation: Primary Navigation
+  secondary_navigation: Secondary Navigation
+  hero: Hero
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  aside: Aside
+  footer: Footer

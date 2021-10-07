@@ -1,0 +1,22 @@
+{
+  "duration": {
+    "immediately": {
+      "value": "0.05s"
+    },
+    "instantly": {
+      "value": "0s"
+    },
+    "paused": {
+      "value": "3.2s"
+    },
+    "promptly": {
+      "value": "0.2s"
+    },
+    "quickly": {
+      "value": "0.1s"
+    },
+    "slowly": {
+      "value": "0.4s"
+    }
+  }
+}

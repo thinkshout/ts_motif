@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ts_motif
+id: ts_motif_content
+theme: ts_motif
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: "Main Page Content"
+  provider: system
+  label_display: "0"
+visibility: {}

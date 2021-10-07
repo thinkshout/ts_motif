@@ -1,0 +1,110 @@
+{
+  "transition": {
+    "default": "all 300ms ease-in-out"
+  },
+  "border": {
+    "color": {
+      "gray": "#dfe4e7",
+      "black": "#000000"
+    },
+    "width": {
+      "none": "0px",
+      "xs": "1px",
+      "sm": "2px",
+      "md": "3px",
+      "lg": "4px",
+      "xl": "5px"
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "0.125rem",
+      "base": "0.25rem",
+      "md": "0.375rem",
+      "lg": "0.5rem",
+      "xl": "0.75rem",
+      "2xl": "1rem",
+      "3xl": "1.5rem",
+      "full": "9999px"
+    }
+  },
+  "color": {
+    "red": "#c40c0c",
+    "green": "#00a860",
+    "white": "#ffffff",
+    "gray": {
+      "100": "#f5f8fa",
+      "200": "#dfe4e7",
+      "300": "#c5cace",
+      "400": "#5d6165",
+      "500": "#44494b",
+      "600": "#242424"
+    },
+    "black": "#000000"
+  },
+  "duration": {
+    "immediately": "0.05s",
+    "instantly": "0s",
+    "paused": "3.2s",
+    "promptly": "0.2s",
+    "quickly": "0.1s",
+    "slowly": "0.4s"
+  },
+  "grid": {
+    "gap": "0.75rem"
+  },
+  "opacity": {
+    "0": 0,
+    "1": 1,
+    "02": 0.2,
+    "05": 0.5
+  },
+  "screen": {
+    "default": "0px",
+    "sm": "501px",
+    "md": "769px",
+    "lg": "1025px",
+    "xl": "1442px",
+    "2xl": "2000px",
+    "siteMaxWidth": "2000px"
+  },
+  "spacer": {
+    "0": "0px",
+    "px": "1px",
+    "6xs": "0.125rem",
+    "5xs": "0.25rem",
+    "4xs": "0.375rem",
+    "3xs": "0.5rem",
+    "2xs": "0.625rem",
+    "xs": "0.75rem",
+    "sm": "0.875rem",
+    "base": "1rem",
+    "md": "1.25rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem",
+    "3xl": "4rem",
+    "4xl": "6rem",
+    "5xl": "8rem",
+    "6xl": "12rem",
+    "7xl": "16rem"
+  },
+  "font": {
+    "weight": {
+      "book": "300",
+      "light": "300",
+      "regular": "400",
+      "medium": "500",
+      "semibold": "600",
+      "bold": "700"
+    },
+    "family": {
+      "serif": "'Geller Headline', Times, serif",
+      "sans": "'Halyard Text', Helvetica, Arial, sans-serif"
+    }
+  },
+  "zIndex": {
+    "0": 0,
+    "1": 1,
+    "2": 2
+  }
+}

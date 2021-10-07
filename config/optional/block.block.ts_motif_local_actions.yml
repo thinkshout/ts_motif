@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ts_motif
+id: ts_motif_local_actions
+theme: ts_motif
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: "Primary Admin Actions"
+  provider: core
+  label_display: "0"
+visibility: {}

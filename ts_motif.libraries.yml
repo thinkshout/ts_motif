@@ -1,0 +1,13 @@
+# Main theme library.
+theme:
+  js:
+    lib/theme/motif.js: {}
+  css:
+    theme:
+      dist/print.css: { media: print }
+      dist/motif.css: {}
+jquery:
+  js:
+    node_modules/jquery/dist/jquery.min.js:
+      preprocess: false
+      weight: -20

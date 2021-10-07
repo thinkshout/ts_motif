@@ -1,0 +1,7 @@
+{
+  "grid": {
+    "gap": {
+      "value": "{spacer.xs.value}"
+    }
+  }
+}

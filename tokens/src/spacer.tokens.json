@@ -1,0 +1,23 @@
+{
+  "spacer": {
+    "0": { "value": "0px" },
+    "px": { "value": "1px" },
+    "6xs": { "value": "0.125rem" },
+    "5xs": { "value": "0.25rem" },
+    "4xs": { "value": "0.375rem" },
+    "3xs": { "value": "0.5rem" },
+    "2xs": { "value": "0.625rem" },
+    "xs": { "value": "0.75rem" },
+    "sm": { "value": "0.875rem" },
+    "base": { "value": "1rem" },
+    "md": { "value": "1.25rem" },
+    "lg": { "value": "1.5rem" },
+    "xl": { "value": "2rem" },
+    "2xl": { "value": "3rem" },
+    "3xl": { "value": "4rem" },
+    "4xl": { "value": "6rem" },
+    "5xl": { "value": "8rem" },
+    "6xl": { "value": "12rem" },
+    "7xl": { "value": "16rem" }
+  }
+}
