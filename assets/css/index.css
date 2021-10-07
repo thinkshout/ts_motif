@@ -8,6 +8,11 @@
  */
 
 @import "base/_variables.css";
+@import "base/typography.css";
+@import "base/buttons-links.css";
+@import "base/design-elements.css";
+@import "base/html.css";
+@import "base/utilities.css";
 
 /**
  * This injects Tailwind's base styles and any base styles registered by
