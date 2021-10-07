@@ -1,0 +1,24 @@
+@media (min-width: 769px) {
+  .styleguide-nav {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 280px;
+  }
+  .styleguide-menu-padding {
+    padding-left: 300px;
+  }
+}
+
+.bg-demo-m {
+  background-color: peachpuff;
+}
+
+.bg-demo-p {
+  background-color: darkseagreen;
+}
+
+.bg-demo-element {
+  background-color: lightblue;
+}
