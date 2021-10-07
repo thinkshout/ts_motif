@@ -1,0 +1,77 @@
+<div id="forms" class="container content-side-padding friendly">
+  <div class="mb-md">
+    <h2 class="inline h2">Forms</h2>
+  </div>
+
+  <div class="webform-submission-form">
+    <div class="input-search">
+      <label class="mb-md" for="search-id">Search</label>
+      <span><input id="search-id" type="text" placeholder="Enter search term" /></span>
+    </div>
+
+    <div class="input-select">
+      <label for="event-type">Select</label>
+      <select id="event-type">
+        <option>All</option>
+        <option>Funder 1</option>
+        <option>Funder 2</option>
+        <option>Funder 3</option>
+      </select>
+    </div>
+
+    <div class="input-text">
+      <label for="email-id">EMAIL</label>
+      <input type="text" placeholder="Email" id="email-id" />
+      <label for="password-id">Password</label>
+      <input type="password" placeholder="Password" id="password-id"/>
+    </div>
+
+    <div class="radios--wrapper">
+      <legend>Radio buttons</legend>
+      <fieldset>
+        <legend class="visually-hidden">Event types</legend>
+        <div class="js-webform-radios">
+          <div class="js-form-item-radios">
+            <input class="form-radio" type="radio" checked="checked" name="radio" id="radio1"/>
+            <label for="radio1">SCG Events</label>
+          </div>
+          <div class="js-form-item-radios">
+            <input class="form-radio" type="radio" name="radio" id="radio2">
+            <label for="radio2">Events in the Field</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    {# Checkboxes#}
+    <div class="checkboxes--wrapper">
+      <div class="bg-grey-lt p-card mt-md mb-xl">
+        <legend class="visually-hidden">Communication types</legend>
+        <fieldset>
+          <div class="js-webform-checkboxes">
+            <div class="js-form-item">
+              <input type="checkbox" class="form-checkbox" id="c1" checked>
+              <label  for="c1">President’s Message</label>
+            </div>
+            <div class="js-form-item">
+              <input type="checkbox" class="form-checkbox" id="c2" checked>
+              <label for="c2">Public Policy Brief</label>
+            </div>
+            <div class="js-form-item">
+              <input type="checkbox" class="form-checkbox" id="c3">
+              <label for="c3">Family Philanthropy Newsletter</label>
+            </div>
+            <div class="js-form-item">
+              <input type="checkbox" class="form-checkbox" id="c4">
+              <label for="c4">Corporate Brief</label>
+            </div>
+            <div class="js-form-item">
+              <input type="checkbox" class="form-checkbox" id="c5">
+              <label for="c5">Weekly Program Update</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
