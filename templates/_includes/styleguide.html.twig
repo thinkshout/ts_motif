@@ -1,0 +1,548 @@
+{# Global Style Guide available at /style-guide #}
+{{ attach_library('ts_motif/styleguide') }}
+{%
+  set sizes = [
+    '2xs',
+    'xs',
+    'sm',
+    'md',
+    'lg',
+    'xl',
+    '2xl',
+    '3xl',
+    '4xl',
+  ]
+%}
+
+{%
+  set fontStyles = [
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'body-lg',
+    'body-md',
+    'body-sm',
+    'body-xs',
+    'text-nav',
+    'text-label',
+  ]
+%}
+{# Displays on lt bg #}
+{%
+  set textColorsDk = [
+    'black',
+    'gray-dk',
+  ]
+%}
+
+{# Displays on dk bg #}
+{%
+  set textColorsLt = [
+  'white',
+  'gray-lt',
+  ]
+%}
+
+{%
+  set bgColorsDk = [
+    'black',
+    'gray-dk',
+  ]
+%}
+
+{%
+  set bgColorsLt = [
+    'white',
+    'gray-lt',
+  ]
+%}
+
+{% set btnLinkStyles = [
+    'btn-read-more',
+    'link-style',
+    'btn-outline',
+    'btn-solid',
+    'btn-solid btn-wide',
+    'btn-tag',
+    'btn-read-more',
+  ]
+%}
+
+{% set iconBtnLinkStyles = [
+  'link-chevron',
+  'link-back',
+  'btn-close',
+  'btn-search',
+]
+%}
+
+<div class="relative">
+  {# Menu#}
+  <div class="bg-gray-dk styleguide-nav">
+  <div class="p-card text-white">
+    <h1 class="h2">Styleguide</h1>
+    <div class="body-sm semibold">
+      <p class="mt-zero mb-sm"><em>Reusable styles using classes (sass/global)</em></p>
+      <ul>
+        <li><a href="#fontstyles" class="inline-block mb-2xs ">Font styles</a></li>
+          <ul>
+            <li><a href="#fontstyles" class="inline-block ml-sm mb-2xs body-sm">Primary</a></li>
+            <li><a href="#fontstyles" class="inline-block ml-sm mb-2xs body-sm">Common variations</a></li>
+          </ul>
+        <li><a href="#fontmodifiers" class="inline-block mb-2xs ">Modifiers</a></li>
+          <ul>
+            <li><a href="#fontmodifiers" class="inline-block ml-sm mb-2xs body-sm">Color / Weight</a></li>
+          </ul>
+        <li><a href="#linkstyles" class="inline-block mb-xs ">Buttons & links</a></li>
+        <li><a href="#gridlayout" class="inline-block mb-xs ">Layout</a></li>
+          <ul>
+            <li><a href="#gridlayout" class="body-sm inline-block ml-sm mb-xs ">Grid</a></li>
+            <li><a href="#width" class="body-sm inline-block ml-sm mb-xs ">Width</a></li>
+            <li><a href="#display" class="body-sm inline-block ml-sm mb-xs ">Display</a></li>
+            <li><a href="#position" class="body-sm inline-block ml-sm mb-xs ">Position, z-index</a></li>
+          </ul>
+        <li><a href="#spacing" class="inline-block mb-2xs ">Spacing</a></li>
+          <ul>
+            <li><a href="#spacing" class="body-sm inline-block ml-sm mb-2xs">Variables</a></li>
+            <li><a href="#marginpadding" class="body-sm inline-block ml-sm mb-2xs">Margin & Padding</a></li>
+            <li><a href="#componentspacing" class="body-sm inline-block ml-sm mb-2xs">Component</a></li>
+          </ul>
+        <li><a href="#commoncss" class="inline-block mb-xs ">Common CSS</a></li>
+        <li><a href="#bg" class="inline-block mb-xs">Background styles</a></li>
+        <hr>
+        <li><a href="#forms" class="inline-block mb-xs">Forms</a></li>
+        <li><a href="#wysiwygstyles" class="inline-block mb-xs">Wysiwyg and
+            Components</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="styleguide-menu-padding">
+  <div class="site-container content-side-padding padding-vertical">
+    <div class="grid-col-2">
+      <div>
+        <h2 class="h2 mt-md" id="fontstyles">Font styles</h2>
+        <p class="mt-zero">assets/css/base/typography.css</p>
+        {# Font styles #}
+        {% for style in fontStyles %}
+          <p class="{{ style }}">.{{ style }}</p>
+        {% endfor %}
+        <hr class="mt-sm mb-sm">
+        {# Font styles as Links#}
+        {% for style in fontStyles %}
+          <p class="{{ style }}"><a href="#">.{{ style }} a</a></p>
+        {% endfor %}
+      </div>
+      <div>
+        <h3 class="h4 letter-spacing mt-md ">Common Variations</h3>
+        <p class="m-zero">assets/css/base/typography.css</p>
+        <hr class="mt-sm mb-sm">
+        <h1 class="h1 white bg-black mb-xs p-card text-white">.h1.text-white</h1>
+        <h2 class="h2 mb-xs ">.h2.text-gray-dk</h2>
+        <h3 class="bg-gray-dk p-card h3 mb-xs text-white">.h3.text-white</h3>
+        <h4 class="h4 mt-sm mb-zero text-black">.h4.text-black</h4>
+        <h4 class="bg-gray-lt p-card h4 mt-sm text-gray-dk">.h4.text-gray-dk</h4>
+        <h4 class="bg-black p-card h4 letter-spacing mt-zero text-white">.h4.letter-spacing.text-white</h4>
+        <hr class="mt-sm mb-sm">
+      </div>
+    </div>
+  </div>
+
+  {# Modifiers #}
+  <div class="friendly">
+    <div class="site-container content-side-padding">
+      <h3 class="h2" id="fontmodifiers">Modifiers</h3>
+      <div class="grid-col-2">
+        <div>
+          <h3 class="h3 mt-md">Color</h3>
+          <p class="mt-zero mb-sm">tokens/src/color.tokens.json</p>
+          <h4 class="h4 letter-spacing mb-zero uppercase">Primary</h4>
+          <p class="text-sm gray">.text-[color]. Add colors to $textColors</p>
+          {% for color in textColorsDk %}
+            <p class="text-{{ color }} m-zero text-sm">.text-{{ color }}</p>
+          {% endfor %}
+          {% for color in textColorsLt %}
+            <p class="bg-black text-{{ color }} m-zero text-sm">.text-{{ color }}</p>
+          {% endfor %}
+          <h4 class="h4 letter-spacing mb-zero uppercase">Secondary</h4>
+
+        </div>
+
+        <div>
+          <h3 class="h3 mt-md mb-sm">Weight</h3>
+          <p class="mt-zero">tokens/src/typography.tokens.json</p>
+          <p class="font-bold">.font-bold 700</p>
+          <p class="font-semibold">.font-semibold 600</p>
+          <p class="font-medium">.font-medium 500</p>
+          <p class="font-regular">.font-regular 400</p>
+          <p class="font-book">.font-book/.font-light 300</p>
+        </div>
+      </div> {# Closes .grid #}
+    </div> {# Closes .site-container.content-side-padding #}
+  </div>
+
+  {# Buttons & Links #}
+  <div class="friendly">
+    <div class="site-container content-side-padding">
+    <h2 class="h2 " id="linkstyles">Buttons and links</h2>
+    <p class="mt-zero">sass/global/_buttons.scss</p>
+      {% for btn in btnLinkStyles %}
+        <a class="{{ btn }} inline-block mr-xs" href=" ">.{{ btn }}</a>
+      {% endfor %}
+      {% for btn in iconBtnLinkStyles %}
+        <a class="{{ btn }} inline-block mr-xs" href=" ">.{{ btn }} {% include
+            ('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}</a>
+      {% endfor %}
+    <div class="mt-sm">
+      <h4 class="h4 mt-md">Include icons in twig files to animate them</h4>
+      {% for btn in iconBtnLinkStyles %}
+        <p class="body-sm inline-block mr-xs">
+          {% include('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}
+          { % include('@ts_motif/_includes/icon-{{ btn }}.html.twig') % }
+        </p>
+      {% endfor %}
+    </div>
+
+    <hr class="mb-md mt-md">
+    <h3 class="h3 mb-sm">Social Links</h3>
+    <div class="social-links">
+      <ul>
+        <li><a><i class="fa fa-facebook-square"></i></a></li>
+        <li><a><i class="fa fa-twitter-square"></i></a></li>
+        <li><a><i class="fa fa-linkedin"></i></a></li>
+        <li><a><i class="fab fa-facebook-messenger"></i></a></li>
+        <li><a><i class="fa fa-envelope"></i></a></li>
+        <li><a><i class="fa fa-link"></i></a></li>
+      </ul>
+    </div>
+    <div class="inline-block social-links-footer">
+      <a><i class="fab fa-twitter"></i></a>
+      <a><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div> {# Closes .site-container.content-side-padding#}
+  </div>
+
+  {# Layout #}
+  <div class="friendly">
+    <div class="site-container content-side-padding">
+    <div class="" id="gridlayout">
+      <h2 class="h1">Layout</h2>
+      <p class="m-zero">assets/css/base/utilities.css</p>
+    </div>
+
+    <h2 class="h2 mt-md mb-sm">Grid</h2>
+    <h3 class="h3 mb-sm">Wrapped in grid-col-2</h3>
+    <div class="grid-col-2">
+      <div class="bg-gray-lt p-card"></div>
+      <div class="bg-gray-lt p-card"></div>
+    </div>
+    <h3 class="h3 mb-sm mt-md">Wrapped in grid-col-3</h3>
+    <div class="grid-col-3">
+      <div class="bg-gray-lt p-card"></div>
+      <div class="bg-gray-lt p-card"></div>
+      <div class="bg-gray-lt p-card"></div>
+    </div>
+    <h3 class="h3 mb-sm mt-md">Wrapped in .grid-col-4</h3>
+    <div class="grid-col-4">
+      <div class="bg-gray-lt p-card"></div>
+      <div class="bg-gray-lt p-card"></div>
+      <div class="bg-gray-lt p-card"></div>
+      <div class="bg-gray-lt p-card"></div>
+    </div>
+
+    {# Width #}
+    <h2 class="h2 mt-lg mb-sm" id="width">Width, margin: zero auto</h2>
+    <p class="text-lg mb-md">Use md: prefix to apply at md breakpoint. Leave off .my-0 mx-auto to left align</p>
+    <div class="bg-gray-lt p-card my-0 mx-auto md:w-3/4">
+      <h3 class="h3">.mt-0.my-auto.md:w-3/4</h3>
+    </div>
+      <h3 class="h3 bg-gray-lt my-0 mx-auto p-card md:w-2/3">.my-0.mx-auto.w-66-md</h3>
+      <h3 class="h3 bg-gray-lt my-0 mx-auto p-card md:w-1/2">.my-0.mx-auto.w-50-md</h3>
+      <h3 class="h3 bg-gray-lt my-0 mx-auto p-card md:w-1/3">.my-0.mx-auto.w-33-md</h3>
+      <h3 class="h3 bg-gray-lt my-0 mx-auto p-card md:w-1/4">.my-0.mx-auto.w-25-md</h3>
+
+    {# Display #}
+    <div><h2 class="h3 mt-md" id="display">Display</h2>
+      <p class="inline">.inline</p>
+      <p class="inline-block ml-md">.inline-block</p>
+      <p class="block mt-zero">.block</p>
+      <p class="flex">.flex</p>
+
+      {# Position, z-index #}
+      <h3 class="h3 mb-sm mt-md" id="position">Position, Z-index</h3>
+      <div class="bg-gray-lt p-card relative"><div class="text-center">Relative</div>
+        <div class="absolute top-0 left-0">.absolute.top-0.left-0</div>
+        <div class="absolute bottom-0 right-0">.absolute.bottom-0.right-0</div>
+      </div>
+      <ul>
+        <li>.absolute</li>
+        <li>.relative</li>
+        <li>.top-0</li>
+        <li>.right-0</li>
+        <li>.bottom-0</li>
+        <li>.left-0</li>
+        <li>.z-0</li>
+        <li>.z-1</li>
+        <li>.z-2</li>
+      </ul>
+    </div>
+
+  </div> {# Closes site-container#}
+  </div>
+
+  {# Spacing #}
+  <div class="friendly">
+    <div class="site-container content-side-padding">
+    <h2 class="h1  mt-md mb-xs" id="spacing">Spacing</h2>
+    <p class="mt-zero">sass/layout/_margins.scss</p>
+    <h3 class="h3">Variables</h3>
+    <p>Used for margin, padding, and height. Designers use mathematical relationships to define spacing. All of the
+      margin, padding and height classes use these base values. The sizes are also available as sass variables.</p>
+
+    <div class="mb-md">
+      <p class="mb-sm"><strong>.height-[size]</strong> or <strong>
+          .margin-[direction]-[size]</strong> are available as classes. <br/><strong>$spacing-[size]</strong> is
+        available as sass variables</p>
+      <p class="inline margin-right-md">Directions: top | bottom | left | right</p>
+      <p class="inline">Sizes: zero | 3xs | 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl</p>
+    </div>
+
+    <div>
+      <div class="bg-gray-dk inline-block h-px w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>PX:</strong> 1px (1px), $spacer-px</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-3xs w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>3XS:</strong> .25rem (4px), $spacer-3xs</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-2xs w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>2XS:</strong> .5rem (8px), $spacer-2xs</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-xs w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>XS:</strong> 1rem (16px), $spacer-xs</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-sm w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>SM:</strong> 1.5rem (20px), $spacer-sm</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-md w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>MD:</strong> 2rem (32px), $spacer-md</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-lg w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>LG:</strong> 3rem (48px), $spacer-lg</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-xl w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>XL:</strong> 4rem (64px), $spacer-xl</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-2xl w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>2XL:</strong> 6rem (96px), $spacer-2xl</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-3xl w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>3XL:</strong> 8.125rem (130px), $spacer-3xl</p>
+    </div>
+    <div>
+      <div class="bg-gray-dk inline-block h-4xl w-1/4"></div>
+      <p class="inline-block ml-xs"><strong>4XL:</strong> 10rem (160px), $spacer-4xl</p>
+    </div>
+  </div>
+  </div>
+
+  {# Margin #}
+  <div class="friendly">
+    <div class="site-container content-side-padding">
+      <h2 class="h2 mt-md" id="marginpadding">Margin & Padding</h2>
+      <p class="mt-zero">.[type][direction]-[size]</p>
+      <div class="grid-col-3">
+        <div>
+          <p class="h4 my-zero normalcase">Type</p>
+          <ul class="mt-zero">
+            <li>m (margin)</li>
+            <li>p (padding)</li>
+          </ul>
+        </div>
+        <div>
+          <p class="h4 my-zero normalcase">Direction</p>
+          <ul class="mt-zero">
+            <li>t (top)</li>
+            <li>r (right)</li>
+            <li>b (bottom)</li>
+            <li>l (left)</li>
+            <li>x (left + right)</li>
+            <li>y (top + bottom)</li>
+            <li>[blank] (all)</li>
+          </ul>
+        </div>
+        <div>
+          <p class="h4 my-zero normalcase">Size</p>
+          <ul class="mt-zero">
+            <li>auto</li>
+            <li>zero</li>
+            <li>4xs</li>
+            {% for size in sizes %}
+              <li>{{ size }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <ul>
+          <li class="h4 mt-sm">Zero</li>
+          <li>.m-0</li>
+        </ul>
+      </div>
+      <hr>
+      {# Margin bottom #}
+      <div class="grid-col-3 text-center">
+        <div class="bg-demo-m">
+          <div class="bg-gray-dk h-lg pt-sm text-white">Margin Bottom</div>
+          {% for size in sizes %}
+            <div class="mb-{{ size }} bg-demo-element h-lg">.mb-{{ size }}</div>
+          {% endfor %}
+        </div>
+        <div class="bg-demo-m">
+          <div class="bg-gray-dk h-lg pt-sm text-white">Margin Top</div>
+          {% for size in sizes %}
+            <div class="mt-{{ size }} bg-demo-element h-lg">.mt-{{ size }}</div>
+          {% endfor %}
+        </div>
+        <div class="bg-demo-m">
+          <div class="bg-gray-dk h-lg pt-sm text-white">Margin Top & Bottom</div>
+          {% for size in sizes %}
+            <div class="my-{{ size }} bg-demo-element h-lg">.my-{{ size }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="bg-demo-m w-50">
+        <div class="bg-gray-dk h-lg pt-sm text-white">Margin Left & Right</div>
+        {% for size in sizes %}
+          <div class="mx-{{size }} bg-demo-element h-lg">.mx-{{ size }}</div>
+        {% endfor %}
+      </div>
+
+      {# Component Spacing #}
+      <h2 class="h2 mt-lg" id="componentspacing">Component</h2>
+      <div class="bg-demo-m"><p class="bg-demo-element m-card">.m-card : card margin</p></div>
+      <p class="bg-demo-p p-card"><span class="bg-demo-element">.p-card : card padding</span></p>
+      <h4 class="h4 mt-md mb-2xs">Large Element</h4>
+      <p class="bg-demo-p py-4xl"><span class="block bg-demo-element">.py-4xl</span></p>
+      <p class="bg-demo-p py-xl"><span class="block bg-demo-element">.py-xl</span></p>
+    </div>
+  </div>
+
+  {# COMMON CSS #}
+  <div class="friendly">
+    <div class="site-container content-side-padding">
+    <h2 class="h2 mt-md " id="commoncss">Common CSS</h2>
+    <p class="mt-zero">sass/global/_05.css-common.scss</p>
+    <p class="mt-zero">[-md]: Add -md to apply style above the md breakpoint.</p>
+    <div class="grid-col-3">
+      <div>
+        <ul>
+          <li class="h4 mb-2xs">Display</li>
+          <li>.block</li>
+          <li>.inline[-md]</li>
+          <li>.inline-block[-md]</li>
+          <li>.flex[-md]</li>
+        </ul>
+
+        <ul>
+          <li class="h4 mt-md mb-2xs">Position</li>
+          <li>.absolute</li>
+          <li>.relative</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          <li class="h4 mb-2xs">Text transform</li>
+          <li class="capitalize">.capitalize</li>
+          <li class="lowercase">.LOWERCASE</li>
+          <li class="uppercase">.uppercase</li>
+        </ul>
+        <ul>
+          <li class="h4 mt-md mb-2xs">Text align</li>
+          <li class="text-left">.text-left></li>
+          <li class="text-center">.text-center[-md]</li>
+          <li class="text-right">.text-right></li>
+        </ul>
+      </div>
+
+      <ul>
+        <li class="h4 mb-2xs">Additional</li>
+        <li class="hyphenate">.hyphenate</li>
+        <li class="letter-spacing">.letter-spacing</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  {# Background Styles #}
+  <div class="friendly">
+    <div class="site-container content-side-padding">
+      <div class="mb-md mt-md">
+        <h2 class="h2" id="bg">Bg Styles</h2>
+        <p class="mt-zero">sass/global/_03.color-modifiers.scss</p>
+        <div class="text-sm text-white">
+          {% for bg in bgColorsDk %}
+              <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
+          {% endfor %}
+        </div>
+        <div class="text-sm text-black">
+          {% for bg in bgColorsLt %}
+            <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
+          {% endfor %}
+        </div>
+        {# Overlay #}
+        <div class="relative">
+          <span class="bg-overlay-black"></span>
+          <p class="p-card relative text-sm text-white z-2">.bg-overlay-black.text-white</p>
+        </div>
+      </div>
+    </div> {# Closes .site-container.content-side-padding #}
+  </div>
+
+  {% include('@ts_motif/_samples/sample-forms.html.twig') %}
+  {% include('@ts_motif/_samples/sample-wysiwyg.html.twig') %}
+  {% include('@ts_motif/_samples/sample-pagination.html.twig') %}
+
+  <div class="site-container content-side-padding">
+   <h2 class="inline h1" id="samplecomponents">Sample Paragraphs</h2>
+  </div>
+
+  {# 3-Up Cards #}
+  <div class="friendly">
+     {% include('@ts_motif/_samples/sample-3-up.html.twig') %}
+   </div>
+
+  {# 2-Up Cards #}
+   <div class="friendly">
+     <div class="site-container content-side-padding">
+       {% include('@ts_motif/_samples/sample-2-up.html.twig') %}
+     </div>
+   </div>
+
+  {# Sample Listing #}
+   <div class="friendly">
+     <div class="site-container content-side-padding">
+       <h2 class="h2">Sample Listing</h2>
+       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
+       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
+       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
+    </div>
+   </div>
+
+  <div class="site-container content-side-padding">
+    {% include('@ts_motif/_samples/sample-testimonial.html.twig') %}
+    {% include('@ts_motif/_samples/sample-footer.html.twig') %}
+  </div>
+</div>
+</div>
