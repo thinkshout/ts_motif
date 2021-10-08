@@ -5,8 +5,6 @@ namespace Drupal\ts_motif;
 /**
  * Provides Motif Theme's Design System constants.
  *
- *   Implements custom properties and type definitions for /ts-design.
- *   As the project matures this should be moved to a helper module.
  */
 class Motif {
 
@@ -15,5 +13,9 @@ class Motif {
    */
   const THEME_NAME = 'ts_motif';
 
+  /**
+   * Provides theme path for svg icons.
+   */
+  const ICON_PATH = 'assets/svg/icons';
 
 }
