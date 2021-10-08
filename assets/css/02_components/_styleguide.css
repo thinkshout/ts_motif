@@ -22,6 +22,7 @@
 .styleguide-nav a:focus {
   background-color: var(--color-gray-lt);
   border-left-color: var(--color-gray-dk);
+  transition: background-color ease-in-out 300ms;
 }
 
 .bg-demo-m {
