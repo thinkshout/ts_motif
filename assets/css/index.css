@@ -1,18 +1,35 @@
-/**
+/*
  * @file
- * Index CSS File
- *
- * This file is to override Drupal defaults for the Drupal Theme.
- * Implements Tailwind.
- *
- */
+------------------------------------------------------------------------------------------------------------------------
+                                         ____    ____         _    _     ___
+                                        |_   \  /   _|       / |_ (_)  .' ..]
+                                          |   \/   |   .--. `| |-'__  _| |_
+                                          | |\  /| | / .'`\ \| | [  |'-| |-'
+                                         _| |_\/_| |_| \__. || |, | |  | |
+                                        |_____||_____|'.__.' \__/[___][___]
+------------------------------------------------------------------------------------------------------------------------
+Index CSS File
+  Parcel Entrypoint for Motif Partials and Tailwind CSS.
+------------------------------------------------------------------------------------------------------------------------
+*/
 
+/*
+ * Motif Base
+ */
 @import "00_base/_generated-variables.css";
 @import "00_base/html.css";
 @import "00_base/utilities.css";
+
+/*
+ * Motif Primitives
+ */
 @import "01_primitives/buttons-links.css";
 @import "01_primitives/design-elements.css";
 @import "01_primitives/typography.css";
+
+/*
+ * Motif Components
+ */
 @import "02_components/_styleguide.css";
 @import "02_components/admin.css";
 @import "02_components/forms.css";

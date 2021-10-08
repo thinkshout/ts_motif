@@ -13,9 +13,9 @@
     "lint": "eslint assets --fix && prettier --check assets",
     "prepare": "husky install",
     "start": "npm run theme.watch",
-    "theme.bundle.dev": "parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
+    "theme.bundle.dev": "NODE_ENV=development parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
     "theme.bundle.prod": "NODE_ENV=production parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
-    "theme.watch": "parcel watch ./assets/motif.js --dist-dir ./dist --public-url ./dist",
+    "theme.watch": "NODE_ENV=development parcel watch ./assets/motif.js --dist-dir ./dist --public-url ./dist",
     "print.bundle": "NODE_ENV=production parcel build ./assets/css/print.css --dist-dir ./dist --public-url ./dist"
   },
   "devDependencies": {

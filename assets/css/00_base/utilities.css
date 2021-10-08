@@ -1,3 +1,17 @@
+/*
+ * @file
+------------------------------------------------------------------------------------------------------------------------
+                                         ____    ____         _    _     ___
+                                        |_   \  /   _|       / |_ (_)  .' ..]
+                                          |   \/   |   .--. `| |-'__  _| |_
+                                          | |\  /| | / .'`\ \| | [  |'-| |-'
+                                         _| |_\/_| |_| \__. || |, | |  | |
+                                        |_____||_____|'.__.' \__/[___][___]
+------------------------------------------------------------------------------------------------------------------------
+Custom Utilities CSS File
+------------------------------------------------------------------------------------------------------------------------
+*/
+
 /* Paragraph or section-level spacing. */
 /* See the wiki for detailed variations: https://github.com/thinkshout/ts_grid/wiki/Vertical-Spacing*/
 .friendly {
@@ -6,7 +20,7 @@
 .unfriendly {
   @apply py-xl;
 }
-@media (min-width: 769px) {
+@media (--md) {
   .unfriendly {
     @apply py-3xl;
   }
@@ -16,7 +30,7 @@
 }
 
 /* GRID: one column on mobile */
-@media (min-width: 769px) {
+@media (--md) {
   .grid-col-2 {
     @apply grid grid-cols-2;
     grid-gap: var(--grid-gap);

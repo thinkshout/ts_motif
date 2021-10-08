@@ -1,13 +1,23 @@
-/*@custom-media --screens-sm (min-width: 0px);*/
-/*@custom-media --screens-md (min-width: 414px);*/
-/*@custom-media --screens-lg (min-width: 768px);*/
-/*@custom-media --screens-xl (min-width: 1280px);*/
-/*@custom-media --screens-xxl (min-width: 1448px);*/
-
-/***
+/*
  * @file
- * BASE - HTML overrides
- */
+------------------------------------------------------------------------------------------------------------------------
+                                         ____    ____         _    _     ___
+                                        |_   \  /   _|       / |_ (_)  .' ..]
+                                          |   \/   |   .--. `| |-'__  _| |_
+                                          | |\  /| | / .'`\ \| | [  |'-| |-'
+                                         _| |_\/_| |_| \__. || |, | |  | |
+                                        |_____||_____|'.__.' \__/[___][___]
+------------------------------------------------------------------------------------------------------------------------
+HTML Overrides CSS File
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+@custom-media --sm (min-width: 501px);
+@custom-media --md (min-width: 769px);
+@custom-media --lg (min-width: 1025px);
+@custom-media --xl (min-width: 1442px);
+@custom-media --2xl (min-width: 2000px);
+
 html {
   background-color: var(--color-gray-lt);
   font-family: var(--font-family-sans);
@@ -16,6 +26,7 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family-sans);
   background-color: var(--color-white);
   font-style: normal;
   font-weight: var(--font-weight-light);
@@ -59,11 +70,11 @@ table {
 
 td,
 th {
-  padding: 0.25rem 0.5rem;
+  padding: var(--spacer-2xs) var(--spacer-xs);
 
-  /*@include mq(md) {*/
-  /*  padding: 0.5rem 0.75rem;*/
-  /*}*/
+  @media (--md) {
+    padding: var(--spacer-xs) var(--spacer-sm);
+  }
 }
 
 td.padding-vert-none,
@@ -87,4 +98,10 @@ th,
 
 blockquote {
   margin-left: 0;
+}
+
+input {
+  @apply font-book;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
 }
