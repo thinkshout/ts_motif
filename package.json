@@ -5,18 +5,22 @@
   "license": "GPL-3.0",
   "author": "ThinkShout, Inc",
   "scripts": {
-    "build": "concurrently -c \"magenta,blue\" \"npm:theme.bundle.dev\" \"npm:print.bundle\"",
+    "build": "concurrently -c \"magenta,blue\" \"npm:theme.bundle.prod\" \"npm:print.bundle\"",
     "format": "concurrently -c \"magenta,blue\" \"npm:format.tokens\" \"npm:format.assets\"",
     "format.assets": "eslint assets --fix && prettier --write assets",
     "format.tokens": "style-dictionary build --config style-dictionary.config.json",
     "preinstall": "npx check-node-version --node $(cat .nvmrc)",
+    "postinstall": "npm run build",
     "lint": "eslint assets --fix && prettier --check assets",
     "prepare": "husky install",
+    "print.bundle": "NODE_ENV=production parcel build ./assets/css/print.css --dist-dir ./dist --public-url ./dist",
     "start": "npm run theme.watch",
     "theme.bundle.dev": "NODE_ENV=development parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
     "theme.bundle.prod": "NODE_ENV=production parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
-    "theme.watch": "NODE_ENV=development parcel watch ./assets/motif.js --dist-dir ./dist --public-url ./dist",
-    "print.bundle": "NODE_ENV=production parcel build ./assets/css/print.css --dist-dir ./dist --public-url ./dist"
+    "theme.watch": "NODE_ENV=development parcel watch ./assets/motif.js --dist-dir ./dist --public-url ./dist"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.0",
@@ -34,8 +38,5 @@
     "prettier": "^2.4.1",
     "style-dictionary": "^3.0.2",
     "tailwindcss": "^2.2.16"
-  },
-  "dependencies": {
-    "jquery": "^3.6.0"
   }
 }
