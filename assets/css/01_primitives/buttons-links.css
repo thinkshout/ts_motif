@@ -4,10 +4,10 @@
  */
 
 /* Constants for buttons styles */
-:root {
-  --btn-font-size-xs: 0.75rem;
-  --btn-font-size-sm: 1rem;
-  --btn-font-size: 1.25rem;
+.btn {
+  --btn-font-size-xs: var(--spacer-sm);
+  --btn-font-size-sm: var(--spacer-base);
+  --btn-font-size: var(--spacer-md);
   --btn-font-family: var(--font-family-sans);
   --btn-weight: var(--font-weight-semibold);
 }

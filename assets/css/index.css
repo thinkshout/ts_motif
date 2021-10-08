@@ -7,12 +7,16 @@
  *
  */
 
-@import "base/_variables.css";
-@import "base/typography.css";
-@import "base/buttons-links.css";
-@import "base/design-elements.css";
-@import "base/html.css";
-@import "base/utilities.css";
+@import "00_base/_generated-variables.css";
+@import "00_base/html.css";
+@import "00_base/utilities.css";
+@import "01_primitives/buttons-links.css";
+@import "01_primitives/design-elements.css";
+@import "01_primitives/typography.css";
+@import "02_components/_styleguide.css";
+@import "02_components/admin.css";
+@import "02_components/forms.css";
+@import "02_components/wysiwyg.css";
 
 /**
  * This injects Tailwind's base styles and any base styles registered by
@@ -40,7 +44,3 @@
  * your stylesheet by default.
  */
 @tailwind screens;
-
-.flerp {
-  @apply border;
-}

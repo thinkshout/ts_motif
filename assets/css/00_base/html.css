@@ -1,3 +1,9 @@
+/*@custom-media --screens-sm (min-width: 0px);*/
+/*@custom-media --screens-md (min-width: 414px);*/
+/*@custom-media --screens-lg (min-width: 768px);*/
+/*@custom-media --screens-xl (min-width: 1280px);*/
+/*@custom-media --screens-xxl (min-width: 1448px);*/
+
 /***
  * @file
  * BASE - HTML overrides
@@ -13,8 +19,8 @@ body {
   background-color: var(--color-white);
   font-style: normal;
   font-weight: var(--font-weight-light);
-  margin: 0 auto;
-  max-width: 2000px;
+  margin-inline: auto;
+  max-width: var(--screen-site-max-width);
   position: relative;
 }
 

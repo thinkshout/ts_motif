@@ -16,8 +16,7 @@
     "theme.bundle.dev": "parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
     "theme.bundle.prod": "NODE_ENV=production parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
     "theme.watch": "parcel watch ./assets/motif.js --dist-dir ./dist --public-url ./dist",
-    "print.bundle": "NODE_ENV=production parcel build ./assets/css/print.css --dist-dir ./dist --public-url ./dist",
-    "tw.dev": "NODE_ENV=development tailwindcss -i ./assets/css/tailwind.css -o ./dist/tailwind.css --watch"
+    "print.bundle": "NODE_ENV=production parcel build ./assets/css/print.css --dist-dir ./dist --public-url ./dist"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.0",

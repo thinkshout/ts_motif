@@ -191,10 +191,10 @@
     <h2 class="h2 " id="linkstyles">Buttons and links</h2>
     <p class="mt-zero">sass/global/_buttons.scss</p>
       {% for btn in btnLinkStyles %}
-        <a class="{{ btn }} inline-block mr-xs" href=" ">.{{ btn }}</a>
+        <a class="{{ btn }} btn inline-block mr-xs" href=" ">.btn.{{ btn }}</a>
       {% endfor %}
       {% for btn in iconBtnLinkStyles %}
-        <a class="{{ btn }} inline-block mr-xs" href=" ">.{{ btn }} {% include
+        <a class="{{ btn }} btn inline-block mr-xs" href=" ">.btn{{ btn }} {% include
             ('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}</a>
       {% endfor %}
     <div class="mt-sm">

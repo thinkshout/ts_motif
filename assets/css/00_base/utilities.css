@@ -15,20 +15,20 @@
   }
 }
 
-/* GRID */
+/* GRID: one column on mobile */
 @media (min-width: 769px) {
   .grid-col-2 {
     @apply grid grid-cols-2;
-    grid-gap: var(--spacer-gutter);
+    grid-gap: var(--grid-gap);
   }
 
   .grid-col-3 {
     @apply grid grid-cols-3;
-    grid-gap: var(--spacer-gutter);
+    grid-gap: var(--grid-gap);
   }
   .grid-col-4 {
     @apply grid grid-cols-4;
-    grid-gap: var(--spacer-gutter);
+    grid-gap: var(--grid-gap);
   }
 }
 
@@ -41,8 +41,8 @@
 
 /* Mobile Padding .*/
 .content-side-padding {
-  padding-left: var(--spacer-gutter);
-  padding-right: var(--spacer-gutter);
+  padding-left: var(--grid-gap);
+  padding-right: var(--grid-gap);
 }
 
 /* Components */
