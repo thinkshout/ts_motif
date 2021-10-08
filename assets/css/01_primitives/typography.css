@@ -6,7 +6,7 @@ body {
 
 .h1,
 .h2 {
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-sans);
 }
 
 .h1,
@@ -17,7 +17,7 @@ body {
 }
 
 .h1 {
-  @apply font-medium;
+  @apply font-bold text-gray-dk;
   font-size: 2.8125rem;
   line-height: 1.1;
 
@@ -32,7 +32,7 @@ body {
 }
 
 .h2 {
-  @apply font-medium;
+  @apply font-semibold text-gray-dk;
   font-size: 1.875rem;
   line-height: 1.1;
 

@@ -4,7 +4,7 @@
   --color-white: #ffffff;
   --color-gray-lt: #ededed;
   --color-gray-dk: #444444;
-  --grid-gap: 0.5rem;
+  --grid-gap: 1rem;
   --opacity-0: 0;
   --opacity-1: 1;
   --opacity-02: 0.2;
@@ -29,7 +29,6 @@
   --spacer-2xl: 3rem;
   --spacer-3xl: 4rem;
   --spacer-4xl: 6rem;
-  --spacer-gutter: 1rem;
   --font-weight-book: 300;
   --font-weight-light: 300;
   --font-weight-regular: 400;

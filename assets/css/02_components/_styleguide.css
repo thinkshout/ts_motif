@@ -1,5 +1,6 @@
 @media (min-width: 769px) {
   .styleguide-nav {
+    border-right: 1px solid var(--color-gray-lt);
     height: 100%;
     left: 0;
     position: fixed;
@@ -7,8 +8,20 @@
     width: 280px;
   }
   .styleguide-menu-padding {
-    padding-left: 300px;
+    padding-left: 330px;
   }
+}
+
+.styleguide-nav a {
+  border-left: 3px solid transparent;
+  display: block;
+  width: 100%;
+}
+
+.styleguide-nav a:hover,
+.styleguide-nav a:focus {
+  background-color: var(--color-gray-lt);
+  border-left-color: var(--color-gray-dk);
 }
 
 .bg-demo-m {
