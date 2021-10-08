@@ -15,22 +15,25 @@ Custom Utilities CSS File
 /* Paragraph or section-level spacing. */
 /* See the wiki for detailed variations: https://github.com/thinkshout/ts_grid/wiki/Vertical-Spacing*/
 .friendly {
-  @apply my-xl;
+  margin-top: var(--spacer-xl);
+  margin-bottom: var(--spacer-xl);
+  @media (--bp-md) {
+    margin-top: var(--spacer-3xl);
+    margin-bottom: var(--spacer-3xl);
+  }
 }
 .unfriendly {
-  @apply py-xl;
-}
-@media (--md) {
-  .unfriendly {
-    @apply py-3xl;
-  }
-  .friendly {
-    @apply my-3xl;
+  padding-top: var(--spacer-xl);
+  padding-bottom: var(--spacer-xl);
+
+  @media (--bp-md) {
+    padding-top: var(--spacer-3xl);
+    padding-bottom: var(--spacer-3xl);
   }
 }
 
 /* GRID: one column on mobile */
-@media (--md) {
+@media (--bp-md) {
   .grid-col-2 {
     @apply grid grid-cols-2;
     grid-gap: var(--grid-gap);

@@ -30,7 +30,7 @@ Button Links CSS File
   font-size: var(--btn-font-size-sm);
   font-weight: var(--btn-weight);
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--btn-font-size);
   }
 }
@@ -111,7 +111,7 @@ a.btn-tag {
   text-decoration: none;
   @apply bg-gray-lt uppercase no-underline;
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--btn-font-size-sm);
   }
 }

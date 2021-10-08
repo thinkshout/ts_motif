@@ -17,6 +17,7 @@ Index CSS File
  * Motif Base
  */
 @import "00_base/_generated-variables.css";
+@import "00_base/tailwind.css";
 @import "00_base/html.css";
 @import "00_base/utilities.css";
 
@@ -34,30 +35,3 @@ Index CSS File
 @import "02_components/admin.css";
 @import "02_components/forms.css";
 @import "02_components/wysiwyg.css";
-
-/**
- * This injects Tailwind's base styles and any base styles registered by
- * plugins.
- */
-@tailwind base;
-
-/**
- * This injects Tailwind's component classes and any component classes
- * registered by plugins.
- */
-@tailwind components;
-
-/**
- * This injects Tailwind's utility classes and any utility classes registered
- * by plugins.
- */
-@tailwind utilities;
-
-/**
- * Use this directive to control where Tailwind injects the responsive
- * variations of each utility.
- *
- * If omitted, Tailwind will append these classes to the very end of
- * your stylesheet by default.
- */
-@tailwind screens;

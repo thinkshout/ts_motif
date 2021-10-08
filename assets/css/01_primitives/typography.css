@@ -22,7 +22,7 @@ Typography CSS File
   font-size: var(--font-size-5xl);
   line-height: var(--line-height-taut);
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--font-size-6xl);
   }
   a {
@@ -35,7 +35,7 @@ Typography CSS File
   font-size: var(--font-size-3xl);
   line-height: var(--line-height-taut);
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--font-size-4xl);
   }
 
@@ -50,7 +50,7 @@ Typography CSS File
   font-size: var(--font-size-md);
   line-height: var(--line-height-tight);
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--font-size-2xl);
   }
 
@@ -65,7 +65,7 @@ Typography CSS File
   font-size: var(--font-size-sm);
   line-height: var(--line-height-snug);
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--font-size-base);
   }
 
@@ -80,7 +80,7 @@ Typography CSS File
   font-size: var(--font-size-2xs);
   line-height: var(--line-height-tight);
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--font-size-xs);
   }
 
@@ -94,7 +94,7 @@ Typography CSS File
   font-size: var(--font-size-lg);
   line-height: var(--line-height-snug);
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--font-size-xl);
   }
   a {
@@ -145,7 +145,7 @@ Typography CSS File
   color: var(--color-black);
   font-size: var(--font-size-sm);
 
-  @media (--md) {
+  @media (--bp-md) {
     font-size: var(--font-size-base);
   }
 }
