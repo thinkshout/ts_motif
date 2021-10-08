@@ -15,7 +15,9 @@ class Motif {
 
   /**
    * Provides theme path for svg icons.
+   *   This path is combined with Drupal's path for the actual location of svg assets.
+   *   It can be updated depending on where or how SVGs are delivered as assets.
    */
-  const ICON_PATH = 'assets/svg/icons';
+  const ICON_PATH = '/assets/images/svg/icons/';
 
 }

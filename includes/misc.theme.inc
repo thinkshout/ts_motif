@@ -12,7 +12,7 @@ use Drupal\ts_motif\Motif;
  * Implements hook_preprocess().
  */
 function ts_motif_preprocess(&$variables) {
-  $variables['paths']['svgs']['icons'] = Motif::ICON_PATH;
+  $variables['svg_icon_path'] = \Drupal::theme()->getActiveTheme()->getPath() . Motif::ICON_PATH;
 }
 
 /**
