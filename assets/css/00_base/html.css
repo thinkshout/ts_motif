@@ -12,57 +12,51 @@ HTML Overrides CSS File
 ------------------------------------------------------------------------------------------------------------------------
 */
 
-@custom-media --sm (min-width: 501px);
-@custom-media --md (min-width: 769px);
-@custom-media --lg (min-width: 1025px);
-@custom-media --xl (min-width: 1442px);
-@custom-media --2xl (min-width: 2000px);
+@custom-media --bp-sm (min-width: 501px);
+@custom-media --bp-md (min-width: 769px);
+@custom-media --bp-lg (min-width: 1025px);
+@custom-media --bp-xl (min-width: 1442px);
+@custom-media --bp-2xl (min-width: 2000px);
+@custom-media --reduce-motion (prefers-reduced-motion: reduce);
 
 html {
   background-color: var(--color-gray-lt);
-  font-family: var(--font-family-sans);
 }
 
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
   font-family: var(--font-family-sans);
-  background-color: var(--color-white);
-  font-style: normal;
   font-weight: var(--font-weight-light);
-  margin-inline: auto;
+  line-height: var(--line-height-normal);
+  font-style: normal;
   max-width: var(--screen-site-max-width);
-  position: relative;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  margin-inline: auto;
+  @media (--bp-2xl) {
+    padding-right: var(--spacer-base);
+    padding-left: var(--spacer-base);
+  }
 }
 
-select {
-  /* for Firefox */
-  -moz-appearance: none;
-  /* for Chrome */
-  -webkit-appearance: none;
-}
-
-/* For IE10 */
-select::-ms-expand {
-  display: none;
-}
-
+/*
+ * Form Styles
+ */
 fieldset {
   border: unset;
-  margin: 0;
-  padding: 0;
 }
 
-img {
-  max-width: 100%;
+input {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-book);
 }
 
-ul {
-  list-style-type: none;
-  padding-left: unset;
-}
-
-/* Table */
+/*
+ * Tabular Data Styles
+ */
 table {
   text-align: left;
   width: 100%;
@@ -72,36 +66,25 @@ td,
 th {
   padding: var(--spacer-2xs) var(--spacer-xs);
 
-  @media (--md) {
+  @media (--bp-md) {
     padding: var(--spacer-xs) var(--spacer-sm);
   }
 }
 
-td.padding-vert-none,
-th.padding-vert-none {
-  padding-top: 0;
-  padding-bottom: 0;
-}
+/*
+ * Reduce Animations for Those that Prefer It
+ */
+@media (--reduce-motion) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-dl {
-  margin-top: 0;
-}
-
-dd {
-  margin-left: 0;
-}
-
-th,
-.filler-cell {
-  background-color: var(--color-gray-lt);
-}
-
-blockquote {
-  margin-left: 0;
-}
-
-input {
-  @apply font-book;
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-normal);
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

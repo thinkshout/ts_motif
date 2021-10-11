@@ -12,7 +12,7 @@ Styleguide CSS File
 ------------------------------------------------------------------------------------------------------------------------
 */
 
-@media (--md) {
+@media (--bp-md) {
   .styleguide-nav {
     position: fixed;
     border-right: 1px solid var(--color-gray-lt);
