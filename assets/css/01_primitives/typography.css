@@ -1,0 +1,151 @@
+/*
+ * @file
+------------------------------------------------------------------------------------------------------------------------
+                                         ____    ____         _    _     ___
+                                        |_   \  /   _|       / |_ (_)  .' ..]
+                                          |   \/   |   .--. `| |-'__  _| |_
+                                          | |\  /| | / .'`\ \| | [  |'-| |-'
+                                         _| |_\/_| |_| \__. || |, | |  | |
+                                        |_____||_____|'.__.' \__/[___][___]
+------------------------------------------------------------------------------------------------------------------------
+Typography CSS File
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.h1,
+.h2 {
+  font-family: var(--font-family-sans);
+}
+
+.h1 {
+  @apply font-bold;
+  font-size: var(--font-size-5xl);
+  line-height: var(--line-height-taut);
+
+  @media (--bp-md) {
+    font-size: var(--font-size-6xl);
+  }
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.h2 {
+  @apply font-semibold text-gray-dk;
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-taut);
+
+  @media (--bp-md) {
+    font-size: var(--font-size-4xl);
+  }
+
+  a,
+  a & {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.h3 {
+  @apply font-semibold;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-tight);
+
+  @media (--bp-md) {
+    font-size: var(--font-size-2xl);
+  }
+
+  a,
+  a & {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.h4 {
+  @apply font-semibold;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+
+  @media (--bp-md) {
+    font-size: var(--font-size-base);
+  }
+
+  a,
+  a & {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.h5 {
+  @apply font-semibold;
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-tight);
+
+  @media (--bp-md) {
+    font-size: var(--font-size-xs);
+  }
+
+  & a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.body-lg {
+  @apply font-book;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-snug);
+
+  @media (--bp-md) {
+    font-size: var(--font-size-xl);
+  }
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.body-md {
+  @apply font-book;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-snug);
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.body-sm {
+  @apply font-book;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-snug);
+
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.body-xs {
+  @apply font-regular;
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-tight);
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.text-nav {
+  @apply font-semibold;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  text-transform: uppercase;
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.text-label {
+  @apply font-semibold;
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+
+  @media (--bp-md) {
+    font-size: var(--font-size-base);
+  }
+}

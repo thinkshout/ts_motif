@@ -1,0 +1,9 @@
+<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>button-close</title>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Group" transform="translate(1.000000, 1.000000)" fill="#000000" fill-rule="nonzero" stroke="#000">
+      <line x1="0" y1="0" x2="18" y2="18" id="Path"/>
+      <line x1="18" y1="0" x2="0" y2="18" id="Path"/>
+    </g>
+  </g>
+</svg>

@@ -11,3 +11,7 @@ jquery:
     node_modules/jquery/dist/jquery.min.js:
       preprocess: false
       weight: -20
+styleguide:
+  css:
+    theme:
+      assets/css/02_components/_styleguide.css: {}

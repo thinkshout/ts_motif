@@ -8,7 +8,25 @@
                                          _| |_\/_| |_| \__. || |, | |  | |
                                         |_____||_____|'.__.' \__/[___][___]
 ------------------------------------------------------------------------------------------------------------------------
-Print Styles CSS File
-  This file is to provide CSS for printing Drupal Theme content.
+Design Elements CSS File
 ------------------------------------------------------------------------------------------------------------------------
 */
+
+/* Color modifiers */
+.outline {
+  /* @TODO DS Override. */
+  border: 1px solid var(--color-gray-lt);
+  border-radius: 10px;
+}
+
+/* Wrap with .relative, eg: Hero photo style */
+.bg-overlay-black {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-black);
+  opacity: var(--opacity-05);
+  z-index: var(--z-index-2);
+}
