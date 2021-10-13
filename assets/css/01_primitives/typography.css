@@ -18,7 +18,7 @@ Typography CSS File
 }
 
 .h1 {
-  @apply font-bold text-gray-dk;
+  @apply font-bold;
   font-size: var(--font-size-5xl);
   line-height: var(--line-height-taut);
 

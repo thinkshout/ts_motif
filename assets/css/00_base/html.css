@@ -41,6 +41,10 @@ body {
   }
 }
 
+strong {
+  @apply font-bold;
+}
+
 /*
  * Form Styles
  */

@@ -93,6 +93,7 @@
           <ul>
             <li><a href="#fontmodifiers" class="body-sm pl-lg py-xs">Color / Weight modifiers</a></li>
           </ul>
+        <li><a href="#bg" class="body-md pl-sm py-xs">Background colors</a></li>
         <li><a href="#linkstyles" class="body-md font-bold pl-sm py-xs">Buttons & links</a></li>
         <li><a href="#gridlayout" class="body-md font-bold pl-sm py-xs">Layout</a></li>
           <ul>
@@ -105,8 +106,7 @@
             <li><a href="#spacing" class="body-sm pl-sm pl-lg py-xs">Variables</a></li>
             <li><a href="#marginpadding" class="body-sm pl-lg py-xs">Margin & Padding</a></li>
           </ul>
-        <li><a href="#commoncss" class="body-md pl-lg py-xs">Utilities</a></li>
-        <li><a href="#bg" class="body-sm pl-lg py-xs">Background styles</a></li>
+        <li><a href="#commoncss" class="body-md pl-sm py-xs">Utilities</a></li>
         <hr class="my-md">
         <li><a href="#forms" class="body-sm pl-lg py-xs">Forms</a></li>
         <li><a href="#wysiwygstyles" class="body-sm pl-lg py-xs">Wysiwyg and
@@ -143,7 +143,7 @@
       <h3 class="h3 mb-md" id="fontmodifiers">Common Variations</h3>
       <div class="grid-col-2">
         <div>
-          <h1 class="h1 white bg-black mb-xs p-card text-white">.h1.text-white</h1>
+          <h1 class="h1 bg-black mb-xs p-card text-white">.h1.text-white</h1>
           <h2 class="h2 mb-xs ">.h2.text-gray-dk</h2>
           <h3 class="bg-gray-dk p-card h3 mb-xs text-white">.h3.text-white</h3>
           <h4 class="h4 mt-sm mb-zero text-black">.h4.text-black</h4>
@@ -173,25 +173,52 @@
     </div> {# Closes .site-container.content-side-padding #}
   </div>
 
+  {# Background colors #}
+  <div class="friendly">
+    <div class="site-container content-side-padding">
+      <div class="mb-md mt-md">
+        <h2 class="h2 mt-md mb-xs" id="bg">Bg colors</h2>
+        <p class="body-lg mb-md">tokens/src/color.tokens.json</p>
+        <p class="body-sm mb-md">Use .bg-[color] to apply background color</p>
+        <div class="body-sm text-white">
+          {% for bg in bgColorsDk %}
+            <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
+          {% endfor %}
+        </div>
+        <div class="body-sm text-black">
+          {% for bg in bgColorsLt %}
+            <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
+          {% endfor %}
+        </div>
+        {# Overlay #}
+        <div class="relative">
+          <span class="bg-overlay-black"></span>
+          <p class="p-card relative body-sm text-white z-2">.bg-overlay-black.text-white</p>
+        </div>
+      </div>
+    </div> {# Closes .site-container.content-side-padding #}
+  </div>
+
   {# Buttons & Links #}
   <div class="friendly">
     <div class="site-container content-side-padding">
       <h2 class="h2 " id="linkstyles">Buttons and links</h2>
-      <p class="body-lg mt-zero">sass/global/_buttons.scss</p>
+      <p class="body-lg mt-zero">css/01_primitives/_buttons-links.scss</p>
       <hr class="mt-sm mb-sm">
       {% for btn in btnLinkStyles %}
         <a class="{{ btn }} btn inline-block mr-xs" href=" ">.btn.{{ btn }}</a>
       {% endfor %}
       {% for btn in iconBtnLinkStyles %}
-        <a class="{{ btn }} btn inline-block mr-xs" href=" ">.btn{{ btn }} {% include
-            ('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}</a>
+        <a class="{{ btn }} btn inline-block mr-xs" href=" ">.btn{{ btn }}
+{#          {% include('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}#}
+        </a>
       {% endfor %}
     <div class="mt-sm">
       <h4 class="h4 mt-md">Include icons in twig files to animate them</h4>
       {% for btn in iconBtnLinkStyles %}
         <p class="body-sm inline-block mr-xs">
-          {% include('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}
-          { % include('@ts_motif/_includes/icon-{{ btn }}.html.twig') % }
+{#          {% include('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}#}
+{#          { % include('@ts_motif/_includes/icon-{{ btn }}.html.twig') % }#}
         </p>
       {% endfor %}
     </div>
@@ -246,12 +273,12 @@
     <h2 class="h3 mt-2xl mb-sm" id="width">Width, margin: zero auto</h2>
       <p class="body-md mb-md">Use md: prefix to apply at md breakpoint.</p>
     <div class="bg-gray-lt p-card my-0 mx-auto md:w-3/4">
-      <h3 class="h3">.mt-0.my-auto.md:w-3/4</h3>
+      <h3 class="body-sm">.my-0.my-auto.md:w-3/4</h3>
     </div>
-      <h3 class="h3 bg-gray-lt my-0 mx-auto p-card md:w-2/3">.my-0.mx-auto.w-66-md</h3>
-      <h3 class="h3 bg-gray-lt my-0 mx-auto p-card md:w-1/2">.my-0.mx-auto.w-50-md</h3>
-      <h3 class="h3 bg-gray-lt my-0 mx-auto p-card md:w-1/3">.my-0.mx-auto.w-33-md</h3>
-      <h3 class="h3 bg-gray-lt my-0 mx-auto p-card md:w-1/4">.my-0.mx-auto.w-25-md</h3>
+      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card md:w-2/3">.my-0.mx-auto.w-66-md</h3>
+      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card md:w-1/2">.my-0.mx-auto.w-50-md</h3>
+      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card md:w-1/3">.my-0.mx-auto.w-33-md</h3>
+      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card md:w-1/4">.my-0.mx-auto.w-25-md</h3>
 
     {# Display #}
     <div><h3 class="h3 mt-2xl mb-sm" id="display">Display</h3>
@@ -286,54 +313,66 @@
   <div class="friendly">
     <div class="site-container content-side-padding">
       <h2 class="h2 mt-md mb-xs" id="spacing">Spacing</h2>
-      <p class="body-lg mt-zero">sass/layout/_margins.scss</p>
+      <p class="body-lg mt-zero">tokens/src/spacer.tokens.json</p>
       <hr class="mt-sm mb-sm">
       <h3 class="h3 mt-md mb-sm">Variables</h3>
-    <p class="body-sm mb-md">Used for margin, padding, and height. Designers use mathematical relationships to define
-      spacing. All of the margin, padding and height classes use these base values. The sizes are also available as sass variables.</p>
+    <p class="body-sm">All of the margin, padding and height classes use generated from these base values. The are also
+      available as css variables.</p>
+    <p class="body-sm my-md">--spacer-[size]</p>
     <div>
       <div class="bg-gray-dk inline-block h-px w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>PX:</strong> 1px (1px), $spacer-px</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>PX</strong></p>
+      <p class="body-sm inline-block ml-base">1px (1px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-3xs w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>3XS:</strong> .25rem (4px), $spacer-3xs</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>3XS</strong> </p>
+      <p class="body-sm inline-block ml-base">.25rem (4px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-2xs w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>2XS:</strong> .5rem (8px), $spacer-2xs</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>2XS</strong></p>
+      <p class="body-sm inline-block ml-base">.5rem (8px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-xs w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>XS:</strong> 1rem (16px), $spacer-xs</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>XS</strong></p>
+      <p class="body-sm inline-block ml-base">1rem (16px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-sm w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>SM:</strong> 1.5rem (20px), $spacer-sm</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>SM</strong></p>
+      <p class="body-sm inline-block ml-base">1.5rem (20px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-md w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>MD:</strong> 2rem (32px), $spacer-md</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>MD</strong></p>
+      <p class="body-sm inline-block ml-base">2rem (32px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-lg w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>LG:</strong> 3rem (48px), $spacer-lg</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>LG</strong></p>
+      <p class="body-sm inline-block ml-base">3rem (48px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-xl w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>XL:</strong> 4rem (64px), $spacer-xl</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>XL</strong></p>
+      <p class="body-sm inline-block ml-base">4rem (64px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-2xl w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>2XL:</strong> 6rem (96px), $spacer-2xl</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>2XL</strong></p>
+      <p class="body-sm inline-block ml-base">6rem (96px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-3xl w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>3XL:</strong> 8.125rem (130px), $spacer-3xl</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>3XL</strong></p>
+      <p class="body-sm inline-block ml-base">8.125rem (130px)</p>
     </div>
     <div>
       <div class="bg-gray-dk inline-block h-4xl w-1/4"></div>
-      <p class="body-sm inline-block ml-base"><strong>4XL:</strong> 10rem (160px), $spacer-4xl</p>
+      <p class="body-sm inline-block ml-base w-md"><strong>4XL</strong></p>
+      <p class="body-sm inline-block ml-base">10rem (160px)</p>
     </div>
   </div>
   </div>
@@ -375,7 +414,8 @@
           </ul>
         </div>
       </div>
-      <hr>
+      <span class="mb-3xs mb-base mb-lg mb-2xl mb-3xl mb-4xl mt-3xs mt-2xs mt-xs mt-sm mt-base mt-lg mt-3xl
+      my-lg my-xl my-2xl my-3xl my-4xl mx-3xs mx-2xs mx-xs mx-sm mx-md mx-base mx-lg mx-xl mx-2xl mx-3xl mx-4xl"></span>
       {# Margin bottom #}
       <div class="grid-col-3 text-center">
         <div class="bg-demo-m">
@@ -397,7 +437,7 @@
           {% endfor %}
         </div>
       </div>
-      <div class="bg-demo-m w-50">
+      <div class="bg-demo-m mt-sm w-50">
         <div class="bg-gray-dk h-2xl pt-sm text-white">Margin Left & Right</div>
         {% for size in sizes %}
           <div class="mx-{{size }} bg-demo-element h-lg">.mx-{{ size }}</div>
@@ -407,9 +447,9 @@
       {# Component Spacing #}
       <h2 class="h3 mt-md mb-sm" id="componentspacing">Component</h2>
       <div class="bg-demo-m"><p class="bg-demo-element m-card">.m-card : card margin</p></div>
-      <p class="bg-demo-p p-card"><span class="bg-demo-element">.p-card : card padding</span></p>
-      <p class="bg-demo-p py-4xl"><span class="block bg-demo-element">.py-4xl</span></p>
-      <p class="bg-demo-p py-xl"><span class="block bg-demo-element">.py-xl</span></p>
+      <p class="bg-demo-p mb-sm p-card"><span class="bg-demo-element">.p-card : card padding</span></p>
+      <p class="bg-demo-p mb-sm py-4xl"><span class="block bg-demo-element">.py-4xl</span></p>
+      <p class="bg-demo-p mb-sm py-xl"><span class="block bg-demo-element">.py-xl</span></p>
     </div>
   </div>
 
@@ -458,31 +498,6 @@
       </ul>
     </div>
   </div>
-  </div>
-
-  {# Background Styles #}
-  <div class="friendly">
-    <div class="site-container content-side-padding">
-      <div class="mb-md mt-md">
-        <h2 class="h2 mt-md mb-xs" id="bg">Bg Styles</h2>
-        <p class="body-lg mb-md">sass/global/_03.color-modifiers.scss</p>
-        <div class="body-sm text-white">
-          {% for bg in bgColorsDk %}
-              <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
-          {% endfor %}
-        </div>
-        <div class="body-sm text-black">
-          {% for bg in bgColorsLt %}
-            <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
-          {% endfor %}
-        </div>
-        {# Overlay #}
-        <div class="relative">
-          <span class="bg-overlay-black"></span>
-          <p class="p-card relative body-sm text-white z-2">.bg-overlay-black.text-white</p>
-        </div>
-      </div>
-    </div> {# Closes .site-container.content-side-padding #}
   </div>
 
   {% include('@ts_motif/_samples/sample-forms.html.twig') %}
