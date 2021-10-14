@@ -1,12 +1,12 @@
 # Motif
 
 A base theme for a Drupal sites.
-[Learn more about utility classes, design tokens and design decisions on the wiki.](https://github.com/thinkshout/ts_theme/wiki/Design-Tokens,-Design-Decisions-and-Utility-Classes)
+[Learn more about the theme in the wiki.](https://github.com/thinkshout/ts_theme/wiki/Design-Tokens,-Design-Decisions-and-Utility-Classes)
 
 ## Style Guide
 
 A style guide is available at /styleguide. The `drupal-project` base Drupal repo has the module available to create the
-route. The template is editable and found in `templates/_includes/styleguide.html.twig`
+route. The template is editable and found in `templates/_includes/_styleguide.html.twig`
 
 ## Installation
 
