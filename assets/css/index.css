@@ -24,9 +24,9 @@ Index CSS File
 /*
  * Motif Commons
  */
-@import "commons/buttons-links.css";
-@import "commons/design-elements.css";
-@import "commons/typography.css";
+@import "common/buttons-links.css";
+@import "common/design-elements.css";
+@import "common/typography.css";
 
 /*
  * Motif Components
