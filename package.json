@@ -13,7 +13,6 @@
     "preinstall": "npx check-node-version --node $(cat .nvmrc)",
     "postinstall": "npm run build",
     "lint": "eslint assets --fix && prettier --check assets",
-    "prepare": "husky install",
     "print.bundle": "NODE_ENV=production parcel build ./assets/css/print.css --dist-dir ./dist --public-url ./dist",
     "start": "npm run theme.watch",
     "theme.bundle.dev": "NODE_ENV=development parcel build ./assets/motif.js --dist-dir ./dist --public-url ./dist",
@@ -24,13 +23,10 @@
     "jquery": "^3.6.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.0",
-    "@commitlint/config-conventional": "^13.2.0",
     "concurrently": "^6.3.0",
     "cssnano": "^5.0.8",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "husky": "^7.0.2",
     "parcel": "^2.0.0",
     "postcss": "^8.3.9",
     "postcss-import": "^14.0.2",
