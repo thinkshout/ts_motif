@@ -1,7 +1,7 @@
 {
   "grid": {
     "gap": {
-      "value": "{spacer.base.value}"
+      "value": "{spacer.md.value}"
     }
   }
 }

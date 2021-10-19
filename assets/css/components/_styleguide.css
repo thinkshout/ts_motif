@@ -8,25 +8,56 @@
                                          _| |_\/_| |_| \__. || |, | |  | |
                                         |_____||_____|'.__.' \__/[___][___]
 ------------------------------------------------------------------------------------------------------------------------
-Design Elements CSS File
+Styleguide CSS File
 ------------------------------------------------------------------------------------------------------------------------
 */
 
-/* Color modifiers */
-.outline {
-  /* @TODO DS Override. */
-  border: 1px solid var(--color-gray-lt);
-  border-radius: 10px;
+@media (--bp-md) {
+  .styleguide-nav {
+    position: fixed;
+    border-right: 1px solid var(--color-gray-lt);
+    height: 100%;
+    width: 280px;
+    left: 0;
+    top: 0;
+  }
+  .styleguide-menu-padding {
+    padding-left: 330px;
+  }
 }
 
-/* Wrap with .relative, eg: Hero photo style */
-.bg-overlay-black {
-  position: absolute;
-  height: 100%;
+.styleguide-nav a {
+  border-left: 3px solid transparent;
+  display: block;
   width: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--color-black);
-  opacity: var(--opacity-05);
-  z-index: var(--z-index-2);
+}
+
+.styleguide-nav a:hover,
+.styleguide-nav a:focus {
+  background-color: var(--color-gray-lt);
+  border-left-color: var(--color-gray-dk);
+  transition: background-color ease-in-out 300ms;
+}
+
+.bg-demo-m {
+  background-color: peachpuff;
+}
+
+.bg-demo-p {
+  background-color: darkseagreen;
+}
+
+.bg-demo-element {
+  background-color: lightblue;
+}
+
+.img-260x156 {
+  height: 156px;
+  width: 260px;
+}
+
+.img-550x335 {
+  height: 335px;
+  max-width: 100%;
+  width: 550px;
 }

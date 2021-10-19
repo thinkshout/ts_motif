@@ -1,0 +1,221 @@
+/*
+ * @file
+------------------------------------------------------------------------------------------------------------------------
+                                         ____    ____         _    _     ___
+                                        |_   \  /   _|       / |_ (_)  .' ..]
+                                          |   \/   |   .--. `| |-'__  _| |_
+                                          | |\  /| | / .'`\ \| | [  |'-| |-'
+                                         _| |_\/_| |_| \__. || |, | |  | |
+                                        |_____||_____|'.__.' \__/[___][___]
+------------------------------------------------------------------------------------------------------------------------
+Typography CSS File
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.h1,
+.body-sm {
+  font-family: var(--font-family-sans);
+}
+
+.h2,
+.h3,
+.h4,
+.h5,
+.headline-xl,
+.headline-lg,
+.headline-md,
+.headline-sm,
+.headline-xs,
+.teaser,
+.body {
+  font-family: var(--font-family-serif);
+}
+
+.h1 {
+  @apply font-bold;
+  font-size: 34px;
+  line-height: var(--lh-10);
+
+  @media (--bp-md) {
+    font-size: 46px;
+  }
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.h2 {
+  @apply font-bold;
+  font-size: 28px;
+  line-height: var(--lh-10);
+
+  @media (--bp-md) {
+    font-size: 32px;
+  }
+
+  a,
+  a & {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.h3 {
+  @apply font-bold;
+  font-size: 22px;
+  line-height: var(--lh-12);
+
+  @media (--bp-md) {
+    font-size: 28px;
+  }
+
+  a,
+  a & {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.h4 {
+  @apply font-semibold;
+  font-size: 20px;
+  line-height: var(--lh-13);
+
+  @media (--bp-md) {
+    font-size: 22px;
+  }
+
+  a,
+  a & {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.h5 {
+  @apply font-bold;
+  font-size: 18px;
+  line-height: var(--lh-14);
+
+  @media (--bp-md) {
+    font-size: 20px;
+  }
+
+  & a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.section-header {
+  font-size: 20px;
+  line-height: var(--lh-13);
+
+  a {
+    @apply text-blue-700;
+  }
+}
+
+.text-white .section-header {
+  a {
+    @apply text-blue-400 focus:underline hover:underline;
+  }
+}
+
+.headline-xl {
+  @apply font-bold;
+  font-size: 38px;
+  line-height: var(--lh-11);
+  @media (--bp-md) {
+    font-size: 44px;
+  }
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.headline-lg {
+  @apply font-bold;
+  font-size: 32px;
+  line-height: var(--lh-11);
+  @media (--bp-md) {
+    font-size: 38px;
+  }
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.headline-md {
+  @apply font-bold;
+  font-size: 22px;
+  line-height: var(--lh-11);
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.headline-sm {
+  font-size: 18px;
+  line-height: var(--lh-12);
+  font-weight: var(--font-weight-bold);
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.headline-xs {
+  @apply font-medium;
+  font-size: 18px;
+  line-height: var(--lh-12);
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.body {
+  @apply font-regular;
+  font-size: 18px;
+  line-height: var(--lh-20);
+
+  @media (--bp-md) {
+    font-size: 19px;
+  }
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.body-sm {
+  @apply font-regular;
+  font-size: 14px;
+  line-height: var(--lh-13);
+}
+
+.tag {
+  @apply font-regular uppercase;
+  font-size: 12px;
+  line-height: var(--lh-20);
+  a {
+    @apply hover:underline focus:underline;
+  }
+}
+
+.author-byline {
+  font-size: 13px;
+  line-height: var(--lh-14);
+}
+
+.bg-black {
+  .author-byline,
+  .credit,
+  .tag {
+    color: var(--color-gray-500);
+  }
+}
+
+.credit {
+  @apply mt-sm text-right;
+  font-size: 13px;
+  line-height: var(--lh-12);
+}
+
+strong {
+  @apply font-bold;
+}

@@ -39,29 +39,26 @@
       }
     },
     "size": {
-      "2xs": {
-        "value": "0.625rem"
-      },
       "xs": {
         "value": "0.75rem"
       },
       "sm": {
-        "value": "0.875rem"
+        "value": "0.8125rem"
       },
       "base": {
         "value": "1rem"
       },
       "md": {
-        "value": "1.125rem"
+        "value": "1.0625rem"
       },
       "lg": {
-        "value": "1.25rem"
+        "value": "1.125rem"
       },
       "xl": {
-        "value": "1.375rem"
+        "value": "1.1875rem"
       },
       "2xl": {
-        "value": "1.4375rem"
+        "value": "1.25rem"
       },
       "3xl": {
         "value": "1.875rem"
@@ -77,21 +74,30 @@
       }
     }
   },
-  "lineHeight": {
+  "lh": {
     "none": {
       "value": "1"
     },
-    "taut": {
+    "11": {
       "value": "1.1"
     },
-    "tight": {
+    "12": {
       "value": "1.2"
     },
-    "snug": {
+    "13": {
       "value": "1.3"
     },
-    "normal": {
+    "14": {
+      "value": "1.4"
+    },
+    "15": {
       "value": "1.5"
+    },
+    "16": {
+      "value": "1.6"
+    },
+    "20": {
+      "value": "2"
     }
   }
 }

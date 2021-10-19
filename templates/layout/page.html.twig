@@ -50,7 +50,7 @@
     {{ page.secondary_navigation }}
 </header>
 
-<div class="container">
+<div class="">
   {{ page.hero }}
   {{ page.highlighted }}
   {{ page.breadcrumb }}
@@ -59,6 +59,8 @@
     <a id="main-content" tabindex="-1"></a>
       {{ page.aside }}
       {{ page.content }}
+    {% include('@ts_motif/_includes/styleguide.html.twig') %}
+{#    {% include('@ts_motif/_samples/csis-test-page.html.twig') %}#}
   </main>
 
   {% if page.footer %}

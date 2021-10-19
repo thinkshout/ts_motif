@@ -64,7 +64,7 @@ Custom Utilities CSS File
 
 /* Components */
 .p-card {
-  @apply px-sm py-sm md:px-md md:py-md;
+  @apply p-sm md:px-md md:py-lg;
 }
 
 .m-card {

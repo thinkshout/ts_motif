@@ -1,0 +1,11 @@
+{% set title = field_title.0 %}
+{% set author = field_author.0 %}
+
+<div class="article-listing flex">
+  <div class="bg-gray-lt h-2xl w-1/4"></div>
+  <div class="pl-base w-3/4">
+    <h3 class="headline-xs">{{ title }}</h3>
+    <p class="author-byline mt-xs">{{ author }}</p>
+  </div>
+</div>
+<hr class="my-base">

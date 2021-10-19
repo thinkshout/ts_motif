@@ -1,15 +1,6 @@
 /*
  * @file
-------------------------------------------------------------------------------------------------------------------------
-                                         ____    ____         _    _     ___
-                                        |_   \  /   _|       / |_ (_)  .' ..]
-                                          |   \/   |   .--. `| |-'__  _| |_
-                                          | |\  /| | / .'`\ \| | [  |'-| |-'
-                                         _| |_\/_| |_| \__. || |, | |  | |
-                                        |_____||_____|'.__.' \__/[___][___]
-------------------------------------------------------------------------------------------------------------------------
 Button Links CSS File
-------------------------------------------------------------------------------------------------------------------------
 */
 
 /* Constants for buttons styles */
@@ -35,42 +26,6 @@ Button Links CSS File
   }
 }
 
-.link-chevron,
-a.link-chevron,
-.link-back,
-a.link-back {
-  @apply text-black no-underline focus:underline hover:underline;
-
-  :focus,
-  :hover {
-    /* @TODO DS Override. */
-    text-underline-offset: 5px;
-  }
-
-  & svg {
-    position: absolute;
-    /* There is not an 18px spacer available, assemble with math. */
-    height: calc(var(--spacer-base) + var(--spacer-3xs));
-    width: calc(var(--spacer-base) + var(--spacer-3xs));
-    /* @TODO DS Override. */
-    top: 10%;
-  }
-}
-
-.link-back,
-.link-chevron {
-  position: relative;
-
-  & svg {
-    position: absolute;
-    /* There is not an 18px spacer available, assemble with math. */
-    height: calc(var(--spacer-base) + var(--spacer-3xs));
-    width: calc(var(--spacer-base) + var(--spacer-3xs));
-    /* @TODO DS Override. */
-    top: 10%;
-  }
-}
-
 .link-back {
   line-height: var(--line-height-snug);
   padding-left: var(--spacer-lg);
@@ -81,10 +36,17 @@ a.link-back {
 }
 
 .link-chevron {
+  @apply font-bold;
+  font-size: 15px;
+  line-height: var(--line-height-snug);
   padding-right: var(--spacer-lg);
   & svg {
     @apply right-0;
   }
+}
+
+.link-chevron--on-dk {
+  color: var(--color-blue-400);
 }
 
 a.btn-outline,
@@ -95,15 +57,10 @@ a.btn-outline,
   line-height: var(--line-height-none);
   border: 1px solid var(--color-black);
   @apply no-underline py-xs px-sm text-black;
-  &:hover,
-  &:focus {
-    @apply transition-all text-white bg-black;
-  }
 }
 
 .btn-tag,
 a.btn-tag {
-  /* @TODO DS Override. */
   border: 1px solid;
   font-size: var(--btn-font-size-xs);
   line-height: var(--line-height-snug);
@@ -118,16 +75,10 @@ a.btn-tag {
 
 .btn-solid,
 a.btn-solid {
-  /* @TODO DS Override. */
   border: 1px solid;
   border-radius: 30px;
   text-decoration: none;
   @apply bg-black no-underline px-sm py-xs text-white transition-all;
-
-  :focus,
-  :hover {
-    @apply bg-white text-black;
-  }
 }
 
 .btn-close:hover,
@@ -149,12 +100,6 @@ a.btn-solid {
 .link-style a,
 a.link-style {
   border-bottom: 1px solid transparent;
-  :focus,
-  :hover {
-    /* @TODO DS Override. */
-    border-bottom: 1px solid;
-    transition: var(--transition-default);
-  }
 
   &.is-active {
     border-bottom: 1px solid var(--color-black);
@@ -166,7 +111,6 @@ a.link-style {
 }
 
 .btn-search {
-  /* @TODO DS Override. */
   border-radius: 30px;
   @apply bg-gray-lt pt-xs px-xs pb-2xs transition-all focus:bg-gray-dk hover:bg-gray-dk;
 }

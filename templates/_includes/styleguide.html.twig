@@ -2,7 +2,6 @@
 {{ attach_library('ts_motif/styleguide') }}
 {%
   set sizes = [
-    '3xs',
     '2xs',
     'xs',
     'sm',
@@ -12,7 +11,6 @@
     'xl',
     '2xl',
     '3xl',
-    '4xl',
   ]
 %}
 
@@ -23,13 +21,16 @@
     'h3',
     'h4',
     'h5',
-    'h6',
-    'body-lg',
-    'body-md',
-    'body-sm',
-    'body-xs',
-    'text-nav',
+    'section-header',
+    'headline-xl',
+    'headline-lg',
+    'headline-md',
+    'headline-sm',
+    'headline-xs',
+    'body',
+    'tag',
     'text-label',
+    'credit',
   ]
 %}
 {# Displays on lt bg #}
@@ -37,6 +38,9 @@
   set textColorsDk = [
     'black',
     'gray-dk',
+    'blue-700',
+    'blue-500',
+    'blue-400',
   ]
 %}
 
@@ -45,6 +49,8 @@
   set textColorsLt = [
   'white',
   'gray-lt',
+  'blue-300',
+  'blue-25',
   ]
 %}
 
@@ -52,6 +58,9 @@
   set bgColorsDk = [
     'black',
     'gray-dk',
+    'gray-900',
+    'gray-800',
+    'gray-700',
   ]
 %}
 
@@ -59,6 +68,9 @@
   set bgColorsLt = [
     'white',
     'gray-lt',
+    'gray-600',
+    'gray-500',
+    'gray-200',
   ]
 %}
 
@@ -87,7 +99,6 @@
   <div class="py-3xl text-gray-dk">
     <h1 class="h2 px-md pt-xs">Styleguide</h1>
     <div class="">
-      <p class="mt-zero mb-sm px-md pt-xs"><em>Reusable styles using classes (sass/global)</em></p>
       <ul>
         <li><a href="#fontstyles" class="body-md font-bold pl-sm py-xs">Typography</a></li>
           <ul>
@@ -272,6 +283,7 @@
     {# Width #}
     <h2 class="h3 mt-2xl mb-sm" id="width">Width, margin: zero auto</h2>
       <p class="body-md mb-md">Use md: prefix to apply at md breakpoint.</p>
+      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card">.my-0.mx-auto</h3>
     <div class="bg-gray-lt p-card my-0 mx-auto md:w-3/4">
       <h3 class="body-sm">.my-0.my-auto.md:w-3/4</h3>
     </div>
@@ -415,7 +427,8 @@
         </div>
       </div>
       <span class="mb-3xs mb-base mb-lg mb-2xl mb-3xl mb-4xl mt-3xs mt-2xs mt-xs mt-sm mt-base mt-lg mt-3xl
-      my-lg my-xl my-2xl my-3xl my-4xl mx-3xs mx-2xs mx-xs mx-sm mx-md mx-base mx-lg mx-xl mx-2xl mx-3xl mx-4xl"></span>
+      my-lg my-xl my-2xl my-3xl my-4xl mx-3xs mx-2xs mx-xs mx-sm mx-md mx-base mx-lg mx-xl mx-2xl mx-3xl mx-4xl py-2xl
+"></span>
       {# Margin bottom #}
       <div class="grid-col-3 text-center">
         <div class="bg-demo-m">
@@ -508,28 +521,12 @@
    <h2 class="inline h1" id="samplecomponents">Sample Paragraphs</h2>
   </div>
 
-  {# 3-Up Cards #}
-  <div class="friendly">
-     {% include('@ts_motif/_samples/sample-3-up.html.twig') %}
-   </div>
-
-  {# 2-Up Cards #}
-   <div class="friendly">
-     <div class="site-container content-side-padding">
-       {% include('@ts_motif/_samples/sample-2-up.html.twig') %}
-     </div>
-   </div>
-
-  {# Sample Listing #}
-   <div class="friendly">
-     <div class="site-container content-side-padding">
-       <h2 class="h2">Sample Listing</h2>
-       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
-       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
-       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
-    </div>
-   </div>
-
+  {% include('@ts_motif/_samples/spotlight-1.html.twig') %}
+  {% include('@ts_motif/_samples/spotlight-2.html.twig') %}
+  {% include('@ts_motif/_samples/spotlight-3.html.twig') %}
+  {% include('@ts_motif/_samples/upcoming-events.html.twig') %}
+  {% include('@ts_motif/_samples/spotlight-3-up.html.twig') %}
+  {% include('@ts_motif/_samples/listing-4-up.html.twig') %}
   <div class="site-container content-side-padding">
     {% include('@ts_motif/_samples/sample-testimonial.html.twig') %}
     {% include('@ts_motif/_samples/sample-footer.html.twig') %}

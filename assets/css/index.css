@@ -16,22 +16,22 @@ Index CSS File
 /*
  * Motif Base
  */
-@import "00_base/_generated-variables.css";
-@import "00_base/tailwind.css";
-@import "00_base/html.css";
-@import "00_base/utilities.css";
+@import "base/_generated-variables.css";
+@import "base/tailwind.css";
+@import "base/html.css";
+@import "base/utilities.css";
 
 /*
- * Motif Primitives
+ * Motif Common
  */
-@import "01_primitives/buttons-links.css";
-@import "01_primitives/design-elements.css";
-@import "01_primitives/typography.css";
+@import "common/buttons-links.css";
+@import "common/design-elements.css";
+@import "common/typography.css";
 
 /*
  * Motif Components
  */
-@import "02_components/_styleguide.css";
-@import "02_components/admin.css";
-@import "02_components/forms.css";
-@import "02_components/wysiwyg.css";
+@import "components/_styleguide.css";
+@import "components/admin.css";
+@import "components/forms.css";
+@import "components/wysiwyg.css";
