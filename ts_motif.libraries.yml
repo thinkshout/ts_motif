@@ -14,4 +14,4 @@ jquery:
 styleguide:
   css:
     theme:
-      assets/css/02_components/_styleguide.css: {}
+      assets/css/components/_styleguide.css: {}

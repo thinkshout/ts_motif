@@ -6,7 +6,7 @@
       "buildPath": "assets/",
       "files": [
         {
-          "destination": "css/00_base/_generated-variables.css",
+          "destination": "css/base/_generated-variables.css",
           "format": "css/variables",
           "options": {
             "showFileHeader": false
