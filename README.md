@@ -28,7 +28,7 @@ commit while inside the theme directory.
 - `npm run print.bundle` Bundle the print stylesheet for production.
 - `npm run theme.bundle.prod` Create the production build.
 - `npm run theme.bundle.dev` Create the development build.
-- `npm run start` Start the watch of the project in development mode.
+- `npm run theme.watch` Start the watch of the project in development mode.
 
 ## Configure PhpStorm for PostCSS
 
