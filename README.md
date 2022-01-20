@@ -1,7 +1,7 @@
 # Motif
 
 A base theme for a Drupal sites.
-[Learn more about the theme in the wiki.](https://github.com/thinkshout/ts_theme/wiki/Design-Tokens,-Design-Decisions-and-Utility-Classes)
+[Learn more about the theme in the wiki.](https://github.com/thinkshout/ts_motif/
 
 ## Style Guide
 
@@ -19,15 +19,16 @@ Install will check the node version against the `.nvmrc` file, install all depen
 For most development tasks, simply run `npm start` to start Parcel's watch, which will compile the projects CSS and
 JavaScript as well as Tailwind in JIT mode.
 
-Additionally, there are a number of scripts to aid in theme development (assume `npm run` prefix):
+Additionally, there are a number of scripts to aid in theme development:
 
-- `build` to compile css, js, and print css for production.
-- `format`: Formats assets, tokens, and SVG files.
-- `lint`: to check styling errors in js/css files. Ran automatically if you commit while inside the theme directory.
-- `print.bundle` Bundle the print stylesheet for production.
-- `theme.build.prod` Create the production build.
-- `theme.build.dev` Create the development build.
-- `theme.watch` Start the watch of the project in development mode (aliased to `npm start`)
+- `npm run build` to compile css, js, and print css for production.
+- `npm run format`: Formats assets, tokens, and SVG files.
+- `npm run lint`: to check styling errors in js/css files. Ran automatically if you 
+commit while inside the theme directory.
+- `npm run print.bundle` Bundle the print stylesheet for production.
+- `npm run theme.bundle.prod` Create the production build.
+- `npm run theme.bundle.dev` Create the development build.
+- `npm run start` Start the watch of the project in development mode.
 
 ## Configure PhpStorm for PostCSS
 
