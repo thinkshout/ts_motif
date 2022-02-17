@@ -1,7 +1,7 @@
 # Motif
 
 A base theme for a Drupal sites.
-[Learn more about the theme in the wiki.](https://github.com/thinkshout/ts_motif/)
+[Learn more about the theme in the wiki.](https://github.com/thinkshout/ts_motif/wiki)
 
 ## Style Guide
 
