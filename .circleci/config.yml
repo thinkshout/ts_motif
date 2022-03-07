@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+       - image: thinkshout/nginx-php-fpm:php74
+         environment:
+           WEBROOT: /var/www/html/drupal-project/web
+           GIT_EMAIL: "ci@thinkshout.com"
+           GIT_NAME: "ThinkShout CI Bot"
+           IS_CIRCLE: TRUE
+         command: ["/start.sh"]
+    working_directory: /var/www/html/drupal-project
+    steps:
+      - checkout
+      - add_ssh_keys
+      - run:
+          name: Check code styles
+          command: |
+            export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
+            composer self-update --2
+            COMPOSER_MEMORY_LIMIT=-1 composer install --prefer-dist
+            composer code-sniff
