@@ -51,7 +51,7 @@ function ts_motif_theme_suggestions_block_alter(array &$suggestions, array $vari
 function ts_motif_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
   // Add a new base hook for menus. Original base hook is not in suggestions,
   // Which causes any new suggestions here to have less precedence.
-  $suggestions[] = $variables['theme_hook_original'] . '__' . 'base';
+  $suggestions[] = $variables['theme_hook_original'] . '__base';
   if (!empty($variables['attributes']['data-block-region'])) {
     $suggestions[] = 'menu' . '__region__' . str_replace('-', '_', $variables['attributes']['data-block-region']);
     $suggestions[] = $variables['theme_hook_original'] . '__region__' . str_replace('-', '_', $variables['attributes']['data-block-region']);

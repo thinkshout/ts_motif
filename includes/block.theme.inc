@@ -16,8 +16,8 @@ function ts_motif_preprocess_block(&$variables) {
   $variables['attributes']['data-block-plugin-id'] = Html::getId(str_replace(':', '-', $variables['elements']['#plugin_id']));
 
   if (!empty($variables['elements']['#id'])) {
-	$block = Block::load($variables['elements']['#id']);
-	$region = $block->getRegion();
-	$variables['content']['#attributes']['data-block-region'] = Html::getId($region);
+    $block = Block::load($variables['elements']['#id']);
+    $region = $block->getRegion();
+    $variables['content']['#attributes']['data-block-region'] = Html::getId($region);
   }
 }
