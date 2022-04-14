@@ -1,538 +1,138 @@
 {# Global Style Guide available at /style-guide #}
 {{ attach_library('ts_motif/styleguide') }}
-{%
-  set sizes = [
-    '3xs',
-    '2xs',
-    'xs',
-    'sm',
-    'base',
-    'md',
-    'lg',
-    'xl',
-    '2xl',
-    '3xl',
-    '4xl',
-  ]
-%}
-
-{%
-  set fontStyles = [
-    'h1',
-    'h2',
-    'h3',
-    'h4',
-    'h5',
-    'h6',
-    'body-lg',
-    'body-md',
-    'body-sm',
-    'body-xs',
-    'text-nav',
-    'text-label',
-  ]
-%}
-{# Displays on lt bg #}
-{%
-  set textColorsDk = [
-    'black',
-    'gray-dk',
-  ]
-%}
-
-{# Displays on dk bg #}
-{%
-  set textColorsLt = [
-  'white',
-  'gray-lt',
-  ]
-%}
-
-{%
-  set bgColorsDk = [
-    'black',
-    'gray-dk',
-  ]
-%}
-
-{%
-  set bgColorsLt = [
-    'white',
-    'gray-lt',
-  ]
-%}
-
-{% set btnLinkStyles = [
-    'btn-read-more',
-    'link-style',
-    'btn-outline',
-    'btn-solid',
-    'btn-solid btn-wide',
-    'btn-tag',
-    'btn-read-more',
-  ]
-%}
-
-{% set iconBtnLinkStyles = [
-  'link-chevron',
-  'link-back',
-  'btn-close',
-  'btn-search',
-]
-%}
 
 <div class="relative">
   {# Menu#}
   <div class="styleguide-nav">
-  <div class="py-3xl text-gray-dk">
-    <h1 class="h2 px-md pt-xs">Styleguide</h1>
-    <div class="">
-      <p class="mt-zero mb-sm px-md pt-xs"><em>Reusable styles using classes (sass/global)</em></p>
-      <ul>
-        <li><a href="#fontstyles" class="body-md font-bold pl-sm py-xs">Typography</a></li>
+    <div class="py-3xl text-grey-dk">
+      <h1 class="h2 px-md pt-xs">Styleguide</h1>
+      <div class="">
+        <p class="mt-zero mb-sm px-md pt-xs"><em>Reusable styles using classes (sass/global)</em></p>
+        <ul>
+          <li><a href="#fontstyles" class="body-md font-bold pl-sm py-xs">Typography</a></li>
           <ul>
             <li><a href="#fontmodifiers" class="body-sm pl-lg py-xs">Color / Weight modifiers</a></li>
           </ul>
-        <li><a href="#bg" class="body-md pl-sm py-xs">Background colors</a></li>
-        <li><a href="#linkstyles" class="body-md font-bold pl-sm py-xs">Buttons & links</a></li>
-        <li><a href="#gridlayout" class="body-md font-bold pl-sm py-xs">Layout</a></li>
+          <li><a href="#bg" class="body-md pl-sm py-xs">Background colors</a></li>
+          <li><a href="#linkstyles" class="body-md font-bold pl-sm py-xs">Buttons & links</a></li>
+          <li><a href="#gridlayout" class="body-md font-bold pl-sm py-xs">Layout</a></li>
           <ul>
             <li><a href="#gridlayout" class="body-sm pl-lg py-xs">Grid</a></li>
             <li><a href="#width" class="body-sm pl-lg py-xs">Width</a></li>
             <li><a href="#display" class="body-sm pl-lg py-xs">Layout utilities</a></li>
           </ul>
-        <li><a href="#spacing" class="body-md font-bold pl-sm py-xs">Spacing</a></li>
+          <li><a href="#spacing" class="body-md font-bold pl-sm py-xs">Spacing</a></li>
           <ul>
             <li><a href="#spacing" class="body-sm pl-sm pl-lg py-xs">Variables</a></li>
             <li><a href="#marginpadding" class="body-sm pl-lg py-xs">Margin & Padding</a></li>
           </ul>
-        <li><a href="#commoncss" class="body-md pl-sm py-xs">Utilities</a></li>
-        <hr class="my-md">
-        <li><a href="#forms" class="body-sm pl-lg py-xs">Forms</a></li>
-        <li><a href="#wysiwygstyles" class="body-sm pl-lg py-xs">Wysiwyg and
-            Components</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="styleguide-menu-padding">
-  <div class="site-container content-side-padding padding-vertical">
-    <h2 class="h2 mt-md mb-sm" id="fontstyles">Typography</h2>
-    <p class="body-lg mt-zero">assets/css/base/typography.css</p>
-    <hr class="mt-sm mb-sm">
-    <div class="grid-col-2">
-      <div>
-        {# Font styles #}
-        {% for style in fontStyles %}
-          <p class="{{ style }} mb-xs">.{{ style }}</p>
-        {% endfor %}
-      </div>
-      <div>
-        {# Font styles as Links#}
-        {% for style in fontStyles %}
-          <p class="{{ style }} mb-xs"><a href="#">.{{ style }} a</a></p>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
-  {# Modifiers #}
-  <div class="ts-friendly">
-    <div class="site-container content-side-padding">
-      <h3 class="h3 mb-md" id="fontmodifiers">Common Variations</h3>
-      <div class="grid-col-2">
-        <div>
-          <h1 class="h1 bg-black mb-xs p-card text-white">.h1.text-white</h1>
-          <h2 class="h2 mb-xs ">.h2.text-gray-dk</h2>
-          <h3 class="bg-gray-dk p-card h3 mb-xs text-white">.h3.text-white</h3>
-          <h4 class="h4 mt-sm mb-zero text-black">.h4.text-black</h4>
-          <h4 class="bg-gray-lt p-card h4 mt-sm text-gray-dk">.h4.text-gray-dk</h4>
-          <h4 class="bg-black p-card h4 letter-spacing mt-zero text-white">.h4.letter-spacing.text-white</h4>
-        </div>
-        <div>
-          <h3 class="h3">Text Color</h3>
-          <p class="mt-zero mb-sm">tokens/src/color.tokens.json</p>
-          <p class="body-sm gray">.text-[color]. Adds colors to base/_generated-variables</p>
-          {% for color in textColorsDk %}
-            <p class="text-{{ color }} py-xs body-sm">.text-{{ color }}</p>
-          {% endfor %}
-          {% for color in textColorsLt %}
-            <p class="bg-black text-{{ color }} body-sm p-sm">.text-{{ color }}</p>
-          {% endfor %}
-
-          <h3 class="h3 mt-md mb-sm">Text Weight</h3>
-          <p class="mt-zero">tokens/src/typography.tokens.json</p>
-          <p class="font-bold">.font-bold 700</p>
-          <p class="font-semibold">.font-semibold 600</p>
-          <p class="font-medium">.font-medium 500</p>
-          <p class="font-regular">.font-regular 400</p>
-          <p class="font-book">.font-book/.font-light 300</p>
-        </div>
-      </div> {# Closes .grid #}
-    </div> {# Closes .site-container.content-side-padding #}
-  </div>
-
-  {# Background colors #}
-  <div class="ts-friendly">
-    <div class="site-container content-side-padding">
-      <div class="mb-md mt-md">
-        <h2 class="h2 mt-md mb-xs" id="bg">Bg colors</h2>
-        <p class="body-lg mb-md">tokens/src/color.tokens.json</p>
-        <p class="body-sm mb-md">Use .bg-[color] to apply background color</p>
-        <div class="body-sm text-white">
-          {% for bg in bgColorsDk %}
-            <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
-          {% endfor %}
-        </div>
-        <div class="body-sm text-black">
-          {% for bg in bgColorsLt %}
-            <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
-          {% endfor %}
-        </div>
-        {# Overlay #}
-        <div class="relative">
-          <span class="bg-overlay-black"></span>
-          <p class="p-card relative body-sm text-white z-2">.bg-overlay-black.text-white</p>
-        </div>
-      </div>
-    </div> {# Closes .site-container.content-side-padding #}
-  </div>
-
-  {# Buttons & Links #}
-  <div class="ts-friendly">
-    <div class="site-container content-side-padding">
-      <h2 class="h2 " id="linkstyles">Buttons and links</h2>
-      <p class="body-lg mt-zero">css/common/_buttons-links.scss</p>
-      <hr class="mt-sm mb-sm">
-      {% for btn in btnLinkStyles %}
-        <a class="{{ btn }} btn inline-block mr-xs" href=" ">.btn.{{ btn }}</a>
-      {% endfor %}
-      {% for btn in iconBtnLinkStyles %}
-        <a class="{{ btn }} btn inline-block mr-xs" href=" ">.btn{{ btn }}
-{#          {% include('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}#}
-        </a>
-      {% endfor %}
-    <div class="mt-sm">
-      <h4 class="h4 mt-md">Include icons in twig files to animate them</h4>
-      {% for btn in iconBtnLinkStyles %}
-        <p class="body-sm inline-block mr-xs">
-{#          {% include('@ts_motif/_includes/icon-' ~ btn ~ '.html.twig') %}#}
-{#          { % include('@ts_motif/_includes/icon-{{ btn }}.html.twig') % }#}
-        </p>
-      {% endfor %}
-    </div>
-
-    <h3 class="h3 mt-xl mb-sm">Social Links</h3>
-    <div class="social-links">
-      <ul>
-        <li><a><i class="fa fa-facebook-square"></i></a></li>
-        <li><a><i class="fa fa-twitter-square"></i></a></li>
-        <li><a><i class="fa fa-linkedin"></i></a></li>
-        <li><a><i class="fab fa-facebook-messenger"></i></a></li>
-        <li><a><i class="fa fa-envelope"></i></a></li>
-        <li><a><i class="fa fa-link"></i></a></li>
-      </ul>
-    </div>
-    <div class="inline-block social-links-footer">
-      <a><i class="fab fa-twitter"></i></a>
-      <a><i class="fab fa-linkedin"></i></a>
-    </div>
-  </div> {# Closes .site-container.content-side-padding#}
-  </div>
-
-  {# Layout #}
-  <div class="ts-friendly">
-    <div class="site-container content-side-padding">
-    <div class="" id="gridlayout">
-      <h2 class="h2 mb-xs">Layout</h2>
-      <p class="body-lg m-zero">assets/css/base/utilities.css</p>
-      <hr class="mt-sm mb-sm">
-    </div>
-    <h3 class="h3 mt-md mb-sm">Grid</h3>
-    <h3 class="body-sm my-sm">Wrapped in grid-col-2</h3>
-    <div class="grid-col-2">
-      <div class="bg-gray-lt p-card"></div>
-      <div class="bg-gray-lt p-card"></div>
-    </div>
-    <h3 class="body-sm my-sm">Wrapped in grid-col-3</h3>
-    <div class="grid-col-3">
-      <div class="bg-gray-lt p-card"></div>
-      <div class="bg-gray-lt p-card"></div>
-      <div class="bg-gray-lt p-card"></div>
-    </div>
-    <h3 class="body-sm my-sm">Wrapped in .grid-col-4</h3>
-    <div class="grid-col-4">
-      <div class="bg-gray-lt p-card"></div>
-      <div class="bg-gray-lt p-card"></div>
-      <div class="bg-gray-lt p-card"></div>
-      <div class="bg-gray-lt p-card"></div>
-    </div>
-
-    {# Width #}
-    <h2 class="h3 mt-2xl mb-sm" id="width">Width, margin: zero auto</h2>
-      <p class="body-md mb-md">Use md: prefix to apply at md breakpoint.</p>
-    <div class="bg-gray-lt p-card my-0 mx-auto md:w-3/4">
-      <h3 class="body-sm">.my-0.my-auto.md:w-3/4</h3>
-    </div>
-      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card md:w-2/3">.my-0.mx-auto.w-66-md</h3>
-      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card md:w-1/2">.my-0.mx-auto.w-50-md</h3>
-      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card md:w-1/3">.my-0.mx-auto.w-33-md</h3>
-      <h3 class="body-sm bg-gray-lt my-0 mx-auto p-card md:w-1/4">.my-0.mx-auto.w-25-md</h3>
-
-    {# Display #}
-    <div><h3 class="h3 mt-2xl mb-sm" id="display">Display</h3>
-      <p class="inline">.inline</p>
-      <p class="inline-block ml-md">.inline-block</p>
-      <p class="block mt-zero">.block</p>
-      <p class="flex">.flex</p>
-
-      {# Position, z-index #}
-      <h3 class="h3 mt-2xl mb-sm" id="position">Position, Z-index</h3>
-      <div class="bg-gray-lt p-card relative"><div class="text-center">Relative</div>
-        <div class="absolute top-0 left-0">.absolute.top-0.left-0</div>
-        <div class="absolute bottom-0 right-0">.absolute.bottom-0.right-0</div>
-      </div>
-      <ul>
-        <li>.absolute</li>
-        <li>.relative</li>
-        <li>.top-0</li>
-        <li>.right-0</li>
-        <li>.bottom-0</li>
-        <li>.left-0</li>
-        <li>.z-0</li>
-        <li>.z-1</li>
-        <li>.z-2</li>
-      </ul>
-    </div>
-
-  </div> {# Closes site-container#}
-  </div>
-
-  {# Spacing #}
-  <div class="ts-friendly">
-    <div class="site-container content-side-padding">
-      <h2 class="h2 mt-md mb-xs" id="spacing">Spacing</h2>
-      <p class="body-lg mt-zero">tokens/src/spacer.tokens.json</p>
-      <hr class="mt-sm mb-sm">
-      <h3 class="h3 mt-md mb-sm">Variables</h3>
-    <p class="body-sm">All of the margin, padding and height classes use generated from these base values. The are also
-      available as css variables.</p>
-    <p class="body-sm my-md">--spacer-[size]</p>
-    <div>
-      <div class="bg-gray-dk inline-block h-px w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>PX</strong></p>
-      <p class="body-sm inline-block ml-base">1px (1px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-3xs w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>3XS</strong> </p>
-      <p class="body-sm inline-block ml-base">.25rem (4px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-2xs w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>2XS</strong></p>
-      <p class="body-sm inline-block ml-base">.5rem (8px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-xs w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>XS</strong></p>
-      <p class="body-sm inline-block ml-base">1rem (16px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-sm w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>SM</strong></p>
-      <p class="body-sm inline-block ml-base">1.5rem (20px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-md w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>MD</strong></p>
-      <p class="body-sm inline-block ml-base">2rem (32px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-lg w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>LG</strong></p>
-      <p class="body-sm inline-block ml-base">3rem (48px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-xl w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>XL</strong></p>
-      <p class="body-sm inline-block ml-base">4rem (64px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-2xl w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>2XL</strong></p>
-      <p class="body-sm inline-block ml-base">6rem (96px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-3xl w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>3XL</strong></p>
-      <p class="body-sm inline-block ml-base">8.125rem (130px)</p>
-    </div>
-    <div>
-      <div class="bg-gray-dk inline-block h-4xl w-1/4"></div>
-      <p class="body-sm inline-block ml-base w-md"><strong>4XL</strong></p>
-      <p class="body-sm inline-block ml-base">10rem (160px)</p>
-    </div>
-  </div>
-  </div>
-
-  {# Margin #}
-  <div class="ts-friendly">
-    <div class="site-container content-side-padding">
-      <h2 class="h3 mt-md mb-sm" id="marginpadding">Margin & Padding</h2>
-      <p class="body-md mt-zero mb-md">.[type][direction]-[size]</p>
-      <div class="grid-col-3">
-        <div>
-          <p class="h4 my-zero normalcase">Type</p>
-          <ul class="mt-zero">
-            <li>m (margin)</li>
-            <li>p (padding)</li>
-          </ul>
-        </div>
-        <div>
-          <p class="h4 my-zero normalcase">Direction</p>
-          <ul class="mt-zero">
-            <li>t (top)</li>
-            <li>r (right)</li>
-            <li>b (bottom)</li>
-            <li>l (left)</li>
-            <li>x (left + right)</li>
-            <li>y (top + bottom)</li>
-            <li>[blank] (all)</li>
-          </ul>
-        </div>
-        <div>
-          <p class="h4 my-zero normalcase">Size</p>
-          <ul class="mt-zero">
-            <li>auto</li>
-            <li>zero</li>
-            <li>4xs</li>
-            {% for size in sizes %}
-              <li>{{ size }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-      <span class="mb-3xs mb-base mb-lg mb-2xl mb-3xl mb-4xl mt-3xs mt-2xs mt-xs mt-sm mt-base mt-lg mt-3xl
-      my-lg my-xl my-2xl my-3xl my-4xl mx-3xs mx-2xs mx-xs mx-sm mx-md mx-base mx-lg mx-xl mx-2xl mx-3xl mx-4xl"></span>
-      {# Margin bottom #}
-      <div class="grid-col-3 text-center">
-        <div class="bg-demo-m">
-          <div class="bg-gray-dk h-2xl pt-sm text-white">Margin Bottom</div>
-          {% for size in sizes %}
-            <div class="mb-{{ size }} bg-demo-element h-lg">.mb-{{ size }}</div>
-          {% endfor %}
-        </div>
-        <div class="bg-demo-m">
-          <div class="bg-gray-dk h-2xl pt-sm text-white">Margin Top</div>
-          {% for size in sizes %}
-            <div class="mt-{{ size }} bg-demo-element h-lg">.mt-{{ size }}</div>
-          {% endfor %}
-        </div>
-        <div class="bg-demo-m">
-          <div class="bg-gray-dk h-2xl pt-sm text-white">Margin Top & Bottom</div>
-          {% for size in sizes %}
-            <div class="my-{{ size }} bg-demo-element h-lg">.my-{{ size }}</div>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="bg-demo-m mt-sm w-50">
-        <div class="bg-gray-dk h-2xl pt-sm text-white">Margin Left & Right</div>
-        {% for size in sizes %}
-          <div class="mx-{{size }} bg-demo-element h-lg">.mx-{{ size }}</div>
-        {% endfor %}
-      </div>
-
-      {# Component Spacing #}
-      <h2 class="h3 mt-md mb-sm" id="componentspacing">Component</h2>
-      <div class="bg-demo-m"><p class="bg-demo-element m-card">.m-card : card margin</p></div>
-      <p class="bg-demo-p mb-sm p-card"><span class="bg-demo-element">.p-card : card padding</span></p>
-      <p class="bg-demo-p mb-sm py-4xl"><span class="block bg-demo-element">.py-4xl</span></p>
-      <p class="bg-demo-p mb-sm py-xl"><span class="block bg-demo-element">.py-xl</span></p>
-    </div>
-  </div>
-
-  {# COMMON CSS #}
-  <div class="ts-friendly">
-    <div class="site-container content-side-padding">
-    <h2 class="h2 mt-md mb-xs" id="commoncss">Utilities</h2>
-    <a href="https://tailwindcss.com/docs/display" class="body-lg block mb-md">Tailwind docs for all
-      utilities ></a>
-    <div class="grid-col-3">
-      <div>
-        <ul>
-          <li class="h4 mb-2xs">Display</li>
-          <li>.block</li>
-          <li>.inline</li>
-          <li>.inline-block</li>
-          <li>.flex</li>
-        </ul>
-
-        <ul>
-          <li class="h4 mt-md mb-2xs">Position</li>
-          <li>.absolute</li>
-          <li>.relative</li>
+          <li><a href="#commoncss" class="body-md pl-sm py-xs">Utilities</a></li>
+          <hr class="my-md">
+          <li><a href="#forms" class="body-sm pl-lg py-xs">Forms</a></li>
+          <li><a href="#wysiwygstyles" class="body-sm pl-lg py-xs">Text Editor and
+              Components</a></li>
         </ul>
       </div>
-
-      <div>
-        <ul>
-          <li class="h4 mb-2xs">Text transform</li>
-          <li class="capitalize">.capitalize</li>
-          <li class="lowercase">.LOWERCASE</li>
-          <li class="uppercase">.uppercase</li>
-        </ul>
-        <ul>
-          <li class="h4 mt-md mb-2xs">Text align</li>
-          <li class="text-left">.text-left></li>
-          <li class="text-center">.text-center</li>
-          <li class="text-right">.text-right></li>
-        </ul>
-      </div>
-
-      <ul>
-        <li class="h4 mb-2xs">Additional</li>
-        <li class="hyphenate">.hyphenate</li>
-        <li class="letter-spacing">.letter-spacing</li>
-      </ul>
     </div>
   </div>
+
+  <div class="styleguide-menu-padding">
+    <div class="p-site ts-friendly">
+      {# Typography styles, displays as 2-up section #}
+      {% include('@ts_motif/_includes/styleguide_sections/typography-styles.html.twig') %}
+    </div>
+
+    {# Common Variations, 2-up section #}
+    <div class="ts-friendly">
+      <div class="p-site">
+        <div>
+          {# Dynamic Typography color styles #}
+          {% include('@ts_motif/_includes/styleguide_sections/font-weights.html.twig') %}
+        </div>
+      </div> {# Closes .container.p-site #}
+    </div>
+
+    <div class="ts-friendly">
+      <div class="container p-site">
+        {# Color Swatches #}
+        {% include('@ts_motif/_includes/styleguide_sections/color-swatches.html.twig') %}
+        {# Background colors #}
+        {% include('@ts_motif/_includes/styleguide_sections/color-bg.html.twig') %}
+      </div> {# Closes .container.p-site #}
+    </div>
+
+    <div class="ts-friendly">
+      <div class="container p-site">
+        {# Buttons & Links #}
+        {% include('@ts_motif/_includes/styleguide_sections/btn-link-styles.html.twig') %}
+      </div> {# Closes .container.p-site#}
+    </div>
+
+    {# Layout #}
+    <div class="ts-friendly">
+      <div class="container p-site">
+        {# Grid layouts #}
+        {% include('@ts_motif/_includes/styleguide_sections/layouts.html.twig') %}
+      </div> {# Closes container#}
+    </div>
+
+    <div class="ts-friendly">
+      <div class="container p-site">
+        {# Spacers: visual of all sizes #}
+        {% include('@ts_motif/_includes/styleguide_sections/spacer-visual.html.twig') %}
+      </div>
+    </div>
+
+    <div class="ts-friendly">
+      <div class="container p-site">
+        {# Spacers: Variable Options #}
+        {% include('@ts_motif/_includes/styleguide_sections/spacer-variable-options.html.twig') %}
+        {# Spacers: Margin Size Options #}
+        {% include('@ts_motif/_includes/styleguide_sections/spacer-margin-visual.html.twig') %}
+      </div>
+    </div>
+
+    <div class="ts-friendly">
+      <div class="container p-site">
+        {# COMMON TAILWIND UTILITIES #}
+        {% include('@ts_motif/_includes/styleguide_sections/utilities-common.html.twig') %}
+      </div>
+    </div>
   </div>
 
   {% include('@ts_motif/_samples/sample-forms.html.twig') %}
   {% include('@ts_motif/_samples/sample-wysiwyg.html.twig') %}
   {% include('@ts_motif/_samples/sample-pagination.html.twig') %}
 
-  <div class="site-container content-side-padding">
-   <h2 class="inline h1" id="samplecomponents">Sample Paragraphs</h2>
+  <div class="container p-site">
+    {#   <h2 class="inline h1" id="samplecomponents">Sample Paragraphs</h2>#}
   </div>
 
   {# 3-Up Cards #}
   <div class="ts-friendly">
-     {% include('@ts_motif/_samples/sample-3-up.html.twig') %}
-   </div>
+    {#     {% include('@ts_motif/_samples/sample-3-up.html.twig') %}#}
+  </div>
 
   {# 2-Up Cards #}
-   <div class="ts-friendly">
-     <div class="site-container content-side-padding">
-       {% include('@ts_motif/_samples/sample-2-up.html.twig') %}
-     </div>
-   </div>
+  <div class="ts-friendly">
+    <div class="container p-site">
+      {#       {% include('@ts_motif/_samples/sample-2-up.html.twig') %}#}
+    </div>
+  </div>
 
   {# Sample Listing #}
-   <div class="ts-friendly">
-     <div class="site-container content-side-padding">
-       <h2 class="h2">Sample Listing</h2>
-       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
-       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
-       {% include('@ts_motif/_samples/sample-listing.html.twig') %}
+  <div class="ts-friendly">
+    <div class="container p-site">
+      {#       <h2 class="h2">Sample Listing</h2>#}
+      {#       {% include('@ts_motif/_samples/sample-listing.html.twig') %}#}
+      {#       {% include('@ts_motif/_samples/sample-listing.html.twig') %}#}
+      {#       {% include('@ts_motif/_samples/sample-listing.html.twig') %}#}
     </div>
-   </div>
+  </div>
 
-  <div class="site-container content-side-padding">
-    {% include('@ts_motif/_samples/sample-testimonial.html.twig') %}
-    {% include('@ts_motif/_samples/sample-footer.html.twig') %}
+  <div class="container p-site">
+    {#    {% include('@ts_motif/_samples/sample-testimonial.html.twig') %}#}
+    {#    {% include('@ts_motif/_samples/sample-footer.html.twig') %}#}
   </div>
 </div>
 </div>

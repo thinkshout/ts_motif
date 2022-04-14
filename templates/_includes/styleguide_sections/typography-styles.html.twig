@@ -1,0 +1,48 @@
+{# Typography
+ *
+ * Displays a left column with Headers, and right column with Text styles.
+ *
+#}
+{%
+  set headerStyles = [
+  'h1',
+  'h2',
+  'h3-alt',
+  'h3',
+  'h4',
+]
+%}
+
+{%
+  set textStyles = [
+  'blockquote',
+  'body-lg',
+  'body',
+  'body-sm',
+  'body-xs',
+  'utility-lg',
+  'utility',
+  'utility-sm',
+  'utility-xs',
+]
+%}
+
+<h2 class="h2 mt-md mb-sm" id="fontstyles">Typography</h2>
+<p class="body-lg mt-zero">assets/css/base/typography.css</p>
+<hr class="mt-sm mb-sm">
+<div class="ts-grid-col-2 text-grey-dk">
+  <div>
+    {# Font styles #}
+    <h3 class="h3 mb-md">Header styles</h3>
+    {% for style in headerStyles %}
+      <p class="{{ style }} mb-xs">.{{ style }}</p>
+    {% endfor %}
+  </div>
+  <div>
+    {# Font styles as Links#}
+    <h3 class="h3 mb-md">Text styles</h3>
+    {% for style in textStyles %}
+      <p class="{{ style }} mb-xs">.{{ style }}</p>
+    {% endfor %}
+  </div>
+</div>
