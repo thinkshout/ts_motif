@@ -1,0 +1,59 @@
+{# Spacer Margin Visual
+ *
+ * Displays examples of margin sizes using Tailwind classes.
+#}
+
+{# This span allows all tailwind margin sizes to appear when the site is still in initial development. #}
+<span class="mb-3xs mb-base mb-lg mb-2xl mb-3xl mb-4xl mt-3xs mt-2xs mt-xs mt-sm mt-base mt-lg mt-3xl
+      my-lg my-xl my-2xl my-3xl my-4xl mx-3xs mx-2xs mx-xs mx-sm mx-md mx-base mx-lg mx-xl mx-2xl mx-3xl mx-4xl"></span>
+
+{%
+  set sizes = [
+  '3xs',
+  '2xs',
+  'xs',
+  'sm',
+  'base',
+  'md',
+  'lg',
+  'xl',
+  '2xl',
+  '3xl',
+  '4xl',
+]
+%}
+
+{# Margin bottom #}
+<div class="ts-grid-col-3 text-center">
+  <div class="bg-demo-m">
+    <div class="bg-grey-dk h-2xl pt-sm text-white">Margin Bottom</div>
+    {% for size in sizes %}
+      <div class="mb-{{ size }} bg-demo-element h-lg">.mb-{{ size }}</div>
+    {% endfor %}
+  </div>
+  <div class="bg-demo-m">
+    <div class="bg-grey-dk h-2xl pt-sm text-white">Margin Top</div>
+    {% for size in sizes %}
+      <div class="mt-{{ size }} bg-demo-element h-lg">.mt-{{ size }}</div>
+    {% endfor %}
+  </div>
+  <div class="bg-demo-m">
+    <div class="bg-grey-dk h-2xl pt-sm text-white">Margin Top & Bottom</div>
+    {% for size in sizes %}
+      <div class="my-{{ size }} bg-demo-element h-lg">.my-{{ size }}</div>
+    {% endfor %}
+  </div>
+</div>
+<div class="bg-demo-m mt-sm w-50">
+  <div class="bg-grey-dk h-2xl pt-sm text-white">Margin Left & Right</div>
+  {% for size in sizes %}
+    <div class="mx-{{size }} bg-demo-element h-lg">.mx-{{ size }}</div>
+  {% endfor %}
+</div>
+
+{# Component Spacing #}
+<h2 class="h3 mt-md mb-sm" id="componentspacing">Component</h2>
+<div class="bg-demo-m"><p class="bg-demo-element m-card">.m-card : card margin</p></div>
+<p class="bg-demo-p mb-sm p-card"><span class="bg-demo-element">.p-card : card padding</span></p>
+<p class="bg-demo-p mb-sm py-4xl"><span class="block bg-demo-element">.py-4xl</span></p>
+<p class="bg-demo-p mb-sm py-xl"><span class="block bg-demo-element">.py-xl</span></p>

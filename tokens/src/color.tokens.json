@@ -2,7 +2,7 @@
   "color": {
     "black": { "value": "#000000" },
     "white": { "value": "#FFFFFF" },
-    "gray": {
+    "grey": {
       "lt": { "value": "#ededed" },
       "dk": { "value": "#444" }
     }

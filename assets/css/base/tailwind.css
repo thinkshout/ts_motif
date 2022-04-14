@@ -1,13 +1,6 @@
 /*
  * @file
 ------------------------------------------------------------------------------------------------------------------------
-                                         ____    ____         _    _     ___
-                                        |_   \  /   _|       / |_ (_)  .' ..]
-                                          |   \/   |   .--. `| |-'__  _| |_
-                                          | |\  /| | / .'`\ \| | [  |'-| |-'
-                                         _| |_\/_| |_| \__. || |, | |  | |
-                                        |_____||_____|'.__.' \__/[___][___]
-------------------------------------------------------------------------------------------------------------------------
 Tailwind CSS File - Entry for Tailwind Classes and Reset
   The contents of this file can be added to the bottom of index.css if the team is fully using tailwind
   The consequence of this decision is a greater reliance on wrapping Stylesheets in Tailwind's @layer directive.

@@ -1,0 +1,35 @@
+{# Color: Background
+ *
+ * bgColorsDk display with white text.
+ * bgColorsLt display with dark text.
+#}
+
+{%
+  set bgColorsDk = [
+  'black',
+  'grey-dk',
+]
+%}
+
+{%
+  set bgColorsLt = [
+  'grey-lt',
+  'white',
+]
+%}
+
+<div class="mb-md mt-md">
+  <h2 class="h2 mt-md mb-xs" id="bg">Bg colors</h2>
+  <p class="body-lg mb-md">tokens/src/color.tokens.json</p>
+  <p class="body-sm mb-md">Use .bg-[color] to apply background color</p>
+  <div class="body-sm text-white">
+    {% for bg in bgColorsDk %}
+      <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
+    {% endfor %}
+  </div>
+  <div class="body-sm text-grey-dk">
+    {% for bg in bgColorsLt %}
+      <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
+    {% endfor %}
+  </div>
+</div>

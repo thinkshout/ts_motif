@@ -1,0 +1,19 @@
+{# Font Weights
+ *
+ * Displays weights in use on the site. Styles created by tailwind.
+#}
+
+{%
+  set weights = [
+  'black',
+  'bold',
+  'regular',
+  'light',
+  'book',
+]
+%}
+<h3 class="h3 mb-sm">Text Weight</h3>
+<p class="body-lg mt-zero mb-base">tokens/src/typography.tokens.json</p>
+{% for weight in weights %}
+  <p class="font-{{ weight }} mb-sm">.font-{{ weight }}</p>
+{% endfor %}

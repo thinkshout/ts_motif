@@ -1,0 +1,38 @@
+{# Spacer variable options
+ *
+ * Displays how to create margin and padding classes in tailwind.
+#}
+<h2 class="h3 mt-md mb-sm" id="marginpadding">Margin & Padding</h2>
+<p class="body-md mt-zero mb-md">.[type][direction]-[size]</p>
+<div class="ts-grid-col-3">
+  <div>
+    <p class="h4 my-zero normalcase">Type</p>
+    <ul class="mt-zero">
+      <li>m (margin)</li>
+      <li>p (padding)</li>
+    </ul>
+  </div>
+  <div>
+    <p class="h4 my-zero normalcase">Direction</p>
+    <ul class="mt-zero">
+      <li>t (top)</li>
+      <li>r (right)</li>
+      <li>b (bottom)</li>
+      <li>l (left)</li>
+      <li>x (left + right)</li>
+      <li>y (top + bottom)</li>
+      <li>[blank] (all)</li>
+    </ul>
+  </div>
+  <div>
+    <p class="h4 my-zero normalcase">Size</p>
+    <ul class="mt-zero">
+      <li>auto</li>
+      <li>zero</li>
+      <li>4xs</li>
+      {% for size in sizes %}
+        <li>{{ size }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

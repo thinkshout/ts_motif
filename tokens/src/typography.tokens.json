@@ -37,61 +37,32 @@
         "type": "font",
         "description": "The primary sans-serif font for body content, etc."
       }
-    },
-    "size": {
-      "2xs": {
-        "value": "0.625rem"
-      },
-      "xs": {
-        "value": "0.75rem"
-      },
-      "sm": {
-        "value": "0.875rem"
-      },
-      "base": {
-        "value": "1rem"
-      },
-      "md": {
-        "value": "1.125rem"
-      },
-      "lg": {
-        "value": "1.25rem"
-      },
-      "xl": {
-        "value": "1.375rem"
-      },
-      "2xl": {
-        "value": "1.4375rem"
-      },
-      "3xl": {
-        "value": "1.875rem"
-      },
-      "4xl": {
-        "value": "2.5rem"
-      },
-      "5xl": {
-        "value": "2.8125rem"
-      },
-      "6xl": {
-        "value": "3.75rem"
-      }
     }
   },
-  "lineHeight": {
-    "none": {
-      "value": "1"
+  "lh": {
+    "10": {
+      "value": "1.0"
     },
-    "taut": {
+    "11": {
       "value": "1.1"
     },
-    "tight": {
+    "12": {
       "value": "1.2"
     },
-    "snug": {
+    "13": {
       "value": "1.3"
     },
-    "normal": {
+    "14": {
+      "value": "1.4"
+    },
+    "15": {
       "value": "1.5"
+    },
+    "16": {
+      "value": "1.6"
+    },
+    "20": {
+      "value": "2"
     }
   }
 }
