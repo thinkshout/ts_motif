@@ -1,32 +1,23 @@
 /*
  * @file
-------------------------------------------------------------------------------------------------------------------------
-                                         ____    ____         _    _     ___
-                                        |_   \  /   _|       / |_ (_)  .' ..]
-                                          |   \/   |   .--. `| |-'__  _| |_
-                                          | |\  /| | / .'`\ \| | [  |'-| |-'
-                                         _| |_\/_| |_| \__. || |, | |  | |
-                                        |_____||_____|'.__.' \__/[___][___]
-------------------------------------------------------------------------------------------------------------------------
-Design Elements CSS File
-------------------------------------------------------------------------------------------------------------------------
+ *
+ * Design Elements CSS File
 */
 
 /* Color modifiers */
-.outline {
-  /* @TODO DS Override. */
-  border: 1px solid var(--color-gray-lt);
-  border-radius: 10px;
-}
+/*.outline {*/
+/*  border: 1px solid var(--color-gray-lt);*/
+/*  border-radius: 10px;*/
+/*}*/
 
-/* Wrap with .relative, eg: Hero photo style */
-.bg-overlay-black {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--color-black);
-  opacity: var(--opacity-05);
-  z-index: var(--z-index-2);
-}
+/*!* Wrap with .relative, eg: Hero photo style *!*/
+/*.bg-overlay-black {*/
+/*  position: absolute;*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  background-color: var(--color-black);*/
+/*  opacity: var(--opacity-05);*/
+/*  z-index: var(--z-index-2);*/
+/*}*/
