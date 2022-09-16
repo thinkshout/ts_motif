@@ -1,7 +1,7 @@
 {
   "screen": {
     "default": {
-      "value": "0px"
+      "value": "375px"
     },
     "sm": {
       "value": "501px"

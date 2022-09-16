@@ -1,63 +1,49 @@
 /*
- * @file
-------------------------------------------------------------------------------------------------------------------------
-                                         ____    ____         _    _     ___
-                                        |_   \  /   _|       / |_ (_)  .' ..]
-                                          |   \/   |   .--. `| |-'__  _| |_
-                                          | |\  /| | / .'`\ \| | [  |'-| |-'
-                                         _| |_\/_| |_| \__. || |, | |  | |
-                                        |_____||_____|'.__.' \__/[___][___]
-------------------------------------------------------------------------------------------------------------------------
-Custom Utilities CSS File
-------------------------------------------------------------------------------------------------------------------------
+ * Custom Utilities
 */
 
 /* Paragraph or section-level spacing. */
 /* See the wiki for detailed variations: https://github.com/thinkshout/ts_grid/wiki/Vertical-Spacing*/
-.friendly {
-  margin-top: var(--spacer-xl);
-  margin-bottom: var(--spacer-xl);
-  @media (--bp-md) {
-    margin-top: var(--spacer-3xl);
-    margin-bottom: var(--spacer-3xl);
-  }
-}
-.unfriendly {
-  padding-top: var(--spacer-xl);
-  padding-bottom: var(--spacer-xl);
 
-  @media (--bp-md) {
-    padding-top: var(--spacer-3xl);
-    padding-bottom: var(--spacer-3xl);
-  }
+/* Section-level spacing. */
+.ts-friendly {
+  @apply mb-2xl;
 }
 
-/* GRID: one column on mobile */
-@media (--bp-md) {
-  .grid-col-2 {
-    @apply grid grid-cols-2;
-    grid-gap: var(--grid-gap);
-  }
-
-  .grid-col-3 {
-    @apply grid grid-cols-3;
-    grid-gap: var(--grid-gap);
-  }
-  .grid-col-4 {
-    @apply grid grid-cols-4;
-    grid-gap: var(--grid-gap);
-  }
+.ts-unfriendly {
+  @apply mb-2xl;
 }
 
-/* Sets the limitations of the full site container. Do not set if you want an*/
-/* element to stretch the full width of the site.*/
-.site-container {
-  margin: 0 auto;
-  max-width: 1260px;
+.ts-lovey + .ts-friendly {
+  @apply mt-xl;
+}
+
+.ts-lovey + .ts-unfriendly {
+  @apply mt-2xl;
+}
+
+/* GRIDS.
+* Add class to wrapper with an inner div for each column.
+* See /styleguide#gridlayout for examples.
+*/
+
+/* sm:2 col */
+.ts-grid-col-2 {
+  @apply sm:grid-cols-2 sm:grid sm:gap-md;
+}
+
+/* md:3 col */
+.ts-grid-col-3 {
+  @apply md:grid-cols-3 md:grid md:gap-md;
+}
+
+/* sm:3 col, md: 4 col */
+.ts-grid-col-4 {
+  @apply sm:grid-cols-3 md:grid-cols-4 sm:grid sm:gap-md;
 }
 
 /* Mobile Padding .*/
-.content-side-padding {
+.p-site {
   padding-left: var(--grid-gap);
   padding-right: var(--grid-gap);
 }

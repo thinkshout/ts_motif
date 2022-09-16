@@ -1,0 +1,26 @@
+{# Color: Swatches
+ *
+ * Displays all colors as tiles.
+#}
+
+{%
+  set colors = [
+  'black',
+  'grey-dk',
+  'grey-lt',
+  'white',
+]
+%}
+
+{# This span allows all tailwind bg colors to appear before they've been used in initial development. #}
+<span class="bg-black bg-grey-dk bg-grey-lt bg-white"></span>
+
+<h3 class="h2 mb-sm text-grey-dk" id="color">Color</h3>
+<p class="body-sm mt-0 mb-base">Classes created in tokens/src/color.tokens.json</p>
+<p class="body-sm mt-0 mb-base">Classes displayed in templates/_includes/styleguide_sections/color-swatches.html.twig</p>
+{% for color in colors %}
+  <div class="inline-block mr-sm mb-xl w-3xl">
+    <div class="bg-{{ color }} h-2xl"></div>
+    <p class="body-xs mt-0">{{ color }}</p>
+  </div>
+{% endfor %}
