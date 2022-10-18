@@ -7,7 +7,7 @@
     "white": "#ffffff",
     "high-contrast": "#444444",
     "low-contrast": "#ededed",
-    "action": "#00b2e3",
+    "action": "#0054a4",
     "grey": {
       "300": "#ededed",
       "800": "#444444",
@@ -16,7 +16,7 @@
     },
     "blue": {
       "300": "#61ddff",
-      "500": "#00b2e3"
+      "500": "#0054a4"
     }
   },
   "grid": {
