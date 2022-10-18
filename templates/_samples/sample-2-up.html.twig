@@ -5,6 +5,8 @@
 {% set link_url = link_url ?? " " %}
 {% set link_text = link_text ?? "optional link" %}
 {% set block_class = "sample--2-up" %}
+{% set bg_color = bg_color ? bg_color : "ts-bg-white" %}
+
 {% extends "@ts_motif/_samples/section-title-link.html.twig" %}
 
 {% block content %}

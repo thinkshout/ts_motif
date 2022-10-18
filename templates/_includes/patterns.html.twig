@@ -4,25 +4,13 @@
   set patterns = [
   'sample-2-up',
   'sample-3-up',
-  'sample-listing',
 ]
 %}
 
 <div>
-  <h2 class="lg:container p-site mb-2xl">Sample patterns</h2>
+  <h2 class="h2 lg:container p-site mb-2xl text-high-contrast">Sample patterns</h2>
   {% for pattern in patterns %}
-    {% include("@ts_motif/_samples/" ~ pattern ~ ".html.twig") %}
+    {% include("@ts_motif/_samples/" ~ pattern ~ ".html.twig") with { bg_color: 'ts-bg-white' } %}
+    {% include("@ts_motif/_samples/" ~ pattern ~ ".html.twig") with { bg_color: 'ts-bg-grey-800 py-2xl'} %}
   {% endfor %}
 </div>
-
-{#<div class="p-site ts-friendly">#}
-{#  #}{# 2-up #}
-{#</div>#}
-{#<div class="p-site ts-friendly">#}
-{#  #}{# 3-up #}
-{#  {% include('@ts_motif/_includes/_samples/sample-3-up.html.twig') %}#}
-{#</div>#}
-{#<div class="p-site ts-friendly">#}
-{#  #}{# Listing #}
-{#  {% include('@ts_motif/_includes/_samples/sample-listing.html.twig') %}#}
-{#</div>#}

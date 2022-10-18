@@ -10,35 +10,41 @@
 {% set link_text = link_text %}
 {% set show_link = show_link ? show_link : (link_url ? 1 : 0)  %}
 {% set link_attributes = link_attributes %}
+{% set block_class = block_class %}
+{% set bg_color = bg_color ? bg_color : "ts-bg-white" %}
+
+{% if my_attributes is empty %}
+  {% set my_attributes = my_attributes ? create_attribute(my_attributes) : create_attribute() %}
+{% endif %}
 
 {% set classes = [
   block_class,
-  'lg:container',
-  'p-site',
+  bg_color,
   'ts-reveal',
   'ts-friendly',
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
-  <div class="sm:flex sm:justify-between sm:items-center">
-
-    {{ title_prefix }}
-    <h2 class="h2 text-high-contrast mb-xs sm:mb-0">{{ title }}</h2>
-    {{ title_suffix }}
-    {% if show_link %}
-      <div>
-      {# Div wrapper is needed to keep ajax loader from reflowing the flex. #}
-      {% block link %}
-        {% include '@ts_motif/_includes/btns/btn-wayfinding.html.twig' with {
-          link_url:link_url,
-          link_text:link_text,
-          link_attributes:link_attributes
-        } %}
-      {% endblock %}
-      </div>
-    {% endif %}
+<div {{ my_attributes.addClass(classes) }}>
+  <div class="lg:container p-site">
+    <div class="sm:flex sm:justify-between sm:items-center">
+      {{ title_prefix }}
+      <h2 class="h2 text-high-contrast mb-xs sm:mb-0">{{ title }}</h2>
+      {{ title_suffix }}
+      {% if show_link %}
+        <div>
+        {# Div wrapper is needed to keep ajax loader from reflowing the flex. #}
+        {% block link %}
+          {% include '@ts_motif/_includes/btns/btn-wayfinding.html.twig' with {
+            link_url:link_url,
+            link_text:link_text,
+            link_attributes:link_attributes
+          } %}
+        {% endblock %}
+        </div>
+      {% endif %}
+    </div>
+    <p class="body-lg mb-md text-high-contrast">{{ intro }}</p>
+    {% block content %}
+    {% endblock %}
   </div>
-  <p class="body-lg mb-md text-high-contrast">{{ intro }}</p>
-  {% block content %}
-  {% endblock %}
 </div>
