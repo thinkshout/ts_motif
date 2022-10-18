@@ -1,0 +1,44 @@
+{# Section Title Link
+ *
+ * Wraps component in block-level ts-friendly spacing and padding.
+ * Includes title, and link.
+#}
+
+{% set title = title %}
+{% set intro = intro %}
+{% set link_url = link_url %}
+{% set link_text = link_text %}
+{% set show_link = show_link ? show_link : (link_url ? 1 : 0)  %}
+{% set link_attributes = link_attributes %}
+
+{% set classes = [
+  block_class,
+  'lg:container',
+  'p-site',
+  'ts-reveal',
+  'ts-friendly',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="sm:flex sm:justify-between sm:items-center">
+
+    {{ title_prefix }}
+    <h2 class="h2 text-high-contrast mb-xs sm:mb-0">{{ title }}</h2>
+    {{ title_suffix }}
+    {% if show_link %}
+      <div>
+      {# Div wrapper is needed to keep ajax loader from reflowing the flex. #}
+      {% block link %}
+        {% include '@ts_motif/_includes/btns/btn-wayfinding.html.twig' with {
+          link_url:link_url,
+          link_text:link_text,
+          link_attributes:link_attributes
+        } %}
+      {% endblock %}
+      </div>
+    {% endif %}
+  </div>
+  <p class="body-lg mb-md text-high-contrast">{{ intro }}</p>
+  {% block content %}
+  {% endblock %}
+</div>
