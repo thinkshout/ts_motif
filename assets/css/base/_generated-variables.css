@@ -2,6 +2,8 @@
   --transition-default: all 300ms ease-in-out;
   --color-black: #000000;
   --color-white: #ffffff;
+  --color-grey-300: #ededed;
+  --color-grey-800: #444444;
   --color-grey-lt: #ededed;
   --color-grey-dk: #444444;
   --grid-gap: 1rem;

@@ -3,8 +3,10 @@
     "black": { "value": "#000000" },
     "white": { "value": "#FFFFFF" },
     "grey": {
-      "lt": { "value": "#ededed" },
-      "dk": { "value": "#444" }
+      "300": { "value": "#ededed" },
+      "800": { "value": "#444" },
+      "lt": { "value": "{color.grey.300.value}" },
+      "dk": { "value": "{color.grey.800.value}" }
     }
   }
 }
