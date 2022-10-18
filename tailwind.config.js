@@ -14,7 +14,6 @@ module.exports = {
     fontFamily: tokens.font.family,
     fontSize: tokens.font.size,
     fontWeight: tokens.font.weight,
-    gap: tokens.grid.gap,
     lineHeight: tokens.lh,
     screens: tokens.screen,
     spacing: tokens.spacer,

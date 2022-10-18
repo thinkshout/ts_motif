@@ -55,7 +55,7 @@
   }
 
   ul li {
-    @apply block relative
+    @apply block relative;
 
     &::before {
       content: "\f105";
