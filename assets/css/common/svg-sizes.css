@@ -1,0 +1,5 @@
+/* Applies sizes to svgs. */
+
+.btn-svg svg {
+	@apply h-sm w-sm;
+}
