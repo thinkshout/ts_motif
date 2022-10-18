@@ -5,11 +5,18 @@
   "color": {
     "black": "#000000",
     "white": "#ffffff",
+    "high-contrast": "#444444",
+    "low-contrast": "#ededed",
+    "action": "#00b2e3",
     "grey": {
       "300": "#ededed",
       "800": "#444444",
       "lt": "#ededed",
       "dk": "#444444"
+    },
+    "blue": {
+      "300": "#61ddff",
+      "500": "#00b2e3"
     }
   },
   "grid": {
