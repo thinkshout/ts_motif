@@ -4,3 +4,16 @@
  * Button Links CSS File
  *
 */
+
+.btn-wayfinding {
+	@apply font-bold pb-xs;
+	color: var(--color-high-contrast);
+	font-family: var(--font-family-sans);
+	font-size: 1.125rem;
+	svg {
+		@apply h-sm w-sm;
+	}
+	path {
+		fill: var(--color-high-contrast);
+	}
+}
