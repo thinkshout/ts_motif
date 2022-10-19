@@ -1,0 +1,16 @@
+{# Wayfinding btn
+ * A text link with arrow right.
+#}
+{{ attach_library('ts_motif/ts_btn_wayfinding') }}
+
+{# Wayfinding link values #}
+{% set link_attributes = link_attributes %}
+{% set link_text = link_text %}
+{% set link_url = link_url %}
+{# Classes + svg name #}
+{% set btn_class = 'btn-wayfinding' %}
+{% set link_svg_classes = 'inline-block' %}
+{% set link_classes = link_classes ? btn_class ~ ' ' ~ link_classes : btn_class  %}
+{% set link_svg_name = link_svg_name|default('chevron-right') %}
+
+{% include "@ts_motif/_patterns/btns/link-base.html.twig" %}

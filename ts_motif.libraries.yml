@@ -15,3 +15,7 @@ styleguide:
   css:
     theme:
       assets/css/components/_styleguide.css: {}
+ts_btn_wayfinding:
+  css:
+    theme:
+      templates/_patterns/btns/btn-wayfinding/btn-wayfinding.css: {}
