@@ -7,12 +7,12 @@
 {% set block_class = "sample--3-up" %}
 {% set bg_color = bg_color %}
 
-{% extends "@ts_motif/_samples/section-title-link.html.twig" %}
+{% extends "@ts_motif/_patterns/" ~ "section-title-link.html.twig" %}
 
 {% block content %}
   <div class="ts-grid-col-3">
-    {% include "@ts_motif/_samples/card-md.html.twig" %}
-    {% include "@ts_motif/_samples/card-md.html.twig" %}
-    {% include "@ts_motif/_samples/card-md.html.twig" %}
+    {% include "@ts_motif/_patterns/" ~ "card-md.html.twig" %}
+    {% include "@ts_motif/_patterns/" ~ "card-md.html.twig" %}
+    {% include "@ts_motif/_patterns/" ~ "card-md.html.twig" %}
   </div>
 {% endblock %}
