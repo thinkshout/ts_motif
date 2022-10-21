@@ -73,6 +73,9 @@
 .ts-bg-white {
 	@apply bg-white;
 }
+.ts-bg-action {
+	@apply bg-action;
+}
 
 /* Text color variables change within bg context */
 .ts-bg-grey-800 {

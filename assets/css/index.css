@@ -32,6 +32,7 @@ Index CSS File
 /*
  * Motif Components
  */
+@import "components/_patterns.css";
 @import "components/_styleguide.css";
 @import "components/admin.css";
 @import "components/forms.css";

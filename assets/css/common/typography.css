@@ -16,3 +16,17 @@
     font-size: 2.75rem; /* 44px */
   }
 }
+
+.h3,
+.wysiwyg-wrapper {
+	@apply font-bold;
+	font-family: var(--font-family-sans);
+	font-size: 1.25rem; /* 20px */
+	line-height: var(--lh-10);
+}
+
+.body {
+	font-family: var(--font-family-sans);
+	font-size: 1rem; /* 16px */
+	line-height: var(--lh-13);
+}

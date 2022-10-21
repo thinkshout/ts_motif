@@ -4,7 +4,7 @@
 
 {# Wayfinding link values #}
 {% set link_attributes = link_attributes %}
-{% set link_text = link_text %}
+{% set link_text = link_text|default("btn-wayfinding") %}
 {% set link_url = link_url %}
 {# Classes + svg name #}
 {% set btn_class = 'btn-wayfinding' %}

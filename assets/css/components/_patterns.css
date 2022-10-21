@@ -1,0 +1,61 @@
+.pattern-overview-page {
+	--color-pattern-grey: #f3f2f2;
+}
+
+.pattern--sidebar-nav {
+	display: inline-block;
+	position: fixed;
+
+	h2 {
+		font-size: 2.5rem;
+	}
+	li {
+		font-size: 1.5rem;
+		line-height: 1.3;
+		padding-bottom: 1rem;
+	}
+}
+
+.pattern-preview__label {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.pattern-preview__description {
+	padding-bottom: 1rem;
+	font-size: 1.5rem;
+}
+
+.pattern-preview__fields {
+	background: var(--color-pattern-grey);
+	margin-bottom: 2rem;
+}
+
+.pattern-preview {
+	margin-left: 350px;
+	margin-bottom: 4rem;
+}
+
+.pattern-preview__preview legend {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.pattern-preview__markup {
+	border: 1px dashed lightgrey;
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+	padding: 2rem;
+}
+
+.pattern-overview-page hr {
+	margin: 2rem 0 2rem 350px;
+	border-color: lightgrey;
+}
+
+.pattern-preview__view,
+.btn--copy-template {
+	color: var(--color-action);
+	font-weight: bold;
+	margin-top: 1rem;
+}
