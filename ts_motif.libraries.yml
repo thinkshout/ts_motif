@@ -11,11 +11,11 @@ jquery:
     node_modules/jquery/dist/jquery.min.js:
       preprocess: false
       weight: -20
-styleguide:
+ts_styleguide:
   css:
     theme:
-      assets/css/components/_styleguide.css: {}
-ts_btn_wayfinding:
+      assets/css/pages/_styleguide.css: {}
+ts_patterns:
   css:
     theme:
-      templates/_patterns/btns/btn-wayfinding/btn-wayfinding.css: {}
+      assets/css/pages_patterns.css: {}
