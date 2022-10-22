@@ -25,14 +25,13 @@
 .pattern-preview__description {
 	font-size: 1.5rem;
 }
-
-.pattern-preview__fields {
+/* Hide fields on overview page */
+.pattern-overview-page .pattern-preview__fields {
 	display: none;
-	/*
+}
+.pattern-preview__fields {
 	background: var(--color-pattern-grey);
 	margin-bottom: 2rem;
-
-	 */
 }
 
 .pattern-preview {
