@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * UI Pattern library page template, override this in your theme.
+ */
+#}
+
+{% if patterns is not empty %}
+<div class="pattern-overview-page">
+  <div class="pattern--sidebar-nav bg-white inline-block fixed h-full top-0 left-0 py-lg">
+    <h2 class="h2 pl-md mb-lg">{{ "Patterns"|t }}</h2>
+
+    {# List of available patterns with anchor links. #}
+    <ul>
+      {% for pattern_name, pattern in patterns %}
+        <li>
+          <a href="#{{ pattern_name }}">{{ pattern.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <hr>
+
+  {% for pattern_name, pattern in patterns %}
+
+    <div class="pattern-preview pattern-preview__{{ pattern.definition.id }} pl-[200px]">
+      {# Pattern name and description. #}
+      <a name="{{ pattern_name }}"></a>
+      {{ pattern.meta }}
+      {# Link to standalone pattern preview page.#}
+      <p class="mb-lg">
+        <a href="{{ url('ui_patterns.patterns.single', {'name': pattern_name}) }}" class="pattern-preview__view">
+          {% trans %}View {{ pattern.label }} on their own page{% endtrans %}
+        </a>
+      </p>
+
+      {# Rendered pattern preview. #}
+      <fieldset class="pattern-preview__preview">
+        <legend class="visually-hidden">{{ "Preview"|t }}</legend>
+        {{ pattern.rendered }}
+      </fieldset>
+
+    </div>
+
+    <hr>
+  {% endfor %}
+</div>
+{% endif %}
+
+
+
