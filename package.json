@@ -8,7 +8,6 @@
     "build": "concurrently -c \"magenta,blue\" \"npm:theme.bundle.prod\" \"npm:print.bundle\"",
     "format": "concurrently -c \"magenta,blue,green\" \"npm:format.tokens\" \"npm:format.assets\" \"npm:format.svg\"",
     "format.assets": "eslint assets --fix && prettier --write assets",
-    "format.svg": "svgo -f ./assets/images/svg/icons --config=./svgo.config.js",
     "format.tokens": "style-dictionary build --config style-dictionary.config.json",
     "preinstall": "npx check-node-version --node $(cat .nvmrc)",
     "postinstall": "npm run build",
@@ -23,18 +22,31 @@
     "jquery": "^3.6.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^10.3.6",
     "concurrently": "^6.3.0",
     "cssnano": "^5.0.8",
+    "dotenv": "^8.2.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
+    "find-config": "^1.0.0",
     "parcel": "^2.0.0",
-    "postcss": "^8.3.9",
+    "postcss": "^8.3.8",
+    "postcss-custom-properties": "^12.1.10",
     "postcss-import": "^14.0.2",
+    "postcss-loader": "^4.0.0",
     "postcss-nested": "^5.0.6",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^7.4.3",
     "prettier": "^2.4.1",
-    "style-dictionary": "^3.0.2",
-    "svgo": "^2.7.0",
-    "tailwindcss": "^2.2.17"
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "prettier-plugin-twig-melody": "^0.4.6",
+    "style-dictionary": "^3.1.1",
+    "tailwindcss": "^3.0.5"
+  },
+  "@parcel/transformer-css": {
+    "drafts": {
+      "customMedia": true
+    }
   }
 }
