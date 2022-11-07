@@ -6,7 +6,7 @@
   "author": "ThinkShout, Inc",
   "scripts": {
     "build": "concurrently -c \"magenta,blue\" \"npm:theme.bundle.prod\" \"npm:print.bundle\"",
-    "format": "concurrently -c \"magenta,blue,green\" \"npm:format.tokens\" \"npm:format.assets\" \"npm:format.svg\"",
+    "format": "concurrently -c \"magenta,blue,green\" \"npm:format.tokens\" \"npm:format.assets\"",
     "format.assets": "eslint assets --fix && prettier --write assets",
     "format.tokens": "style-dictionary build --config style-dictionary.config.json",
     "preinstall": "npx check-node-version --node $(cat .nvmrc)",
