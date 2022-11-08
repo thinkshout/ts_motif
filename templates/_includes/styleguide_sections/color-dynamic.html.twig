@@ -1,0 +1,39 @@
+{# Text colors and Weights #}
+
+{# Dynamic text colors that change depending on bg color #}
+{%
+  set textColors = [
+  'accent',
+  'action',
+  'md-contrast',
+  'high-contrast',
+]
+%}
+
+{%
+  set bgColors = [
+  'ts-bg-blue-900',
+  'ts-bg-blue-500',
+  'ts-bg-blue-400',
+  'ts-bg-blue-100',
+  'ts-bg-green-700',
+  'ts-bg-grey-100',
+  'ts-bg-white',
+]
+%}
+{# This span allows all tailwind bg colors to appear before they've been used in initial development. #}
+<span class="bg-blue-400 bg-blue-100 bg-white bg-blue-500 bg-green-700 bg-grey-100"></span>
+
+<h3 class="h3 mb-md" id="fontmodifiers">Common Variations</h3>
+<h3 class="h3">Text Color</h3>
+<p class="body-lg mt-zero">tokens/src/color.tokens.json</p>
+<p class="body-lg mt-zero">tokens/base/utilities.css</p>
+<p class="utility text-high-contrast mt-sm mb-md">In twig: .text-high-contrast in CSS: var
+  (--color-high-contrast) </p>
+{% for bgcolor in bgColors %}
+  {% for color in textColors %}
+    <div class="{{ bgcolor }}">
+      <p class="text-{{ color }} font-bold utility p-base">.text-{{ color }}</p>
+    </div>
+  {% endfor %}
+{% endfor %}

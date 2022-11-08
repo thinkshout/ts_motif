@@ -59,8 +59,14 @@
 
 /* Dynamic Text colors change based on the background color */
 /* Default colors */
+.text-accent {
+	color: var(--color-accent);
+}
 .text-action {
 	color: var(--color-action);
+}
+.text-md-contrast {
+	color: var(--color-md-contrast);
 }
 .text-high-contrast {
 	color: var(--color-high-contrast);
@@ -77,8 +83,81 @@
 	@apply bg-action;
 }
 
+.ts-bg-blue-500 {
+	@apply bg-blue-500;
+}
+.ts-bg-blue-400 {
+	@apply bg-blue-400;
+}
+.ts-bg-blue-100 {
+	@apply bg-blue-100;
+}
+.ts-bg-green-700 {
+	@apply bg-green-700;
+}
+.ts-bg-grey-100 {
+	@apply bg-grey-100;
+}
+.ts-bg-blue-900 {
+	@apply bg-blue-900;
+}
+.ts-bg-white {
+	@apply bg-white;
+}
+
 /* Text color variables change within bg context */
-.ts-bg-grey-800 {
-	--color-action: var(--color-blue-300);
+.ts-bg-blue-900 {
+	--color-accent: var(--color-green-100);
+	--color-action: var(--color-blue-100);
 	--color-high-contrast: var(--color-white);
+	--color-md-contrast: var(--color-grey-200);
+}
+.ts-bg-blue-500 {
+	--color-accent: var(--color-blue-100);
+	--color-high-contrast: var(--color-white);
+	--color-md-contrast: var(--color-grey-200);
+}
+.ts-bg-blue-400 {
+	--color-accent: var(--color-blue-100);
+	--color-action: var(--color-blue-100);
+	--color-high-contrast: var(--color-white);
+	--color-md-contrast: var(--color-grey-200);
+}
+.ts-bg-green-700 {
+	--color-accent: var(--color-blue-100);
+	--color-high-contrast: var(--color-grey-200);
+	--color-md-contrast: var(--color-grey-200);
+}
+.ts-bg-white {
+	--color-accent: var(--color-blue-500);
+	--color-action: var(--color-blue-400);
+	--color-high-contrast: var(--color-grey-700);
+}
+.ts-bg-blue-100 {
+	--color-high-contrast: var(--color-blue-500);
+	--color-md-contrast: var(--color-blue-500);
+}
+.ts-bg-grey-100 {
+	--color-action: var(--color-blue-400);
+	--color-accent: var(--color-green-700);
+	--color-high-contrast: var(--color-grey-700);
+}
+
+/* SVG FILLS */
+/* Uses action color on Podcast svg */
+.ts-fill-action svg path {
+	fill: var(--color-action);
+}
+
+/* Uses high contrast color on svg fill */
+.ts-fill-high-contrast svg path {
+	fill: var(--color-high-contrast);
+}
+/* Uses low contrast color on svg fill */
+.ts-fill-md-contrast svg path {
+	fill: var(--color-md-contrast);
+}
+/* Uses low contrast color on svg fill */
+.ts-fill-low-contrast svg path {
+	fill: var(--color-low-contrast);
 }
