@@ -2,9 +2,18 @@
   "color": {
     "black": { "value": "#000000" },
     "white": { "value": "#FFFFFF" },
+    "high-contrast": { "value": "{color.grey.800.value}" },
+    "low-contrast": { "value": "{color.grey.300.value}" },
+    "action": { "value": "{color.blue.500.value}" },
     "grey": {
-      "lt": { "value": "#ededed" },
-      "dk": { "value": "#444" }
+      "300": { "value": "#ededed" },
+      "800": { "value": "#444" },
+      "lt": { "value": "{color.grey.300.value}" },
+      "dk": { "value": "{color.grey.800.value}" }
+    },
+    "blue": {
+      "300": { "value": "#61DDFF" },
+      "500": { "value": "#0054A4" }
     }
   }
 }

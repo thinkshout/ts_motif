@@ -3,7 +3,7 @@ const tokens = require("./tokens/tailwind-tokens.json");
 const { NODE_ENV = 'production' } = process.env;
 
 module.exports = {
-  mode: NODE_ENV !== 'production' && 'jit',
+  mode: 'jit',
   purge: ["./includes/**/*.inc", "./templates/**/*.{html,twig}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -14,7 +14,6 @@ module.exports = {
     fontFamily: tokens.font.family,
     fontSize: tokens.font.size,
     fontWeight: tokens.font.weight,
-    gap: tokens.grid.gap,
     lineHeight: tokens.lh,
     screens: tokens.screen,
     spacing: tokens.spacer,
