@@ -3,20 +3,41 @@
     "default": "all 300ms ease-in-out"
   },
   "color": {
-    "black": "#000000",
+    "black": "#00053e",
     "white": "#ffffff",
     "high-contrast": "#444444",
-    "low-contrast": "#ededed",
-    "action": "#0054a4",
+    "md-contrast": "#e2e7ed",
+    "low-contrast": "#f1f1f1",
+    "action": "#0040b0",
+    "accent": "#3dbbff",
+    "success": "#206f63",
+    "error": "#ed0131",
     "grey": {
-      "300": "#ededed",
-      "800": "#444444",
-      "lt": "#ededed",
-      "dk": "#444444"
+      "100": "#f8fafc",
+      "200": "#f1f1f1",
+      "300": "#e2e7ed",
+      "400": "#b8bcca",
+      "700": "#3b4256",
+      "800": "#444444"
     },
     "blue": {
-      "300": "#61ddff",
-      "500": "#0054a4"
+      "100": "#c8eaff",
+      "200": "#aec6e4",
+      "300": "#3dbbff",
+      "400": "#006fdd",
+      "500": "#0040b0",
+      "900": "#00053e"
+    },
+    "green": {
+      "100": "#aaf9d8",
+      "400": "#00edaf",
+      "600": "#008e6a",
+      "700": "#206f63"
+    },
+    "system": {
+      "300": "#e2e7ed",
+      "500": "#a6a7ad",
+      "900": "#3b4256"
     }
   },
   "grid": {

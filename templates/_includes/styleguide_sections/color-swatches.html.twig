@@ -4,23 +4,72 @@
 #}
 
 {%
-  set colors = [
+  set colorsPrimary = [
   'black',
-  'grey-dk',
-  'grey-lt',
-  'white',
+  'blue-400',
+  'blue-300',
+  'green-100',
+  'green-400',
+  'grey-200'
 ]
 %}
 
+{%
+  set colorsSecondary = [
+  'blue-500',
+  'blue-100',
+  'green-700',
+  'green-600',
+  'blue-200'
+]
+%}
+
+{%
+  set colorsSystem = [
+  'white',
+  'system-300',
+  'system-500',
+  'system-900',
+  'success',
+  'error',
+  'grey-100',
+  'grey-300',
+  'grey-400'
+]
+%}
+
+{% set color_wrapper = "inline-block mr-sm mb-xl w-4xl" %}
+{% set color_label = "body-xs mt-0" %}
+{% set swatch_size = "h-2xl w-4xl" %}
+{% set palette_name = "body-sm font-bold my-0" %}
+
+
 {# This span allows all tailwind bg colors to appear before they've been used in initial development. #}
-<span class="bg-black bg-grey-dk bg-grey-lt bg-white"></span>
+<span class="bg-black bg-blue-400 bg-blue-300 bg-green-100 bg-green-400 bg-grey-200 bg-white bg-blue-500 bg-blue-100 bg-green-700
+bg-green-600 bg-blue-200
+bg-system-300 bg-system-500 bg-system-900 bg-success bg-error bg-grey-100 bg-grey-300 bg-grey-400"></span>
 
 <h3 class="h2 mb-sm text-grey-dk" id="color">Color</h3>
 <p class="body-sm mt-0 mb-base">Classes created in tokens/src/color.tokens.json</p>
 <p class="body-sm mt-0 mb-base">Classes displayed in templates/_includes/styleguide_sections/color-swatches.html.twig</p>
-{% for color in colors %}
-  <div class="inline-block mr-sm mb-xl w-3xl">
-    <div class="bg-{{ color }} h-2xl"></div>
-    <p class="body-xs mt-0">{{ color }}</p>
+<p class="{{ palette_label }}">Primary</p>
+{% for color in colorsPrimary %}
+  <div class="{{ color_wrapper }}">
+    <div class="bg-{{ color }} {{ swatch_size }}"></div>
+    <p class="{{ color_label }}">{{ color }}</p>
+  </div>
+{% endfor %}
+<p class="{{ palette_label }}">Secondary</p>
+{% for color in colorsSecondary %}
+  <div class="{{ color_wrapper }}">
+    <div class="bg-{{ color }} {{ swatch_size }}"></div>
+    <p class="{{ color_label }}">{{ color }}</p>
+  </div>
+{% endfor %}
+<p class="{{ palette_label }}">System & Surface</p>
+{% for color in colorsSystem %}
+  <div class="{{ color_wrapper }}">
+    <div class="bg-{{ color }} {{ swatch_size }}"></div>
+    <p class="{{ color_label }}">{{ color }}</p>
   </div>
 {% endfor %}
