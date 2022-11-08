@@ -6,15 +6,18 @@
 
 {%
   set bgColorsDk = [
-  'black',
-  'grey-dk',
+  'ts-bg-green-700',
+  'ts-bg-blue-900',
+  'ts-bg-blue-500',
 ]
 %}
 
 {%
   set bgColorsLt = [
-  'grey-lt',
-  'white',
+  'ts-bg-blue-400',
+  'ts-bg-blue-100',
+  'ts-bg-grey-100',
+  'ts-bg-white',
 ]
 %}
 
@@ -24,12 +27,12 @@
   <p class="body-sm mb-md">Use .bg-[color] to apply background color</p>
   <div class="body-sm text-white">
     {% for bg in bgColorsDk %}
-      <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
+      <p class="{{ bg }} p-card">.{{ bg }}</p>
     {% endfor %}
   </div>
   <div class="body-sm text-grey-dk">
     {% for bg in bgColorsLt %}
-      <p class="bg-{{ bg }} p-card">.bg-{{ bg }}</p>
+      <p class="{{ bg }} p-card">.{{ bg }}</p>
     {% endfor %}
   </div>
 </div>
