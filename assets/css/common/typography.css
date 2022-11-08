@@ -5,6 +5,13 @@
  * See also components/wysiwyg.css for tag styles in text editor content.
 */
 
+.h1 {
+	@apply font-regular;
+	font-family: var(--font-family-sans);
+	font-size: 90px;
+	line-height: var(--lh-11);
+}
+
 .h2,
 .wysiwyg-wrapper h2 {
   @apply font-bold;
@@ -18,10 +25,18 @@
 }
 
 .h3,
-.wysiwyg-wrapper {
+.wysiwyg-wrapper h3 {
 	@apply font-bold;
 	font-family: var(--font-family-sans);
-	font-size: 1.25rem; /* 20px */
+	font-size: 2.5rem; /* 40px */
+	line-height: var(--lh-10);
+}
+
+.h6,
+.wysiwyg-wrapper h6 {
+	@apply font-regular;
+	font-family: var(--font-family-sans);
+	font-size: 1.625rem; /* 26px */
 	line-height: var(--lh-10);
 }
 
