@@ -6,6 +6,9 @@ theme:
     theme:
       dist/print.css: { media: print }
       dist/motif.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
 jquery:
   js:
     node_modules/jquery/dist/jquery.min.js:
@@ -19,3 +22,5 @@ ts_patterns:
   css:
     theme:
       assets/css/pages_patterns.css: {}
+  js:
+    dist/motif.js: {}
