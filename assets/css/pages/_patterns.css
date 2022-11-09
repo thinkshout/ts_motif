@@ -2,13 +2,15 @@
 	--color-pattern-grey: #f3f2f2;
 }
 
+.pattern-page-title {
+	font-size: 1.5rem;
+}
 .pattern--sidebar-nav {
-	h2 {
-		font-size: 2.5rem;
-	}
 	a {
+		color: var(--color-grey-700);
 		display: block;
-		font-size: 1.5rem;
+		font-size: .875rem;
+		font-weight: var(--font-weight-bold);
 		line-height: 1.3;
 		padding: .5rem 1rem;
 	}
@@ -18,8 +20,8 @@
 }
 
 .pattern-preview__label {
-	font-size: 3rem;
-	font-weight: bold;
+	font-size: 4rem;
+	font-weight: lighter;
 }
 
 .pattern-preview__description {
@@ -36,9 +38,6 @@
 
 .pattern-preview {
 	margin-bottom: 4rem;
-	max-width: 90%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .pattern-preview__preview legend {
@@ -48,10 +47,9 @@
 
 .pattern-preview__markup {
 	border: 1px dashed lightgrey;
-	background-color: #e7e7e7;
 	margin-top: 1rem;
 	margin-bottom: 4rem;
-	padding: 2rem;
+	padding: 2rem 2rem 1rem;
 }
 
 .pattern-overview-page hr {
@@ -64,4 +62,19 @@
 	color: var(--color-action);
 	font-weight: bold;
 	margin-top: 1rem;
+}
+
+.pattern-preview__variants th {
+	visibility: hidden;
+}
+.pattern-preview__preview table {
+	width: auto;
+}
+.pattern-preview__preview td:first-of-type {
+	font-size: 1.5rem;
+}
+
+.ts-pattern-code {
+	font-family: 'Courier New', Monospace;
+	font-weight: bold;
 }

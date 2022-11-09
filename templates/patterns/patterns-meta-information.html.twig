@@ -8,29 +8,35 @@
 {% if pattern is not empty %}
 
   {# Pattern name and description. #}
-  <h3 class="pattern-preview__label">{{ pattern.label }}</h3>
-  <p class="pattern-preview__description">{{ pattern.description }}</p>
+  <div class="bg-black">
+    <div class="lg:container p-site">
+      <h3 class="pattern-preview__label pt-[150px] pb-lg text-white">{{ pattern.label }}</h3>
+    </div>
+  </div>
+    <div class="lg:container p-site">
+      <p class="pattern-preview__description mt-lg">{{ pattern.description }}</p>
 
-  {# Pattern fields descriptions. #}
-  <table class="pattern-preview__fields">
-    <thead>
-    <tr>
-      <th>{{ "Field"|t }}</th>
-      <th>{{ "Label"|t }}</th>
-      <th>{{ "Type"|t }}</th>
-      <th>{{ "Description"|t }}</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for field in pattern.fields %}
-      <tr>
-        <td><code>{{ field.name }}</code></td>
-        <td>{{ field.label }}</td>
-        <td><code>{{ field.type }}</code></td>
-        <td>{{ field.description }}</td>
-      </tr>
-    {% endfor %}
-    </tbody>
-  </table>
+      {# Pattern fields descriptions. #}
+      <table class="pattern-preview__fields">
+        <thead>
+        <tr>
+          <th>{{ "Field"|t }}</th>
+          <th>{{ "Label"|t }}</th>
+          <th>{{ "Type"|t }}</th>
+          <th>{{ "Description"|t }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for field in pattern.fields %}
+          <tr>
+            <td><code>{{ field.name }}</code></td>
+            <td>{{ field.label }}</td>
+            <td><code>{{ field.type }}</code></td>
+            <td>{{ field.description }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
 
 {% endif %}

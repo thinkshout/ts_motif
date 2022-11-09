@@ -6,41 +6,47 @@
 #}
 
 {% if patterns is not empty %}
-<div class="pattern-overview-page">
-  <div class="pattern--sidebar-nav bg-white inline-block fixed h-full top-0 left-0 py-lg">
-    <h2 class="h2 pl-md mb-lg">{{ "Patterns"|t }}</h2>
+<div class="pattern-overview-page relative">
+  <h1 class="pattern-page-title bg-[#000] fixed font-bold left-0 p-md right-0 text-white top-0 utility-lg w-full
+  z-3">{{ "ThinkShout
+  Design System"|t
+    }}</h1>
+  <div class="pattern--sidebar-nav absolute bg-white h-full left-0 top-0 w-[255px] z-1">
 
-    {# List of available patterns with anchor links. #}
-    <ul>
-      {% for pattern_name, pattern in patterns %}
-        <li>
-          <a href="#{{ pattern_name }}">{{ pattern.label }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    <div class="fixed top-[4rem] left-0 py-lg w-[255px]">
+
+      {# List of available patterns with anchor links. #}
+      <ul>
+        {% for pattern_name, pattern in patterns %}
+          <li>
+            <a href="#{{ pattern_name }}">{{ pattern.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
-
-  <hr>
 
   {% for pattern_name, pattern in patterns %}
 
-    <div class="pattern-preview pattern-preview__{{ pattern.definition.id }} pl-[200px]">
+    <div class="pattern-preview pattern-preview__{{ pattern.definition.id }} ml-[200px]">
       {# Pattern name and description. #}
       <a name="{{ pattern_name }}"></a>
-      {{ pattern.meta }}
-      {# Link to standalone pattern preview page.#}
-      <p class="mb-lg">
-        <a href="{{ url('ui_patterns.patterns.single', {'name': pattern_name}) }}" class="pattern-preview__view">
-          {% trans %}View {{ pattern.label }} on their own page with specs{% endtrans %}
-        </a>
-      </p>
+        {{ pattern.meta }}
+      <div class="lg:container p-site">
+        {# Link to standalone pattern preview page.#}
+        <p class="">
+          <a href="{{ url('ui_patterns.patterns.single', {'name': pattern_name}) }}" class="pattern-preview__view">
+            {% trans %}View {{ pattern.label }} on their own page with specs{% endtrans %}
+          </a>
+        </p>
 
-      {# Rendered pattern preview. #}
-      <fieldset class="pattern-preview__preview">
-        <legend class="visually-hidden">{{ "Preview"|t }}</legend>
-        {{ pattern.rendered }}
-      </fieldset>
+        {# Rendered pattern preview. #}
+        <fieldset class="pattern-preview__preview">
+          <legend class="visually-hidden">{{ "Preview"|t }}</legend>
+          {{ pattern.rendered }}
+        </fieldset>
 
+      </div>
     </div>
 
     <hr>
