@@ -5,4 +5,3 @@ import "./css/index.css";
 
 // JavaScript Files
 import "./js/drupal-behaviors";
-import "./js/ts-patterns.js";

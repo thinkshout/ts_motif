@@ -125,6 +125,7 @@
 }
 .ts-bg-green-700 {
 	--color-accent: var(--color-blue-100);
+	--color-accent: var(--color-blue-100);
 	--color-high-contrast: var(--color-grey-200);
 	--color-md-contrast: var(--color-grey-200);
 }

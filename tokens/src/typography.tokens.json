@@ -32,10 +32,15 @@
         "type": "font",
         "description": "The primary serif font for headings."
       },
-      "sans": {
-        "value": "'Halyard Text', Helvetica, Arial, sans-serif",
+      "headline-sans": {
+        "value": "'bebas neue pro', sans-serif",
         "type": "font",
-        "description": "The primary sans-serif font for body content, etc."
+        "description": "The primary sans-serif headline font"
+      },
+      "sans": {
+        "value": "'bio sans', sans-serif",
+        "type": "font",
+        "description": "The primary sans-serif headline font"
       }
     }
   },

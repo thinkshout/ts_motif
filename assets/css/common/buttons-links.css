@@ -4,3 +4,12 @@
  * Button Links CSS File
  *
 */
+
+.btn-primary,
+.btn-outline {
+	font-size: 1.125rem; /* 18px */
+}
+
+.btn-back {
+	font-size: .875rem; /* 14px */
+}

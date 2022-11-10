@@ -43,12 +43,13 @@
   --spacer-xs: 0.5rem;
   --spacer-sm: 0.75rem;
   --spacer-base: 1rem;
-  --spacer-md: 1.25rem;
-  --spacer-lg: 1.5rem;
-  --spacer-xl: 2rem;
-  --spacer-2xl: 3rem;
-  --spacer-3xl: 4rem;
+  --spacer-md: 1.5rem;
+  --spacer-lg: 2rem;
+  --spacer-xl: 2.5rem;
+  --spacer-2xl: 4rem;
+  --spacer-3xl: 4.5rem;
   --spacer-4xl: 6rem;
+  --spacer-5xl: 8rem;
   --font-weight-book: 300;
   --font-weight-light: 300;
   --font-weight-regular: 400;
@@ -56,7 +57,8 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-family-serif: 'Geller Headline', Times, serif;
-  --font-family-sans: 'Halyard Text', Helvetica, Arial, sans-serif;
+  --font-family-headline-sans: 'bebas neue pro', sans-serif;
+  --font-family-sans: 'bio sans', sans-serif;
   --lh-10: 1.0;
   --lh-11: 1.1;
   --lh-12: 1.2;

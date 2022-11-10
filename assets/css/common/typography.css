@@ -6,21 +6,24 @@
 */
 
 .h1 {
-	@apply font-regular;
-	font-family: var(--font-family-sans);
-	font-size: 90px;
-	line-height: var(--lh-11);
+	@apply font-regular uppercase;
+	font-family: var(--font-family-headline-sans);
+	font-size: 4rem; /* 64px */
+	line-height: var(--lh-10);
+	@media (--bp-md) {
+		font-size: 5.625rem; /* 90px */
+	}
 }
 
 .h2,
 .wysiwyg-wrapper h2 {
-  @apply font-bold;
+  @apply font-regular;
   font-family: var(--font-family-sans);
-  font-size: 1.5625rem; /* 25px */
-  line-height: var(--lh-10);
+  font-size: 2.125rem; /* 34px */
+  line-height: var(--lh-13);
 
   @media (--bp-md) {
-    font-size: 2.75rem; /* 44px */
+    font-size: 3.5rem; /* 56px */
   }
 }
 
@@ -28,20 +31,40 @@
 .wysiwyg-wrapper h3 {
 	@apply font-bold;
 	font-family: var(--font-family-sans);
-	font-size: 2.5rem; /* 40px */
+	font-size: 2rem; /* 32px */
 	line-height: var(--lh-10);
+	@media (--bp-md) {
+		font-size: 2.5rem; /* 40px */
+	}
+}
+
+.h4,
+.wysiwyg-wrapper h4 {
+	@apply font-bold uppercase;
+	font-family: var(--font-family-headline-sans);
+	font-size: 1.875rem; /* 30px */
+	line-height: var(--lh-10);
+	@media (--bp-md) {
+		font-size: 2.5rem; /* 40px */
+	}
 }
 
 .h6,
 .wysiwyg-wrapper h6 {
-	@apply font-regular;
-	font-family: var(--font-family-sans);
-	font-size: 1.625rem; /* 26px */
+	@apply font-semibold uppercase;
+	font-family: var(--font-family-headline-sans);
+	font-size: 1.375rem; /* 22px */
 	line-height: var(--lh-10);
+	@media (--bp-md) {
+		font-size: 1.625rem; /* 26px */
+	}
 }
 
 .body {
 	font-family: var(--font-family-sans);
-	font-size: 1rem; /* 16px */
-	line-height: var(--lh-13);
+	font-size: 1.25rem; /* 20px */
+	line-height: var(--lh-17);
+	@media (--bp-md) {
+		font-size: 1.375rem; /* 22px */
+	}
 }

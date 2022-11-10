@@ -21,6 +21,10 @@ ts_styleguide:
 ts_patterns:
   css:
     theme:
-      assets/css/pages_patterns.css: {}
+      assets/css/pages/_patterns.css: {}
   js:
     dist/motif.js: {}
+fonts:
+  css:
+    theme:
+      '//use.typekit.net/rsn5kax.css': { type: external }
