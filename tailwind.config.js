@@ -4,7 +4,7 @@ const { NODE_ENV = 'production' } = process.env;
 
 module.exports = {
   mode: 'jit',
-  purge: ["./includes/**/*.inc", "./templates/**/*.{html,twig}"],
+  purge: ["./includes/**/*.inc", "./templates/**/*.{html,twig}","./../../../modules/contrib/ts_patterns/templates/**/**/**/**/*.{html,twig}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: tokens.color,
