@@ -11,9 +11,9 @@
   z-3">{{ "ThinkShout
   Design System"|t
     }}</h1>
-  <div class="pattern--sidebar-nav  absolute bg-white h-full left-0 top-0 w-[175px] z-1">
+  <div class="pattern--sidebar-nav sm:absolute bg-white h-full left-0 top-0 sm:w-[175px] z-1">
 
-    <div class="fixed top-[4rem] left-0 py-lg w-[255px]">
+    <div class="sm:fixed top-[4rem] left-0 py-lg sm:w-[175px]">
 
       {# List of available patterns with anchor links. #}
       <ul>
@@ -28,7 +28,7 @@
 
   {% for pattern_name, pattern in patterns %}
 
-    <div class="pattern-preview pattern-preview__{{ pattern.definition.id }} ml-[200px]">
+    <div class="pattern-preview pattern-preview__{{ pattern.definition.id }} sm:ml-[175px]">
       {# Pattern name and description. #}
       <a name="{{ pattern_name }}"></a>
         {{ pattern.meta }}

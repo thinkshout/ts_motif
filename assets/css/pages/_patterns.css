@@ -49,8 +49,14 @@
 	border: 1px dashed lightgrey;
 	margin-top: 1rem;
 	margin-bottom: 4rem;
-	padding: 2rem 2rem 1rem;
+	padding: 2rem 1rem 1rem;
 }
+@media (min-width:769px) {
+	.pattern-preview__markup {
+		padding: 2rem 2rem 1rem;
+	}
+}
+
 
 .pattern-overview-page hr {
 	margin: 2rem 0 2rem 350px;
