@@ -5,6 +5,8 @@ const { NODE_ENV = 'production' } = process.env;
 module.exports = {
   mode: NODE_ENV !== 'production' && 'jit',
   prefix: '',
+  purge: ["./includes/**/*.inc", "./templates/**/*.{html,twig}"],
+  darkMode: false, // or 'media' or 'class'
   content: [
     './templates/**/*.{html,twig}',
     './includes/**/*.inc',
@@ -17,7 +19,6 @@ module.exports = {
     fontFamily: tokens.font.family,
     fontSize: tokens.font.size,
     fontWeight: tokens.font.weight,
-    gap: tokens.grid.gap,
     lineHeight: tokens.lh,
     opacity: tokens.opacity,
     screens: tokens.screen,

@@ -27,11 +27,18 @@ Index CSS File
 @import "common/buttons-links.css";
 @import "common/design-elements.css";
 @import "common/typography.css";
+@import "common/svg-sizes.css";
 
 /*
  * Motif Components
  */
-@import "components/_styleguide.css";
 @import "components/admin.css";
 @import "components/forms.css";
 @import "components/wysiwyg.css";
+
+/*
+ * Page-specific styles
+ */
+/* TODO: refactor so _styleguide and _patterns only render on their twig templates*/
+@import "pages/_patterns.css";
+@import "pages/_styleguide.css";

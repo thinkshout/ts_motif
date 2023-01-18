@@ -1,0 +1,12 @@
+/* Use action color on hocus */
+.hocus-action {
+	transition: color var(--transition-default);
+}
+.hocus-action:hover,
+.hocus-action:focus {
+	color: var(--color-action);
+	text-decoration: none;
+	svg path {
+		fill: var(--color-action);
+	}
+}

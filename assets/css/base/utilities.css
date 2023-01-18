@@ -56,3 +56,29 @@
 .m-card {
   @apply mx-md my-md;
 }
+
+/* Dynamic Text colors change based on the background color */
+/* Default colors */
+.text-action {
+	color: var(--color-action);
+}
+.text-high-contrast {
+	color: var(--color-high-contrast);
+}
+
+/* Bg colors that trigger text color change */
+.ts-bg-grey-800 {
+	@apply bg-grey-800;
+}
+.ts-bg-white {
+	@apply bg-white;
+}
+.ts-bg-action {
+	@apply bg-action;
+}
+
+/* Text color variables change within bg context */
+.ts-bg-grey-800 {
+	--color-action: var(--color-blue-300);
+	--color-high-contrast: var(--color-white);
+}

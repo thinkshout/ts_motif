@@ -1,0 +1,57 @@
+{# Base link file
+ *
+ * Ensures links have Drupal attributes.
+ * Uses a btn if no href (link_url).
+#}
+
+
+{# WARNING: DO NOT UPDATE THIS FILE.
+ *
+ * It will update all buttons and links site-wide. To update a style of button, update
+ * the button-style template in templates/_includes/btns. To update a single instance,
+ * pass different classes or variables from the instance where the button is included.
+ * See README for more info.
+#}
+
+{# VARIABLES #}
+{% if my_attributes is empty %}
+  {% set my_attributes = link_attributes ? create_attribute(link_attributes) : create_attribute() %}
+{% endif %}
+{% set link_text = link_text %}
+{% set link_url = link_url %}
+{% set link_aria_label = link_aria_label %}
+{% set link_disabled = link_disabled|default('') %}
+
+{# Classes + svg name #}
+{% set link_classes = link_classes %}
+{# Default svg styles set on .btn-svg in buttons-links.css #}
+{% set link_svg_classes = link_svg_classes %}
+{% set link_svg_name = link_svg_name %}
+
+{# anchor or button -- checks to see if link_url is set #}
+{% if link_url is not empty %}
+<a{{ my_attributes.addClass(link_classes).setAttribute('href',link_url).setAttribute('aria-label',link_aria_label).setAttribute('title',link_aria_label)
+}} {{ link_disabled }}>
+  {% else %}
+  <button{{ my_attributes.addClass(link_classes).setAttribute('aria-label',link_aria_label) }} {{ link_disabled }}>
+    {% endif %}
+
+    {# Content #}
+    {% block content%}
+      {{ link_text }}
+    {% endblock %}
+
+    {# SVG #}
+    {% block svg %}
+      {% if link_svg_name is not empty %}
+        <span class="btn-svg {{ link_svg_classes }}">
+        {% include '@ts_motif/_includes/svg-icon-embed.html.twig' with { svg_name: link_svg_name } %}
+       </span>
+      {% endif %}
+    {% endblock %}
+
+    {% if link_url is not empty %}
+</a>
+{% else %}
+  </button>
+{% endif %}
