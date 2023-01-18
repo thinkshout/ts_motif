@@ -1,11 +1,16 @@
-const tokens = require("./tokens/tailwind-tokens.json");
+const tokens = require('./tokens/tailwind-tokens.json');
 
 const { NODE_ENV = 'production' } = process.env;
 
 module.exports = {
-  mode: 'jit',
+  mode: NODE_ENV !== 'production' && 'jit',
+  prefix: '',
   purge: ["./includes/**/*.inc", "./templates/**/*.{html,twig}"],
   darkMode: false, // or 'media' or 'class'
+  content: [
+    './templates/**/*.{html,twig}',
+    './includes/**/*.inc',
+  ],
   theme: {
     colors: tokens.color,
     container: {
@@ -15,6 +20,7 @@ module.exports = {
     fontSize: tokens.font.size,
     fontWeight: tokens.font.weight,
     lineHeight: tokens.lh,
+    opacity: tokens.opacity,
     screens: tokens.screen,
     spacing: tokens.spacer,
     transitionDuration: tokens.duration,
@@ -25,4 +31,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+}
