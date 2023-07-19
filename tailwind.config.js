@@ -23,7 +23,7 @@ module.exports = {
     opacity: tokens.opacity,
     screens: tokens.screen,
     spacing: tokens.spacer,
-    transitionDuration: tokens.duration,
+    transitionDuration: tokens.transition,
     zIndex: tokens.z,
     extend: {},
   },
