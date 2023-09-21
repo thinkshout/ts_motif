@@ -9,5 +9,5 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
   },
-  root: true
+  root: true,
 };
