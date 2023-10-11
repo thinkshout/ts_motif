@@ -5,7 +5,7 @@ A base theme for a Drupal sites.
 
 ## Style Guide
 
-A style guide is available at /styleguide. The `drupal-project` base Drupal repo has the module available to create the
+A style guide is available at /styleguide. The [ts_styleguide](https://github.com/thinkshout/ts_styleguide) package has the module available to create the
 route. The template is editable and found in `templates/_includes/_styleguide.html.twig`
 
 ## Installation
