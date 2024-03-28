@@ -29,7 +29,7 @@
     ],
     "scaffold": [
       "cp -R ../../../../vendor/thinkshout/base-assets/* ./",
-      "mv views/* templates/",
+      "mv -f views/* templates/",
       "rmdir views"
     ]
   }
