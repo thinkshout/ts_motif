@@ -4,7 +4,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@github.com:thinkshout/base-assets.git",
+      "url": "git@github.com:thinkshout/base-assets.git"
     }
   ], 
   "require-dev": {
