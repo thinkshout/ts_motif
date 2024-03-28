@@ -1,6 +1,6 @@
 name: Motif
 type: theme
-base theme: stable
+base theme: stark
 description: A Starterkit Theme with Parcel, Style Dictionary, and Tailwind.
 package: ThinkShout
 core_version_requirement: ^9 || ^10
