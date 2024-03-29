@@ -15,7 +15,3 @@ ts_styleguide:
   css:
     theme:
       assets/css/pages/_styleguide.css: {}
-ts_patterns:
-  css:
-    theme:
-      assets/css/pages_patterns.css: {}
