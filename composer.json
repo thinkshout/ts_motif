@@ -28,9 +28,11 @@
       ".\/vendor\/bin\/phpcbf --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,info --ignore=node_modules,bower_components,vendor ."
     ],
     "scaffold": [
-      "cp -R ../../../../vendor/thinkshout/base-assets/scaffold/* ./",
+      "git clone git@github.com:thinkshout/base-assets.git",
+      "mv base-assets/scaffold/* ./",
       "mv views/* templates/",
-      "rmdir views"
+      "rmdir views",
+      "rm -rf base-assets"
     ]
   }
 }
