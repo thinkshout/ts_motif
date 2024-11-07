@@ -9,7 +9,7 @@
 # not already re-named.
 #
 # call like this:
-# > update_theme_name.sh my_new_theme_name
+# > ./update_theme_name.sh my_new_theme_name
 #
 
   THEME_NAME=$1
