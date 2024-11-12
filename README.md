@@ -10,8 +10,8 @@ After copying this repository into your project's `web/themes/custom` directory,
 1. Decide on a machine name (no spaces or unusual characters other than `_`) for this theme. It should generally include your project's name or other unique identifier.
 2. Open a terminal window and `cd` into this copied theme: `cd ~/Sites/PROJECTNAME/web/themes/custom/ts_motif`
 3. If you cloned the git repository to copy this theme, remove the link to this repository by deleting the `.git` directory: `rm -rf .git`
-4. Run the naming script: `./update_theme_name.sh YOUR_THEME_NAME`
-5. Run the scaffolding script to pull in the contents of the base-assets repository and organize theme: `composer scaffold`
+4. Run the scaffolding script to pull in the contents of the base-assets repository and organize theme: `composer scaffold`
+5. Run the naming script: `./update_theme_name.sh YOUR_THEME_NAME`
 6. Assuming you have already installed the site and have a database, enable the "ts_styleguide" module, or add it to `config/core.extension.yml`, and configure Drupal to use your new theme by visiting `admin/appearance` as a site admin, where you can enable it and set it to be the default.
 
 You should now be able to see a starter styleguide at `/styleguide`.
