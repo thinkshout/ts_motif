@@ -33,7 +33,8 @@
       "rsync -r views/* templates/",
       "rm -rf views",
       "rm -rf base-assets",
-      "sed -I .orig 's/{% extends \"/{% extends \"@ts_motif\/g' templates/*.twig templates/*/*.twig templates/*/*/*.twig"
+      "sed -I .orig 's/{% extends \"/{% extends \"@ts_motif\\//g' templates/*.twig templates/*/*.twig templates/*/*/*.twig",
+      "sed -I .orig \"s/{% extends '/{% extends '@ts_motif\\//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig"
     ]
   }
 }
