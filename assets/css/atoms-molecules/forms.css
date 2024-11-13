@@ -1,0 +1,21 @@
+.select-styles {
+	@apply appearance-none;
+}
+
+/* Sets default input placeholder text */
+form input::placeholder {
+	color: var(--color-secondary);
+}
+
+.tribe-events .tribe-events-c-events-bar .tribe-common-form-control-text__input {
+	&::placeholder {
+		@apply utility-lg;
+	}
+	&:focus {
+		border-color: unset;
+	}
+}
+
+input[type='checkbox'] {
+	accent-color: var(--color-secondary);
+}

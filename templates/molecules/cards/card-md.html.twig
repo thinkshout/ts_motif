@@ -1,0 +1,46 @@
+{# Card md
+ *
+ * Variables:
+ * - has_image
+ * - title
+ * - text
+ * - link
+ * - link_url
+#}
+
+{% set link_url = link.url ? link.url : link %}
+{% set hocus_style = link_url ? "ts-hocus-scale" : "" %}
+
+<div class="card-md rounded-[10px] relative {{ hocus_style }}">
+
+  {# Image #}
+  {% if has_image %}
+    <div class="">
+      {% set classes = "aspect-[5/3] object-cover overflow-hidden lazyloaded w-full" %}
+      {% block card_image %}
+      {% endblock %}
+    </div>
+  {% endif %}
+
+  {# Text Wrapper #}
+  <div class="py-4">
+
+    {# Card link -- needs to be immediately before card-title-hocus #}
+    {% include '@ts_motif/molecules/cards/card-overlay-link.html.twig' with { link_url: link_url } %}
+
+    {# Title #}
+    {% if title %}
+      <a href="{{ link_url }}" class="color-secondary card-title-hocus">
+        <h3 class="h3 mb-sm">
+          {{ title }}
+        </h3>
+      </a>
+    {% endif %}
+
+    {# Text #}
+    {% if text %}
+      <div class="body-sm color-secondary">{{ text }}</div>
+    {% endif %}
+
+  </div> {# end Text Wrapper #}
+</div>

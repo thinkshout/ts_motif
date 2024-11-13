@@ -1,0 +1,71 @@
+{# Banner -- left or right aligned aligned
+ *
+ * See banner.html.twig for full variables.
+#}
+
+{% set image_align = presentation == 'left' ? "left-0 md:left-[25%]" : "right-0 md:right-[25%]" %}
+{% set caption_align = presentation == 'left' ? "right-0" : "left-0" %}
+{% set banner_text_align = presentation == 'right' ? "md:ml-[50%]" %}
+{% set banner_height_lg = "700px" %}
+{% set banner_height_md = "650px" %}
+{% set banner_height_sm = "600px" %}
+
+{% set image = image.src ? image : Image(image) %}
+
+<style>
+  .banner--side-text--bg-image {
+    background-image: url("{{ image.src }}");
+  }
+</style>
+
+<div class="block--banner--side-text--{{ presentation}} min-h-[{{ banner_height_sm }}] md:min-h-[{{ banner_height_md
+}}] overflow-hidden md:h-full pt-6 md:pt-0 relative ts-lovey w-full">
+
+    <div class="h-full xl:container p-site ">
+      <div class="md:flex md:items-center min-h-[{{ banner_height_sm }}] md:min-h-[{{ banner_height_md }}]
+      lg:min-h-[{{ banner_height_lg }}]">
+
+        {# Text Wrapper #}
+        <div class="{{ banner_text_align }} colorway-light relative md:w-[50%] p-4 md:p-12 lg:p-18 z-2">
+          {% include 'molecules/section-title/section-title.twig' with {
+            eyebrow: eyebrow,
+            header: title,
+            text: text,
+            primary_btn: primary_btn,
+            secondary_btn: secondary_btn,
+            secondary_btn: secondary_btn,
+            style: "left",
+            header_tag: is_hero ? "h1" : "h2",
+          } %}
+        </div>  {# Closes Text wrapper #}
+      </div>
+    </div>
+
+    {# Image: Hides image, bit keeps it for screen readers, and sets it as a background on the figure tag #}
+    <div>
+    {% set figure_classes =
+      "banner--side-text--bg-image
+      absolute
+      top-0
+      overflow-hidden
+      h-full
+      bg-[center_12rem]
+      bg-cover
+      bg-no-repeat
+      md:bg-center
+      md:max-h-auto
+      w-full
+      md:w-[75%]
+      z-0"
+    %}
+    {% include 'molecules/image/media.twig' with {
+      image: image,
+      classes: "sr-only",
+      caption_style: "under",
+      bg_figcaption: "colorway-dark",
+      figure_classes: figure_classes ~ " " ~ image_classes ~ " " ~ image_align,
+      figcaption_classes: "color-secondary absolute bottom-0 p-2 lg:pb-0  " ~ caption_align
+    } %}
+  </div>
+
+</div>

@@ -1,0 +1,66 @@
+/* WP IMAGE BLOCK
+ * See gutenberg-blocks.css for .alignwide, .alignfull, styles.
+*/
+
+/* Width None: aligns with longform text. */
+.gutenberg-content {
+	& > figure.wp-block-image:not(.alignleft, .alignright, .aligncenter, .alignfull, .alignwide) {
+		@apply px-6 lg:px-0 max-w-screen-siteMaxWidth mx-auto my-block-sm;
+	}
+}
+
+/* Max-width 1200px, wide container & mobile padding. */
+.wp-block-image.alignwide {
+	@apply my-block-sm;
+}
+
+/* Full width image, no container or padding. */
+.wp-block-image.alignfull {
+	@apply my-block-sm;
+	figcaption {
+		@apply px-6;
+	}
+}
+
+/* Image Captions. */
+figure.wp-block-image figcaption {
+	@apply mt-2 text-left;
+}
+
+/* Images inside of layouts */
+.wp-block-columns {
+	figure.wp-block-image {
+		@apply my-0;
+	}
+}
+
+/* Image align left */
+.wp-block-image.alignleft {
+	@apply py-4 md:float-left md:pr-4 md:w-auto;
+	@media(min-width: 930px) {
+		margin-left: calc((100vw - var(--screen-site-max-width-md))/2);
+	}
+	figcaption.wp-element-caption {
+		@apply p-site text-left md:pr-4;
+	}
+}
+
+/* Image align right */
+.wp-block-image.alignright {
+	@apply py-4 md:float-right md:pl-4 md:w-auto;
+	@media(min-width: 930px) {
+		margin-right: calc((100vw - var(--screen-site-max-width-md)) / 2);
+	}
+	figcaption.wp-element-caption {
+		@apply p-site text-left md:pl-4;
+	}
+}
+
+/* Image align center */
+.wp-block-image.aligncenter {
+	@apply py-4 p-site lg:container md:w-auto;
+	figcaption.wp-element-caption {
+		@apply p-site text-left;
+	}
+}
+

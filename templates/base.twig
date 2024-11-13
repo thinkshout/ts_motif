@@ -1,0 +1,40 @@
+{% block html_head_container %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+
+<head>{% include '@ts_motif/organisms/header/head.twig' %}</head>
+{% endblock %}
+
+<body class="{{body_class}}" data-template="base.twig">
+{% include '@ts_motif/organisms/header/body-scripts.twig' %}
+<a class="skip-link screen-reader-text" href="{{post.link}}#content">{{  'Skip to content', 'thinktimber' ) }}</a>
+{% block header %}
+  {% include '@ts_motif/organisms/header/header.twig' %}
+{% endblock %}
+
+<section id="content" role="main" class="content-wrapper">
+  {% if title %}<h1>{{title}}</h1>{% endif %}
+  <div class="wrapper {{sidebar_class}}">
+    {% block content %}
+      {# Sets default bg color, can be overriden by setting a value in any extending template. #}
+      {% set bg_color = bg_color ?? 'colorway-white' %}
+      {{ 'Sorry, no content'|t }}
+    {% endblock %}
+  </div>
+  {% if sidebar %}
+    <aside class="layout-sidebar">
+      {{sidebar}}
+    </aside>
+  {% endif %}
+</section>
+
+{% block footer %}
+  {% include '@ts_motif/organisms/footer/display/footer.twig' %}
+{% endblock %}
+{% include '@ts_motif/organisms/footer/footer-scripts.twig' %}
+</body>
+</html>

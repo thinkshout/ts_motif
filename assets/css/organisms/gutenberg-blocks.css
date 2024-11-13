@@ -1,0 +1,100 @@
+/* CSS for Gutenberg blocks. */
+
+/*--------------------------------------------------------------
+  ## Default Site container -- 930px narrow.
+  --------------------------------------------------------------*/
+.gutenberg-content {
+	@apply mb-10 md:mb-18;
+	& > * {
+		&:not(.alignwide, .alignfull) {
+			@apply p-site max-w-[var(--screen-site-max-width-md)] mx-auto;
+		}
+	}
+}
+/* !*-------------------------------------------------------------- */
+/*   ## Site container for editorial-- 1200px wide */
+/*   --------------------------------------------------------------*! */
+.gutenberg-content > * {
+	&.alignfull:not(.wp-block-image, .wp-block-columns, .wp-block-content-block-featured-report, .wp-block-content-block-content-cards, .block--alerts-recent--layout, .eearth-map-form) {
+		@apply p-site lg:container;
+	}
+}
+
+/*--------------------------------------------------------------
+	## Wide container for GB blocks: 1200px.
+	--------------------------------------------------------------*/
+.alignwide {
+	@apply p-site lg:container max-w-[var(--screen-site-max-width)];
+}
+
+/*--------------------------------------------------------------
+	## Full width for GB blocks, no container.
+	--------------------------------------------------------------*/
+.alignfull {
+	@apply max-w-[100vw] w-full;
+}
+
+/*--------------------------------------------------------------
+  ## Buttons
+  --------------------------------------------------------------*/
+.wp-block-button__link,
+.wp-block-button.is-style-fill > .wp-block-button__link:not(.has-text-color) {
+	@apply btn-solid;
+}
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
+	@apply btn-outline;
+}
+.wp-block-buttons + .wp-block-buttons {
+	@apply mt-4;
+}
+
+/*--------------------------------------------------------------
+  ## Column layouts
+  --------------------------------------------------------------*/
+.wp-block-columns {
+	@apply gap-6;
+	&.alignfull figcaption {
+		@apply pl-2;
+	}
+}
+
+/*--------------------------------------------------------------
+  ## Media + Text block.
+  --------------------------------------------------------------*/
+.wp-block-media-text {
+	@apply p-site lg:container my-block;
+	& h2.wp-block-heading {
+		@apply mt-0 mb-4;
+	}
+	& p {
+		@apply mb-6;
+	}
+}
+
+/*--------------------------------------------------------------
+  ## Separator.
+  --------------------------------------------------------------*/
+.gutenberg-content > .wp-block-separator {
+	@apply border-neutral-200 mx-6 md:mx-auto mt-sm mb-4 py-0;
+}
+
+/*--------------------------------------------------------------
+  ## YouTube embed.
+  --------------------------------------------------------------*/
+.wp-block-embed-youtube {
+	@apply my-block;
+}
+
+/*--------------------------------------------------------------
+  ## Details.
+  --------------------------------------------------------------*/
+.wp-block-details {
+	@apply border-0;
+	summary {
+		@apply h3 mb-4;
+		color: var(--primary);
+	}
+	p {
+		@apply body-base mb-4;
+	}
+}

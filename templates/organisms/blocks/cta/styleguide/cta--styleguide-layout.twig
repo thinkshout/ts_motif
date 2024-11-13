@@ -1,0 +1,32 @@
+{# Call to action (CTA) example #}
+
+{% set title = 'CTA Block' %}
+{% set text = 'This is a CTA block' %}
+{% set primary_btn = {
+  title: 'Primary CTA',
+  url: '#',
+  target: '_blank',
+}
+%}
+{% set secondary_btn = {
+  title: 'Secondary CTA',
+  url: '#',
+} %}
+
+{# "ROW" variant #}
+{% include 'organisms/blocks/cta/display/cta--display.twig' with {
+  colorway: 'page',
+  block_presentation: block_presentation ?: 'full-columns',
+} %}
+
+{# "CENTERED" variant #}
+{% include 'organisms/blocks/cta/display/cta--display.twig' with {
+  colorway: 'brand',
+  block_presentation: 'stacked',
+} %}
+
+{# "CENTERED" and "INSET" variant #}
+{% include 'organisms/blocks/cta/display/cta--display.twig' with {
+  colorway: 'brand',
+  block_presentation: 'inset-columns',
+} %}

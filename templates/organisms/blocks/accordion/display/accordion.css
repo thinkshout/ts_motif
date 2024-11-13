@@ -1,0 +1,32 @@
+.accordion {
+  &__section {
+    &__content {
+      @apply mt-0 max-h-0 overflow-hidden pr-9 opacity-0;
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+        margin-top 0.3s ease-in-out;
+    }
+		.accordion__section__icon {
+			.icon-layer {
+				&:first-child {
+					 @apply rotate-0;
+					 transition: transform .3s ease-in-out;
+				 }
+			}
+		}
+    &--open {
+      .accordion__section__content {
+        @apply mt-2 mb-6 max-h-[10000px] opacity-100;
+      }
+      .accordion__section__icon {
+        .icon-layer {
+          &:first-child {
+            @apply rotate-90;
+						path {
+							@apply fill-purple-500;
+						}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{#
+  Title: News Card Grid
+  Description: A block that displays a grid of cards with an optional title and description above.
+  Category: theme
+  Icon: columns
+  SupportsAlign: false
+  Example: {}
+#}
+
+{% include 'organisms/blocks/news-grid/display/news-grid--display.twig' with {
+  cards: fields.block_cards,
+  colorway: fields.colorway|default("colorway-light"),
+  header: fields.title,
+  eyebrow: fields.eyebrow,
+  text: fields.description,
+  primary_btn: fields.primary_cta,
+  secondary_btn: fields.secondary_cta
+} %}

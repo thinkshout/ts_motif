@@ -1,0 +1,12 @@
+{# Hamburger button #}
+
+<button class="btn-hamburger menu-toggle btn reset relative block lg:hidden"
+  aria-controls="{{ header_menu.slug }}"
+  aria-expanded="false">
+  <span class="menu-toggle__sandwich-layer bg-neutral-900 left-0 top-0 block relative"></span>
+  <span class="menu-toggle__sandwich-layer bg-neutral-900 left-0 top-0 block relative"></span>
+  <span class="menu-toggle__sandwich-layer bg-neutral-900 left-0 top-0 block relative"></span>
+  <span class="sr-only">
+    Toggle {{ header_menu.name }}
+  </span>
+</button>

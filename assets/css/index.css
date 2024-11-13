@@ -1,0 +1,36 @@
+/* Ordering based on this article re: using imports w/ tailwind https://medium.com/@arulpraba/using-tailwind-css-utilities-in-custom-css-files-acf811089055 */
+/* Tailwind Setup */
+@import "_elements/tailwind-base.css";
+
+/* Global Dictionary */
+@import "_elements/_generated-variables.css";
+
+/* Element Definitions */
+@import "_elements/colorways.css";
+@import "_elements/site-spacing.css";
+
+/* Atoms & Molecules */
+@import "atoms-molecules/base.css";
+@import "atoms-molecules/design-elements.css";
+@import "atoms-molecules/forms.css";
+@import "atoms-molecules/hocus.css";
+@import "atoms-molecules/images.css";
+@import "atoms-molecules/typography.css";
+
+/* Organisms */
+@import "organisms/gutenberg-blocks.css";
+@import "organisms/gutenberg-images.css";
+@import "../../templates/organisms/header/display/header.css";
+@import "../../templates/organisms/footer/display/footer.css";
+@import "../../templates/organisms/blocks/accordion/display/accordion.css";
+@import "organisms/wp-blocks.css";
+@import "../../templates/molecules/pagination/pagination.css";
+@import "../../templates/organisms/blocks/banner/display/banner.css";
+
+/* PAGES */
+@import "pages/home.css";
+@import "pages/404.css";
+@import "pages/styleguide.css";
+
+/* Tailwind Wrap-up */
+@import "_elements/tailwind-end.css";

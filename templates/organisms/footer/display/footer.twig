@@ -1,0 +1,77 @@
+{#
+Set in lib/class-theme.php as part of thinktimber_menus class prop in the constuctor.
+Added to timber's context in the add_to_context function.
+#}
+{% set footer_about_menu = menus.footer_about %}
+{% set footer_programs_menu = menus.footer_programs %}
+{% set footer_get_involved_menu = menus.footer_get_involved %}
+{% set footer_copyright_menu = menus.footer_copyright %}
+
+{#@todo: replace placeholder contact info.#}
+{% set email = "info@myorganization.org" %}
+{% set tel_display = "+1(123) 567-8910" %}
+{% set tel_call = "12345678910" %}
+
+<footer id="colophon" class="site-footer py-8 md:py-16 colorway-dark">
+  <div class="p-site xl:container">
+    <div class="footer-content md:divide-y md:divide-neutral-300">
+
+      {# Subscribe form #}
+      {# @todo Once we add the form variant of the Section Title, that will handle the text and form #}
+      <div class="md:pb-10">
+        {% include 'molecules/section-title/section-title.twig' with {
+          header: __("Receive Updates ", 'ts'),
+          text: __("Receive eNews, action alerts, and event invitations.", 'ts'),
+          style: "row",
+          primary_btn: { title: __("Subscribe",'ts'), url: '/' }
+        }
+        %}
+      </div>
+
+      {# Footer menus #}
+      <div class="footer-content__menu-wrapper py-10 md:flex md:flex-row md:justify-between">
+        <nav class="footer-nav-about inline-block mt-0">
+          {% include 'organisms/footer/menu--footer.twig' with {
+            'items': footer_about_menu.get_items
+          } %}
+        </nav>
+        <div class="md:flex">
+          <div class="inline-flex mt-6 md:mt-0 ">
+            {% set link_classes = "h6 hocus-underline hocus-action color-secondary md:text-right block" %}
+            <div>
+              <a href="tel:{{ tel_call }}" class="{{ link_classes }}">{{ __(tel_display, 'ts') }}</a>
+              <a href="email:{{email}}" class="{{ link_classes }}">{{ email }}</a>
+              <div class="mt-3">
+                {% include 'molecules/social-nav.twig' with {
+                  icons_only: true
+                } %}
+              </div>
+            </div>
+          </div>
+          {% if site_logo %}
+            <img src="{{ site_logo.src('medium') }}" alt="Site Logo" class="h-[8.75rem] w-[8.75rem]
+            mt-4 md:mt-0 md:ml-4" />
+            <span class="sr-only">{{ site.name }}</span>
+          {% endif %}
+        </div>
+      </div>
+
+      {# Copyright #}
+      <div class="footer-content__copyright md:pt-10 md:flex flex-row gap-2 justify-between">
+        <p class="body-base color-secondary mt-0 lg:mb-0 lh:relative">
+          {% set copyright = '&copy; ' ~ 'now'|date('Y') ~ " " ~ site.name ~ __('. All Rights Reserved.', 'ts') %}
+          {{ __(copyright, 'ts') }}
+        </p>
+        <nav class="footer-nav-copy mt-6 md:mt-0">
+          {% include 'organisms/footer/menu--footer--privacy.twig' with {
+            'items': footer_copyright_menu.get_items
+          } %}
+        </nav>
+      </div>
+    </div>
+    <!-- .footer-content -->
+  </div>
+  <!-- .container-content -->
+</footer>
+<!-- #colophon -->
+{{ wp_footer }}

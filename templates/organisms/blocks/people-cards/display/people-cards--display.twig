@@ -1,0 +1,10 @@
+{# People Cards
+ *
+#}
+
+{% include 'organisms/card-grid.twig' with {
+  card_view_mode: "card-person",
+  block_class: "people",
+  columns: "ts-grid-col-1 sm:ts-grid-col-2 md:ts-grid-col-3 lg:ts-grid-col-4",
+  cards: cards
+} %}

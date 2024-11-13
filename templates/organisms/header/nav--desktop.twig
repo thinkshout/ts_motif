@@ -1,0 +1,16 @@
+{# Desktop Nav #}
+
+<nav id="nav-main" class="nav-main nav-main--desktop hidden lg:flex flex-row" aria-label="main navigation">
+  {# Top level nav #}
+  {% include '@ts_motif/organisms/header/menu-main/menu-main.twig' with { 'items': header_menu.get_items } %}
+
+  {# Buttons#}
+  <div class="nav-main__cta ml-8 flex flex-row-reverse gap-3">
+    {# CTAs #}
+    {% set header_primary_cta = header_menu.get_field('primary_cta') %}
+    {% include '@ts_motif/atoms/btns/btn-two-up.twig' with {
+      primary_btn: header_primary_cta,
+      size: 'md'
+    } %}
+  </div>
+</nav>

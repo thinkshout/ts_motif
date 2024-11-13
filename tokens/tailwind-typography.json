@@ -1,0 +1,113 @@
+{
+  "style": {
+    ".h1": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": "2rem /* 32px */;",
+      "font-weight": "var(--font-weight-bold);",
+      "line-height": "var(--lh-12);",
+      "@media ( min-width: 769px )": {
+        "font-size": "3rem /* 48px */;"
+      }
+    },
+    ".h2": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": "1.5rem /* 24px */;",
+      "font-weight": "var(--font-weight-bold);",
+      "line-height": "var(--lh-12);",
+      "@media ( min-width: 769px )": {
+        "font-size": "2rem /* 32px */;"
+      }
+    },
+    ".h3": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": "1.3125rem /* 21px */;",
+      "font-weight": "var(--font-weight-semibold);",
+      "line-height": "var(--lh-15);",
+      "@media ( min-width: 769px )": {
+        "font-size": "1.5rem /* 24px */;"
+      }
+    },
+    ".h4": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": "1.125rem /* 18px */;",
+      "font-weight": "var(--font-weight-bold);",
+      "line-height": "var(--lh-13);",
+      "@media ( min-width: 769px )": {
+        "font-size": "1.3125rem /* 21px */;"
+      }
+    },
+    ".h5": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": ".75rem /* 12px */;",
+      "font-weight": "var(--font-weight-bold);",
+      "line-height": "var(--lh-130);",
+      "text-transform": "uppercase;",
+      "letter-spacing": "1px;"
+    },
+    ".body-base": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": "1.0625rem /* 17px */;",
+      "font-weight": "var(--font-weight-regular);",
+      "line-height": "var(--lh-15);",
+      "@media (min-width: 769px)": {
+        "font-size": "1.125rem; /* 18px */;"
+      }
+    },
+    ".body-sm": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": "1.066rem /* 15px */;",
+      "font-weight": "var(--font-weight-regular);",
+      "line-height": "var(--lh-15);",
+      "@media (min-width: 769px)": {
+        "font-size": "1rem; /* 16px */;"
+      }
+    },
+    ".body-xs": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": ".875rem; /* 14px */;",
+      "font-weight": "var(--font-weight-regular);",
+      "line-height": "var(--lh-15);"
+    },
+    ".tag": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": ".75rem /* 12px */;",
+      "font-weight": "var(--font-weight-bold);",
+      "line-height": "var(--lh-130);",
+      "letter-spacing": "1px;",
+      "text-transform": "uppercase;"
+    },
+    ".blockquote": {
+      "color": "var(--color-primary);",
+      "font-family": "var(--font-family-sans);",
+      "font-size": "1.5rem /* 24px */;",
+      "font-style": "italic;",
+      "font-weight": "var(--font-weight-regular);",
+      "line-height": "var(--lh-16);"
+    },
+    ".utility-lg": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": "1rem /* 16px */;",
+      "font-weight": "var(--font-weight-regular);",
+      "line-height": "var(--lh-16);"
+    },
+    ".utility-sm": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": ".8125rem /* 13px */;",
+      "font-weight": "var(--font-weight-regular);",
+      "line-height": "var(--lh-16);"
+    },
+    ".utility-xl": {
+      "font-family": "var(--font-family-sans);",
+      "font-size": "1.125rem /* 18px */;",
+      "font-weight": "var(--font-weight-regular);",
+      "line-height": "var(--lh-13);"
+    },
+    ".link-sm": {
+      "font-family": "var(--font-family-serif);",
+      "font-size": "1rem /* 16px */;",
+      "font-weight": "var(--font-weight-light);",
+      "line-height": "var(--lh-15);"
+    }
+
+  }
+}

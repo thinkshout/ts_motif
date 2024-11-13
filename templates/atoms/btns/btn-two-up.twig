@@ -1,0 +1,23 @@
+{# Primary + secondary buttons
+
+  Variables
+  - primary_btn
+  - secondary_btn
+#}
+
+{% set shared_btn_classes = shared_btn_classes ?? "block md:inline-block text-center" %}
+
+{% if primary_btn %}
+  {% include '@ts_motif/atoms/btns/btn-solid.twig' with {
+    link: primary_btn,
+    add_classes: shared_btn_classes,
+    size: size
+  } %}
+{% endif %}
+{% if secondary_btn %}
+  {% include '@ts_motif/atoms/btns/btn-outline.twig' with {
+    link: secondary_btn,
+    add_classes: shared_btn_classes,
+    size: size
+  } %}
+{% endif %}

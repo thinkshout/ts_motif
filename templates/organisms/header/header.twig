@@ -1,0 +1,54 @@
+{% set header_menu = menus.header_primary_navigation %}
+{% set header_menu_utility = menus.header_utility_navigation %}
+{% set primary_cta = header_menu.get_field('primary_cta') %}
+{% set secondary_cta = header_menu.get_field('secondary_cta') %}
+
+<header id="masthead" class="site-header z-50 relative">
+  <div class="colorway-light">
+    <div class="p-site xl:container flex justify-end">
+      <nav id="nav-utility" class="nav-utility nav-utility--desktop hidden lg:flex flex-row" aria-label="utility navigation">
+        {% include '@ts_motif/organisms/header/menu-utility/menu--utility.twig' with { 'items': header_menu_utility.get_items } %}
+      </nav>
+    </div>
+  </div>
+  <div id="site-navigation" class="main-navigation py-4 colorway-dark md:py-6 relative z-10">
+    <div class="p-site xl:container ">
+      <div class="site-branding site-title relative opacity-100 visible">
+        <a href="{{ site.home_url }}" rel="home" class="w-full" aria-label="{{ 'Homepage: Friends of the
+        Gorge'|t }}">
+          {% if site_logo %}
+            <img src="{{ site_logo.src('medium') }}" alt="Site Logo" class="absolute h-[86px] w-[86px] left-0 top-0 z-10
+            lg:h-auto lg:w-auto" />
+            <span class="sr-only">{{ site.name }}</span>
+          {% else %}
+          <h1 class="site-title h4 w-10xl color-primary">
+            {{ site.name }}
+          </h1>
+          <span class="sr-only site-description">
+            {{ site.description }}
+          </span>
+          {% endif %}
+        </a>
+      </div>
+      <!-- .site-branding -->
+
+      <div class="flex justify-end">
+        {# Desktop Nav #}
+        {% include '@ts_motif/organisms/header/nav--desktop.twig' %}
+
+        {# Hamburger button #}
+        {% include '@ts_motif/atoms/btns/btn-solid.twig' with {
+          size: "md",
+          link_svg_name: "hamburger",
+          link: {title: 'Menu'|t},
+          add_classes: "lg:hidden",
+          id: "btn-menu-mobile--open"
+        } %}
+
+        {# Mobile nav #}
+        {% include '@ts_motif/organisms/header/nav--mobile.twig' %}
+      </div>
+    </div>
+  </div>
+  <!-- #site-navigation -->
+</header>

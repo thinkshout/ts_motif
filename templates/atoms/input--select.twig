@@ -1,0 +1,35 @@
+{#
+  Styled Select Dropdown
+  Description: A styled select dropdown that uses https://www.npmjs.com/package/slim-select
+  Relevant JS: /assets/js/components/custom-select.js
+  Relevant CSS: /assets/css/common/forms.css
+#}
+
+{% set add_classes = add_classes|default(false) %}
+{% set class = 'ts-select' %}
+{% set classes = add_classes ? class ~ ' ' ~ add_classes : class %}
+{% set select_label = select_label|default('') %}
+{% set select_options = select_options|default([]) %}
+{% set select_id = select_id|default('') %}
+{% set select_name = select_name|default(select_id) %}
+{% set select_data_attributes = select_data_attributes|default('') %}
+{% set select_data_attributes = select_data_attributes ? ' ' ~ select_data_attributes : '' %}
+{% set select_searchable = select_searchable|default(false) %}
+{% set select_searchable_attribute = select_searchable ? 'data-searchable="true"' : '' %}
+
+
+<select class="{{ classes }}" id="{{ select_id }}" name="{{ select_name }}" {{select_searchable_attribute}}{{select_data_attributes}}>
+  {% if select_label %}
+  <option value="" data-placeholder="true">{{ select_label }}</option>
+  {% endif %}
+  {% block options %}
+    {% for option in select_options %}
+      {# Check if the option has props and use them, otherwise use it as string #}
+      {% if option is iterable %}
+      <option value="{{ option.value }}">{{ option.label }}</option>
+      {% else %}
+      <option value="{{ option }}">{{ option }}</option>
+      {% endif %}
+    {% endfor %}
+  {% endblock %}
+</select>

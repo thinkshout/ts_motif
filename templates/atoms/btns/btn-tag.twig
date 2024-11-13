@@ -1,0 +1,22 @@
+{# Tag-style status button
+* Grey bg tag with icon, displays card type.
+* Seen in card-md.twig
+*
+* To use this button style, use an include statement and pass in values:
+*   {% include '@ts_motif/_includes/btn/btn-tag-status.twig' with { type: type }%}
+#}
+
+{% set bgColor = bgColor ? bgColor : 'bg-neutral-300' %}
+{% set tag_classes = tag_classes %}
+{% set text = text %}
+{% set svg_name = svg_name|lower|replace({' ':'-', '_':'-'}) %}
+{% set svgs_available = [
+  'events'
+] %}
+
+<p class="{{ bgColor }} inline-flex items-center py-1 px-1 {{ tag_classes }}">
+  {% if svg_name in svgs_available %}
+    <span class="pr-1">{% include '@ts_motif/atoms/svg-icon-embed.twig' with { svg_name: svg_name|lower } %}</span>
+  {% endif %}
+  <span class="tag text-neutral-900 inline-block">{{ text }}</span>
+</p>

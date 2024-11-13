@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * SVG Icon Embed
+ *
+ * Available variables:
+ * - svg_name: Any valid SVG name located in icon_path
+ *
+ * Sample Include:
+ * {% include '@ts_motif/_includes/svg-icon-embed.twig' with {
+ *    svg_name: 'back'
+ * } %}
+ *
+ */
+#}
+
+{% if svg_name is not empty %}
+  {{ source('assets/images/svgs/' ~ svg_name ~ '.svg') }}
+{% endif %}

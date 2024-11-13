@@ -1,0 +1,41 @@
+{# Banner -- default
+ *
+ * See banner.html.twig for full variables.
+#}
+
+{% set aspect_ratio = " aspect-[21/9] " %}
+{% set image_classes = " lazyloaded object-cover w-full " ~ aspect_ratio %}
+{% set image_wrapper_classes = " overflow-hidden ts-border-radius " ~ aspect_ratio %}
+{% set padding = is_hero ? "pt-9 lg:pt-24" : "ts-py-block-sm" %}
+
+<div class="block--banner--default relative ts-lovey {{ padding }} {{ colorway }}">
+
+    <div class="xl:container p-site ">
+        {# Text Wrapper #}
+        <div class="">
+            {% include 'molecules/section-title/section-title.twig' with {
+                eyebrow: eyebrow,
+                header: title,
+                text: text,
+                primary_btn: primary_btn,
+                secondary_btn: secondary_btn,
+                secondary_btn: secondary_btn,
+                style: "left",
+                header_tag: is_hero ? "h1" : "h2"
+            } %}
+        </div>  {# Closes Text wrapper #}
+        {# Image #}
+      {% if image %}
+        <div class="banner--center-image-wrapper {{ image_wrapper_classes }} mt-2">
+            {% include 'molecules/image/media.twig' with {
+                image: image,
+                classes: image_classes,
+                caption_style: "under",
+                bg_figcaption: "",
+                figcaption_classes: 'p-1 lg:px-0 lg:pb-0'
+            } %}
+        </div>
+      {% endif %}
+    </div>
+
+</div>

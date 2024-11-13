@@ -1,0 +1,39 @@
+{# Text colors and Weights
+ *
+ * Dynamic text colors that change depending on bg color
+#}
+{%
+  set textColors = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'action',
+]
+%}
+
+{% set bgColors = {
+  "Dark Colorway": 'colorway-dark',
+  "White Colorway": 'colorway-white',
+  "Light Colorway 1": 'colorway-light',
+  "Neutral 100 Colorway": 'colorway-neutral-100'
+}
+%}
+{#Pre-renders Tailwind classes so they work before they're in use.#}
+<span class="hidden colorway-light mt-8 color-secondary color-tertiary"></span>
+
+<h3 class="h4 mb-6" id="fontmodifiers">Colorways</h3>
+<h3 class="body-sm">Colorways are color relationships between background colors, text, buttons and other elements.
+  Using a block with a different colorway can help break up a longer page or change the tone.</h3>
+<p class="utility-sm mt-sm"> Development notes: defined in tokens/src/color.tokens.json, and css/common/colors.css</p>
+<p class="utility-sm color-primary mb-6">Variable names: .color-primary in CSS: var
+  (--color-primary) </p>
+{% for key, bgcolor in bgColors %}
+  <h3 class="h5 mt-6 mb-sm">{{ key }}</h3>
+  <div class="grid grid-cols-4 gap-4 mb-6">
+  {% for color in textColors %}
+    <div class="{{ bgcolor }} col-span-1 inline-block">
+      <p class="text-{{ color }} font-bold utility p-4">{{ color }}</p>
+    </div>
+  {% endfor %}
+  </div>
+{% endfor %}

@@ -1,0 +1,21 @@
+{#
+/**
+ * Invisible overlay link for cards.
+ *
+ * Not available to assistive technology.
+ * Headline on the card must be a link.
+ * Card must have 'relative' class for correct position.
+ *
+ * Variables:
+ * link_url: string
+ *
+ * Pass link_url value from parent template.
+ */
+#}
+
+{% set link_classes = link_classes %}
+
+{% if link_url %}
+  <a href="{{ link_url }}" class="card-overlay-link absolute left-0 top-0 w-full h-full z-3 {{ link_classes }}"
+     aria-hidden="true" tabindex="-1" aria-label="overlay link"></a>
+{% endif %}

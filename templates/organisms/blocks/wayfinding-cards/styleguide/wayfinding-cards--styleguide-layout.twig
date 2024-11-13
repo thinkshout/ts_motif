@@ -1,0 +1,28 @@
+{# Wayfinding Cards -- example data #}
+
+{% set primary_btn = primary_btn ?? { title: 'Donate', url: '/' }  %}
+{% set secondary_btn = secondary_btn ?? { title: 'Learn more', url: '/' }  %}
+
+{% include 'organisms/blocks/wayfinding-cards/display/wayfinding-cards--display.twig' with {
+  header: "Wayfinding Cards",
+  text: "Lorem ipsum",
+  btn_primary: "Lorem ipsum",
+  columns: columns ?? "3",
+  cards: [
+    {
+      title: "Card title one",
+      excerpt: "Card text",
+      link: "/"
+    },
+    {
+      title: "Card title two",
+      excerpt: "Card text",
+      link: "/"
+    },
+    {
+      title: "Card title three",
+      excerpt: "Card text",
+      link: "/"
+    },
+  ]}
+%}

@@ -1,0 +1,87 @@
+{# Spacer Visual
+ * Bars indicate spacer sizes.
+#}
+
+
+<h2 class="h3 mt-6 mb-2">Spacing</h2>
+<p class="body-xs mt-zero">tokens/src/spacer.tokens.json</p>
+<p class="body-sm mt-sm">Spacing values define the space between elements on the page. This can include space
+  between buttons, between columns of text, or around an image. Setting a scale of sizes helps the page to feel
+  cohesive and considered.</p>
+<p class="utility-sm mt-sm">Development notes on spacing: <em>.ts-py-block, .ts-my-block, .ts-py-block-sm and
+    .ts-my-block-sm</em> classes define
+  block-level spacing.</p>
+<p class="utility-sm mt-zero">See tokens/tailwind-site-spacing, and tokens/src/spacer-tokens.json for definitions.
+  All of the margin, padding and height classes use generated from these base values. They are also
+  available as css and tailwind variables.</p>
+<p class="utility-sm my-6">CSS custom property name: --spacer-[size]</p>
+<span class="h-16 h-9 h-8 h-6 h-1 h-05 h-px hidden"></span>
+
+{% set spacing_values = [
+  {
+    "name":"30",
+    "rem":"7.5"
+  },
+  {
+    "name":"24",
+    "rem":"6"
+  },
+  {
+    "name":"18",
+    "rem":"4.5"
+  },
+  {
+    "name":"16",
+    "rem":"4"
+  },
+  {
+    "name":"12",
+    "rem":"3"
+  },
+  {
+    "name":"10",
+    "rem":"2.5"
+  },
+  {
+    "name":"9",
+    "rem":"2.25"
+  },
+  {
+    "name":"8",
+    "rem":"2"
+  },
+  {
+    "name":"6",
+    "rem":"1.5"
+  },
+  {
+    "name":"4",
+    "rem":"1"
+  },
+  {
+    "name":"3",
+    "rem":".75"
+  },
+  {
+    "name":"2",
+    "rem":".5"
+  },
+  {
+    "name":"1",
+    "rem":".25"
+  },
+  {
+    "name":"05",
+    "rem":".125"
+  },
+] %}
+<span class="hidden h-4 h-3 h-6 h-2 h-10 h-18 h-24 h-30 w-30"></span>
+
+{% for value in spacing_values %}
+  <div>
+    <div class="bg-neutral-900 inline-block h-{{ value.name }} w-1/4"></div>
+    <p class="utility-sm inline-block ml-4 w-8"><strong>{{ value.name }}</strong></p>
+    <p class="body-sm inline-block ml-4 w-16">{{ value.rem }} rem</p>
+    <p class="body-sm inline-block ml-4">({{ value.rem * 16 }} px)</p>
+  </div>
+{% endfor %}

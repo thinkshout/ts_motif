@@ -1,0 +1,20 @@
+
+/* Import all tailwind css. */
+@import "index.css";
+
+/* UNCOMMENT STYLES FOR WORDPRESS */
+/* !* Add any wp-admin specific overrides here! *! */
+/* .edit-post-visual-editor__post-title-wrapper h1 { */
+/*   font-size: revert; */
+/*   font-weight: revert; */
+/*   margin: revert; */
+/* } */
+
+/* .acf-field select, */
+/* .acf-field textarea { */
+/*   border: 1px solid #8c8f94; */
+/* } */
+
+/* .block-editor-block-list__layout .ts-block-container { */
+/* 	@apply p-site; */
+/* } */

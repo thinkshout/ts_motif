@@ -1,0 +1,23 @@
+{# Utility menu in header, top level #}
+
+{% if items %}
+	<ul class="menu--utility accessible-menu flex flex-col gap-y-4 lg:gap-y-0 lg:flex-row lg:items-center lg:gap-x-8
+	py-4">
+	{% set menu_wrapper_classes = '' %}
+	{% for item in items %}
+		<li class="{{ item.class }} utility-lg color-primary flex items-center relative">
+			<a target="{{ item.target }}" class="hocus-action hocus-underline" href="{{ item.link }}">{{ item.title
+				}}</a>
+			{% if item.children %}
+        {% include 'atoms/btns/btn-underline.twig' with {
+          link_svg_name: "chevron-down",
+          size: "md",
+          link_svg_classes: "submenu-dropdown-icon",
+					add_classes: "btn-menu-dropdown"
+        } %}
+			{% include 'organisms/header/menu-main--submenu.twig' with { 'items': item.children } %}
+		{% endif %}
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}

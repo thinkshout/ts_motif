@@ -1,0 +1,16 @@
+{# Image Caption
+*
+* Positioned on top of the image, at the bottom right.
+* Needs to be wrapped in a <figure> tag, below an <image>.
+#}
+
+{% set caption = caption %}
+{% set caption_classes = caption_classes %}
+{% set figcaption_classes = figcaption_classes %}
+{% set bg_figcaption = bg_figcaption ?: "color-dark" %}
+{% set text_align = text_align ?? "text-left md:text-right" %}
+
+<figcaption class="caption--over body-2 py-05 relative z-3 {{ bg_figcaption }} {{ figcaption_classes }} {{
+text_align }}">
+  <div class="color-secondary {{ caption_classes }}">{{ caption }}</div>
+</figcaption>

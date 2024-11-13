@@ -1,0 +1,39 @@
+{# Section title -- text fields
+ *
+ * Fields
+ * - eyebrow
+ * - header
+ * - text
+ * - header_tag
+ * - breadcrumb_back_text
+ * - breadcrumb_back_link
+#}
+
+{% set header_tag = header_tag|default('h2') %}
+
+{# Eyebrow #}
+{% if eyebrow or breadcrumb_back_text %}
+  <p class="h5 mb-4">
+    {% if breadcrumb_back_text %}
+      <a href="{{ breadcrumb_back_link }}" class="hocus-underline color-primary">&lsaquo; {{ breadcrumb_back_text }}</a>
+    {% endif %}
+    {% if breadcrumb_back_text and eyebrow %}
+      |
+    {% endif %}
+    {% if eyebrow %}
+      <span class="color-secondary">{{ eyebrow }}</span>
+    {% endif %}
+  </p>
+{% endif %}
+
+{# Header #}
+{% if header_tag == 'h1' %}
+  <h1 class="h1 color-primary mb-4">{{ header }}</h1>
+{% else %}
+  <h2 class="h2 color-primary mb-4">{{ header }}</h2>
+{% endif %}
+
+{# text #}
+{% if text %}
+  <div class="body-base color-primary wp-block-post-content {{ max_width }}">{{ text }}</div>
+{% endif %}

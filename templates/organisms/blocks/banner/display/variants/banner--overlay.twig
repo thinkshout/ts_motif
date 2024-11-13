@@ -1,0 +1,43 @@
+{# Banner -- text over the image, left aligned.
+ *
+ * See banner.html.twig for full variables.
+#}
+
+{% set banner_height_lg = "800px" %}
+{% set banner_height_sm = "540px" %}
+{% set image_classes = "aspect-[21/9] lazyloaded" %}
+<span class="hidden h-[540px] md:h-[800px] left-[25%] right-[25%] md:max-w-[730px]"></span>
+
+<div class="block--banner--overlay overflow-hidden relative ts-lovey  {{ colorway }}">
+  <div class="xl:container p-site ">
+    <div class="md:flex md:flex-col justify-center h-[{{ banner_height_sm }}] lg:h-[{{ banner_height_lg }}]">
+
+      {# Image #}
+      <div class="absolute h-[{{ banner_height_sm }}] left-0 top-[25%]
+      md:top-0 z-0 {{ image_classess }} w-full">
+        {% include 'molecules/image/media.twig' with {
+          image: image,
+          classes: 'object-cover overflow-hidden w-full',
+          caption_style: "below",
+          bg_figcaption: "colorway-white",
+          figcaption_classes: 'color-secondary p-1 lg:px-0 lg:pb-0'
+        } %}
+      </div>
+
+      {# Text Wrapper #}
+      <div class="colorway-white mt-4 md:mt-0 relative z-2 md:w-[50%] p-4 md:p-12 lg:p-18">
+        {% include 'molecules/section-title/section-title.twig' with {
+          eyebrow: eyebrow,
+          header: title,
+          text: text,
+          primary_btn: primary_btn,
+          secondary_btn: secondary_btn,
+          secondary_btn: secondary_btn,
+          style: "left",
+          header_tag: is_hero ? "h1" : "h2",
+        } %}
+      </div>  {# Closes Text wrapper #}
+
+    </div>
+  </div>
+</div>

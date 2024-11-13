@@ -1,0 +1,22 @@
+{# Menu in header, top level on Mobile #}
+
+{% if items %}
+	<ul class="menu-main--mobile accessible-menu mb-6">
+	{% set menu_wrapper_classes = '' %}
+	{% for item in items %}
+		<li class="{{ item.classes | join(" ") }} utility-lg color-primary border-b-[1px] border-white py-4
+		w-full">
+			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+      {% if item.children %}
+				{% include 'atoms/btns/btn-underline.twig' with {
+					link_svg_name: "chevron-down",
+					size: "md",
+					link_svg_classes: "submenu-dropdown-icon",
+					add_classes: "btn-menu-dropdown float-right"
+				} %}
+			{% include 'organisms/header/menu-main/mobile/menu-main--mobile-submenu.twig' with { 'items': item.children } %}
+      {% endif %}
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}

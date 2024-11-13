@@ -1,0 +1,21 @@
+
+/* Video btn */
+button.btn-video {
+	@apply pl-10;
+	/* @todo Update path to pause and play icons */
+	/* background-image: url("../../templates/atoms/svgs/pause.svg"); */
+	background-size: var(--spacer-6);
+	background-position: var(--spacer-3) center;
+	background-repeat: no-repeat;
+
+	&.play {
+	/* @todo Update path to pause and play icons */
+		/* background-image: url("../../templates/atoms/svgs/play.svg"); */
+	}
+}
+
+/* Forces full width on Hero videos for Homepage and Full Bleed banners */
+.block--banner--fullbleed video,
+.block--banner--homepage video {
+	@apply max-w-[100vw] w-full;
+}

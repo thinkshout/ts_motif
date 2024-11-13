@@ -1,0 +1,60 @@
+{# Social media menu
+*
+* Can be displayed horizontally as icons-only, or vertically as icons, or vertically as icons + text.
+* Styles are similar on social-nav.twig.
+    Options
+    menu_orientation: 'horizontal' is the default
+    horizontal_padding: pass in value, px-6 is the default
+#}
+
+{% set menu_orientation = menu_orientation|default('horizontal') %}
+{% set icons_only = icons_only ?? true %}
+{% set horizontal_padding = horizontal_padding|default('') %}
+{% set layout_classes = menu_orientation == 'horizontal' ? 'flex-row items-center gap-x-sm ' ~ horizontal_padding :
+  'flex-col gap-y-4' %}
+{% set svg_base_classes = "block w-2" %}
+{% set svg_classes = icons_only ? svg_base_classes : "inline-block mr-1 " ~ svg_base_classes %}
+{% set hocus = "ts-hocus-text-gray-500" %}
+{# addClasses are used to pass mobile nav values used in navigation.js #}
+{% set addClasses = addClasses ?? "" %}
+
+{# @todo: update social urls #}
+{% set social_menus = [
+  {
+    "name":"Facebook",
+    "url":"https://www.facebook.com/ThinkShout/",
+    "path":"assets/images/svgs/facebook.svg"
+  },
+  {
+    "name":"Instagram",
+    "url":"https://www.instagram.com/thinkshout/",
+    "path":"assets/images/svgs/instagram.svg"
+  },
+  {
+    "name":"Twitter",
+    "url":"https://twitter.com/thinkshout",
+    "path":"assets/images/svgs/twitter.svg"
+  },
+  {
+    "name":"YouTube",
+    "url":"https://www.youtube.com/@thinkshout1612",
+    "path":"assets/images/svgs/youtube.svg"
+  },
+  {
+    "name":"LinkedIn",
+    "url":"https://www.linkedin.com/company/thinkshout-inc-/",
+    "path":"assets/images/svgs/linkedin.svg"
+  },
+] %}
+
+<ul class="social-nav flex color-primary  {{ layout_classes }}">
+  {% for social in social_menus %}
+    <li class="inline-block">
+      {% include '@ts_motif/atoms/btns/btn-social.twig' with {
+        link_svg_name: social.name|lower,
+        link: {title: "", url: social.url, target: "_blank"},
+        link_aria_label: '%s Site Name, opens in a new tab'|t | format( social.name ),
+      } %}
+    </li>
+  {% endfor %}
+</ul>

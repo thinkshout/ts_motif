@@ -1,0 +1,24 @@
+/* Blocks without unique templates */
+
+/* UNCOMMENT FOR WP BLOCKS */
+/* !* Iframe embed *! */
+/* .article-body > .wp-block-embed { */
+/*     @apply ts-my-block-sm; */
+/* 	iframe { */
+/* 		@apply mx-auto md:h-[440px] md:w-full; */
+/* 	} */
+/* } */
+
+/* !* Separator *! */
+/* .wp-block-separator { */
+/*     @apply border-0 mx-auto my-8 w-[200px] h-[2.25rem] bg-no-repeat; */
+/*     background-image: url("../images/hr.png"); */
+/* } */
+
+/* !* Video Block *! */
+/* .wp-block-video { */
+/*     @apply colorway-dark py-block; */
+/*     video { */
+/*         @apply aspect-video p-site xl:container mx-auto md:max-w-[800px]; */
+/*     } */
+/* } */

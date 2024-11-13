@@ -1,0 +1,35 @@
+{# Section title -- left aligned
+ *
+#}
+
+<div class="component--section-title--align-left flex flex-col gap-sm">
+
+  {# Text wrapper #}
+  <div class="">
+    {# Text #}
+    {% include 'molecules/section-title/display/variants/section-title--text.twig' with {
+      eyebrow: eyebrow,
+      header: header,
+      text: text,
+      max_width: max_width
+    } %}
+
+  </div>
+
+  {% if primary_btn or secondary_btn %}
+    {# Button wrapper #}
+    <div class="md:block shrink-0">
+      <div class="flex flex-col md:flex-row gap-4 lg:gap-6 justify-start">
+
+        {# Button(s) #}
+        {% include 'atoms/btns/btn-two-up.twig' with {
+          primary_btn: primary_btn,
+          secondary_btn: secondary_btn,
+          spacing_override: ""
+        } %}
+
+      </div>
+    </div>
+  {% endif %}
+
+</div>

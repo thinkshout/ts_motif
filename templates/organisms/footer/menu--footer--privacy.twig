@@ -1,0 +1,12 @@
+{# Footer privacy menu, at the bottom of the Footer region #}
+
+{% if items %}
+	<ul class="flex divide-x divide-neutral-300">
+	{% set menu_wrapper_classes = '' %}
+	{% for item in items %}
+		<li class="{{ item.classes | join(' body-sm px-3 text-center md:text-left color-primary ') }}">
+			<a target="{{ item.target }}" class="hocus-underline hocus-action" href="{{ item.link }}">{{ item.title }}</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}

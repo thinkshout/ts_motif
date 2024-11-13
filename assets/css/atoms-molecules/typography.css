@@ -1,0 +1,117 @@
+/* Typography -- ONLY Gutenberg styles in this file.
+ *
+ * SITE-WIDE STYLES ARE SET IN TAILWIND: in tailwind-typography.json,
+ * made into tailwind components in tailwind.config.js.
+*/
+
+/*@todo	Remove ability to add an H1 heading to the page */
+/* H1 heading GB block styles */
+h1.wp-block-heading {
+	@apply h1 mt-10 mb-6;
+	color: var(--color-primary);
+}
+
+/* H2 heading GB block styles */
+h2.wp-block-heading {
+	@apply h2 mt-8 mb-1;
+	color: var(--color-primary);
+}
+
+/* H3 heading GB block styles */
+h3.wp-block-heading {
+	@apply h3 mt-4;
+	color: var(--color-primary);
+}
+
+/* H4 heading GB block styles */
+h4.wp-block-heading {
+	@apply h4 mt-4;
+	color: var(--color-primary);
+}
+
+/* H5 heading GB block styles */
+h5.wp-block-heading {
+	@apply h5 mt-4;
+	color: var(--color-primary);
+}
+
+/* Pull Quote: GB block styles */
+.wp-block-pullquote {
+	@apply bg-neutral-300 my-8;
+	p {
+		@apply blockquote p-10 color-primary;
+	}
+	cite {
+		@apply body-sm block mt-sm mb-10 color-secondary;
+	}
+}
+/* Quote */
+.wp-block-quote {
+	@apply border-l-4 border-purple-500 my-8 ml-6 px-6;
+	p {
+		@apply blockquote px-6 color-primary;
+	}
+	cite {
+		@apply body-sm block mt-6 px-6 color-secondary;
+		font-style: normal;
+	}
+}
+
+/* P, UL, OL, text link and header link styles */
+.article-body,
+	/* In WP columns */
+.wp-block-column,
+	/* Editor view */
+.wp-block-post-content {
+
+	/* Paragraphs */
+	& > p {
+		@apply body-base mb-4;
+		color: var(--color-primary);
+	}
+	/* Paragraph -- Italic text */
+	& > p em {
+		@apply italic;
+	}
+	/* Bold	*/
+	& > p strong {
+		@apply font-bold;
+	}
+
+	/* Text links */
+	& > p a,
+	& > h2 a,
+	& > h3 a,
+	& > h4 a,
+	& > h5 a {
+		@apply btn-text-link;
+	}
+
+	/* Unordered List	*/
+	& > ul:not(.news--filters),
+		/* Accordion block */
+	.block--accordion ul {
+		@apply utility-lg list-disc my-8;
+		li {
+			@apply list-outside ml-4 my-4;
+			color: var(--color-primary);
+			&::marker {
+				color: var(--color-purple-500);
+			}
+		}
+	}
+
+	/* Ordered List	*/
+	& > ol {
+		@apply utility-lg list-decimal my-8;
+		li {
+			@apply list-outside ml-4 my-2;
+			color: var(--color-primary);
+		}
+	}
+
+}
+
+.wp-block-image figcaption {
+	@apply utility-sm color-secondary;
+}

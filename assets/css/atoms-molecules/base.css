@@ -1,0 +1,71 @@
+@custom-media --bp-sm (min-width: 501px);
+@custom-media --bp-md (min-width: 769px);
+@custom-media --bp-lg (min-width: 1025px);
+@custom-media --bp-xl (min-width: 1442px);
+@custom-media --bp-2xl (min-width: 2000px);
+@custom-media --reduce-motion (prefers-reduced-motion: reduce);
+
+html {
+	background-color: var(--color-neutral-50);
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
+	width: 100%;
+	min-height: 100vh;
+	margin-inline: auto;
+}
+
+strong {
+	@apply font-bold;
+}
+
+/*
+ * Form Styles
+ */
+fieldset {
+	border: unset;
+}
+
+input {
+	font-size: var(--font-size-4);
+	line-height: var(--lh-12);
+	font-weight: var(--font-weight-book);
+}
+
+/*
+ * Tabular Data Styles
+ */
+table {
+	text-align: left;
+	width: 100%;
+}
+
+td,
+th {
+	padding: var(--spacer-1) var(--spacer-3);
+
+	@media (--bp-md) {
+		padding: var(--spacer-3) var(--spacer-3);
+	}
+}
+
+/*
+ * Reduce Animations for Those that Prefer It
+ */
+@media (--reduce-motion) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

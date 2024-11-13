@@ -1,0 +1,24 @@
+{# Submenu in header nav: two column layout
+ *
+ * Variables:
+ * - two_col (default is one column)
+ * - items
+#}
+
+{% if items %}
+	<ul class="{{ menu_wrapper_classes }} menu-main--submenu menu-main--submenu--two-col ts-border-radius absolute left-0
+	top-10 gap-y-3 lg:gap-x-6 pt-3 px-6 pb-4 colorway-white">
+	{% set menu_wrapper_classes = '' %}
+	{% for item in items %}
+		<li class="menu-item color-primary body-sm lg:min-w-[200px]">
+      <a target="{{ item.target }}" class="hocus-action hocus-underline utility-lg" href="{{ item.link }}">
+        {{ item.title }}</a>
+			{% if item.children %}
+				{% include 'organisms/header/menu-main/two-col/menu-main--grandchild.twig' with {
+					'items': item.children
+				} %}
+			{% endif %}
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}

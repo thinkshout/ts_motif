@@ -1,0 +1,37 @@
+{# Section title -- Centered
+ *
+ * See variables in section-title.twig.
+#}
+
+{% set margin = margin ?? "mb-4 md:mb-9" %}
+
+<div class="component--section-title--center text-center flex flex-col md:items-center gap-sm {{ margin }}">
+
+  {# Text wrapper #}
+  <div class="md:max-w-[{{ description_max_width }}]">
+
+    {# Text #}
+    {% include 'molecules/section-title/display/variants/section-title--text.twig' with {
+      eyebrow: eyebrow,
+      header: header,
+      text: text
+    } %}
+
+  </div>
+
+  {% if primary_btn or secondary_btn %}
+    {# Button wrapper #}
+    <div class="md:block shrink-0">
+      <div class="flex flex-col md:flex-row gap-1 md:gap-6">
+
+        {# Button(s) #}
+        {% include 'atoms/btns/btn-two-up.twig' with {
+          primary_btn: primary_btn,
+          secondary_btn: secondary_btn
+        } %}
+
+      </div>
+    </div>
+  {% endif %}
+
+</div>

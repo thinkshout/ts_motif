@@ -1,0 +1,57 @@
+{# Image and Text
+ *
+ * Configuration options:
+ *  image align:
+ *   - Left | left
+ *   - Right | right
+ *   Inset or full width
+ *   align_img (left, right (default)
+ *
+ * Fields:
+ * - eyebrow
+ * - title
+ * - text
+ * - primary_btn
+ * - secondary_btn
+ * - presentation
+ * - image
+#}
+
+{% set image_align_classes = "left" in presentation|split('-') ? 'order-2' : '' %}
+{% set align_left = "left" in presentation|split('-') ? 1 : 0 %}
+{% set alignment = align_left ? "left" : "right" %}
+{% set padding = "inset" in presentation|split('-') ? "md:my-24 ts-friendly" : "py-block-sm ts-lovey"
+%}
+{% set colorway = colorway == 'brand' ? "colorway-light" : "colorway-white" %}
+
+<div class="block--image-text {{ colorway }} {{ padding }}">
+  <div class="md:ts-grid-col-2 md:gap-12 lg:gap-30 md:justify-between xl:container p-site">
+
+    {# Image #}
+    <div class="{{ image_align_classes }} mb-2 md:mb-0">
+      {% include 'molecules/image/media.twig' with {
+        image: image,
+        classes: "aspect-[5/3] object-cover overflow-hidden lazyloaded w-full",
+        caption_style: "below",
+        bg_figcaption: "",
+        figcaption_classes: 'color-secondary p-1 lg:px-0 lg:pb-0'
+      } %}
+    </div>
+
+    {# Text Wrapper #}
+    <div class="flex flex-col items-justified-center md:-w-[5/12]">
+      <div>
+      {% include 'molecules/section-title/section-title.twig' with {
+        eyebrow: eyebrow,
+        header: title,
+        text: text,
+        primary_btn: primary_btn,
+        secondary_btn: secondary_btn,
+        style: "left",
+      } %}
+
+      </div>
+
+    </div> {# Closes Text wrapper #}
+  </div>
+</div>

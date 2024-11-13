@@ -1,0 +1,35 @@
+{# Example card #}
+
+{% set author = "Person Name" %}
+{% set date = "20 Jan 2022" %}
+{% set eyebrow = "Card eyebrow" %}
+{% set title = "Card " ~ size %}
+{% set btn_tag_text = "Tag" %}
+{% set text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat, ipsum ac auctor ornare, nunc ligula scelerisque eros. Lorem ipsum dolor sit amet." %}
+{% set type = "Multi Day" %}
+{% set author = "Jane Smith" %}
+{% set text_small = "Optional small text" %}
+{% set distance = "4.8 miles" %}
+{% set elevation = "1500 ft" %}
+{% set link_title = "Primary" %}
+{% set link_url = "/" %}
+{% set link_title_2 = "Secondary" %}
+{% set link_url_2 = "/" %}
+{% set size = size ?? "lg" %}
+{% set number_of_cards = number_of_cards %}
+{% set number_of_columns = number_of_columns ?? "3" %}
+{% set image_classes = 'lazyloaded w-full' %}
+{% set has_image = true %}
+{% set day = "Sat" %}
+{% set day_number = "9" %}
+
+<div class="ts-grid-col-{{ number_of_columns }} my-block">
+  {% for i in 1..number_of_cards %}
+    {% embed "/molecules/cards/card-" ~ size ~ ".html.twig" %}
+      {% set image_sample = 1 %}
+      {% block card_image %}
+        <img class="{{image_classes}}" src="{{site.theme.uri}}/assets/images/default-dark.png" alt="Placeholder image">
+      {% endblock %}
+    {% endembed %}
+  {% endfor %}
+</div>

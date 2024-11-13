@@ -1,0 +1,11 @@
+{# Wayfinding Cards
+
+#}
+
+{% set colorway = colorway == 'brand' ? 'colorway-dark' : '' %}
+
+{% include 'organisms/card-grid.twig' with {
+  card_view_mode: "card-md",
+  block_class: "wayfinding ",
+  style: "center"
+} %}
