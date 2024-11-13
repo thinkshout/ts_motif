@@ -36,6 +36,9 @@
   sed "s/ts_motif_/${THEME_NAME}_/g" $THEME_DEST/ts_motif.theme >$THEME_DEST/$THEME_NAME.theme
   rm $THEME_DEST/ts_motif.theme
 
+  sed "s/ts_motif./${THEME_NAME}./g" $THEME_DEST/ts_motif.breakpoints.yml >$THEME_DEST/$THEME_NAME.info.yml
+  rm $THEME_DEST/ts_motif.breakpoints.yml
+
   sed "s/name: Motif/name: ${THEME_NAME}/g" $THEME_DEST/ts_motif.info.yml | sed "s/ts_motif/${THEME_NAME}/g" >$THEME_DEST/$THEME_NAME.info.yml
   rm $THEME_DEST/ts_motif.info.yml
 
@@ -54,6 +57,16 @@
   mv $THEME_DEST/README.md $THEME_DEST/README.md.child
   sed "s/# Motif/# ${THEME_NAME}/g" $THEME_DEST/README.md.child >$THEME_DEST/README.md
   rm $THEME_DEST/README.md.child
+
+  # Rename & edit config files
+  mv $THEME_DEST/config/install/ts_motif.settings.yml $THEME_DEST/config/install/${THEME_NAME}.settings.yml
+
+  for file in $THEME_DEST/config/optional/*ts_motif*yml
+    do
+      mv $file $file.child
+      sed "s/ts_motif/${THEME_NAME}/g" $file.child > $file
+      rm $file.child
+  done
 
   # self modifying code
   mv $THEME_DEST/update_theme_name.sh $THEME_DEST/update_theme_name.child
