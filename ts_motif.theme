@@ -22,5 +22,6 @@ include 'includes/media.theme.inc';
 include 'includes/misc.theme.inc';
 include 'includes/navigation.theme.inc';
 include 'includes/node.theme.inc';
+include 'includes/styleguide.theme.inc';
 include 'includes/taxonomy_term.theme.inc';
 include 'includes/view.theme.inc';

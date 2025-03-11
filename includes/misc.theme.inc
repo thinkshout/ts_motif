@@ -13,6 +13,32 @@ use Drupal\ts_motif\Motif;
  */
 function ts_motif_preprocess(&$variables) {
   $variables['svg_icon_path'] = \Drupal::theme()->getActiveTheme()->getPath() . Motif::ICON_PATH;
+  if ($variables["theme_hook_original"] === 'page-style-guide') {
+    //@todo his whole behavior belongs in styleguide.theme.inc if we can get
+    //a more targeted hook to trigger.
+    $styleguide_directory_scans = array(
+      'ts_blocks'    => '/templates/organisms/blocks',
+      'ts_molecules' => '/templates/molecules',
+    );
+    foreach( $styleguide_directory_scans as $context_label => $theme_path ) {
+      $variables[$context_label] = [];
+      $directory = \Drupal::service('extension.list.theme')->getPath('ts_motif') . $theme_path;
+      $scan_options = [
+        'nomask' => '/allincluded/', // We don't want a "nomask", but "FALSE" isn't on option here, and the default specifically exclude directories.
+        'recurse' => FALSE,
+        'key' => 'filename',
+      ];
+      $element_directories = \Drupal::service('file_system')->scanDirectory($directory, '/.*/', $scan_options);
+      if ($element_directories) {
+        foreach ($element_directories as $id => $item) {
+          $styleguide_file = "$directory/$id/styleguide/$id--styleguide-layout.twig";
+          if ( file_exists( $styleguide_file ) ) {
+            $variables[$context_label][$id] = ucfirst(str_replace('-', ' ', $id));
+          }
+        }
+      }
+    }
+  }
 }
 
 /**
