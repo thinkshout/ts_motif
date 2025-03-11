@@ -39,18 +39,18 @@
       "sed -I '' \"s/{% include '/{% include '@ts_motif\\//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
       "sed -I '' 's/{% extends \"/{% extends \"@ts_motif\\//g' templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
       "sed -I '' \"s/{% extends '/{% extends '@ts_motif\\//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/{{ source('/{{ source('@ts_motif\\//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' \"s/{{ source('/{{ source('@ts_motif\\//g\"   templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
       "sed -I '' \"s/{{ source(\"/{{ source(\"@ts_motif\\//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/{% embed '/{% embed '@ts_motif\\//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/{% embed \"/{% embed \"@ts_motif\\//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/{{ function('wp_.*') }}//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/{{ function(\"wp_.*') }}//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/{% do action('.*') %}//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/{% do action('.*') %}//g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' 's/featured_image: Image(308)//g' templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' 's/__(//g' templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/, 'ts')/|t/g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
-      "sed -I '' \"s/,'ts')/|t/g\" templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig"
+      "sed -I '' \"s/{% embed '/{% embed '@ts_motif\\//g\"     templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' \"s/{% embed \"/{% embed \"@ts_motif\\//g\"   templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' \"s/{{ function('wp_.*') }}//g\"              templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' \"s/{{ function(\"wp_.*') }}//g\"             templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' \"s/{% do action('.*') %}//g\"                templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' \"s/{% do action('.*') %}//g\"                templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' 's/featured_image: Image(308)//g'             templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' 's/__(//g'                                    templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' \"s/, 'ts')/|t/g\"                            templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig",
+      "sed -I '' \"s/,'ts')/|t/g\"                             templates/*.twig templates/*/*.twig templates/*/*/*.twig templates/*/*/*/*.twig templates/*/*/*/*/*.twig"
     ]
   }
 }
