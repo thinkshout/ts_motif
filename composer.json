@@ -35,12 +35,7 @@
       "rm -rf base-assets",
       "mv templates/pages/page-style-guide.twig templates/pages/styleguide.html.twig",
       "sed -I '' 's/views/templates/g' assets/css/index.css assets/js/main.js tailwind.config.js templates/organisms/blocks/banner/display/banner.css",
-      "find . -name '*.twig' -execdir sed -I '' 's/@thinktimber/@ts_motif/g' {} +",
-      "find . -name '*.twig' -execdir sed -I '' \"s/{{ function('wp_.*') }}//g\"{} +",
-      "find . -name '*.twig' -execdir sed -I '' \"s/{{ function(\"wp_.*') }}//g\"{} +",
-      "find . -name '*.twig' -execdir sed -I '' \"s/{% do action('.*') %}//g\"{} +",
-      "find . -name '*.twig' -execdir sed -I '' \"s/, 'thinktimber')/|t/g\" {} +",
-      "find . -name '*.twig' -execdir sed -I '' \"s/,'thinktimber')/|t/g\" {} +"
+      "find . -name '*.twig' -execdir sed -I '' 's/@thinktimber/@ts_motif/g' {} +"
     ]
   }
 }
