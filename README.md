@@ -5,6 +5,13 @@ A base theme for a Drupal sites.
 
 ## Initial Setup
 
+Getting started you will need to install theme dependencies with nvm, npm, and composer.
+
+- [ ] Make sure you're running PHP >=8.1. (These instructions were tested with PHP 8.1.)
+- [ ] Navigate to your theme folder `~/sites/YOURSITE/web/themes/`
+- [ ] Create a new folder `custom`
+- [ ] Close a copy of this repo `ts_motif` into the `custom` directory
+
 After copying this repository into your project's `web/themes/custom` directory, you need to do some initialization steps to pull in the base build. Most of this is handled by a script.
 
 1. Decide on a machine name (no spaces or unusual characters other than `_`) for this theme. It should generally include your project's name or other unique identifier.
@@ -13,6 +20,8 @@ After copying this repository into your project's `web/themes/custom` directory,
 4. Run the scaffolding script to pull in the contents of the base-assets repository and organize theme: `composer scaffold`
 5. Run the naming script: `./update_theme_name.sh YOUR_THEME_NAME`
 6. Assuming you have already installed the site and have a database, enable the "ts_styleguide" module, or add it to `config/core.extension.yml`, and configure Drupal to use your new theme by visiting `admin/appearance` as a site admin, where you can enable it and set it to be the default.
+7. Run `nvm install`; `npm install`; `npm run build`
+8. At this point the files will be in place, but some syntax needs to be updated. Expect the theme to be broken until you make the necessary syntax changes. Manual syntax change [instructions are in this google document](https://docs.google.com/document/d/1fcPiFEJXhuxIsAuVqjZZzsNzAc5bMx13uVbEsThg1xU/edit)
 
 You should now be able to see a starter styleguide at `/styleguide`.
 
