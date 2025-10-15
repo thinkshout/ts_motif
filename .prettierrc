@@ -1,8 +1,0 @@
-{
-  "plugins": [
-    "./node_modules/prettier-plugin-twig-melody",
-    "./node_modules/prettier-plugin-tailwindcss"
-  ],
-  "twigPrintWidth": 240,
-  "twigMelodyPlugins": ["node_modules/prettier-plugin-twig-enhancements"]
-}
