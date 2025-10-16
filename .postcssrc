@@ -1,9 +1,0 @@
-{
-  "plugins": {
-    "postcss-import": {},
-    "tailwindcss": {},
-    "postcss-nested": {},
-    "postcss-custom-properties": {},
-    "cssnano": {}
-  }
-}
