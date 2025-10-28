@@ -3,7 +3,7 @@ type: theme
 base theme: stark
 description: A base Theme with Parcel, Style Dictionary, and Tailwind.
 package: ThinkShout
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 libraries:
   - ts_motif/theme
 libraries-override:
