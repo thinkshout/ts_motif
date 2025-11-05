@@ -29,7 +29,7 @@
     ],
     "scaffold": [
       "git clone git@github.com:thinkshout/base-assets.git",
-      "rsync -r base-assets/scaffold ./",
+      "rsync -r base-assets/scaffold/ ./",
       "rsync -r views templates/",
       "rm -rf views",
       "rm -rf base-assets",
