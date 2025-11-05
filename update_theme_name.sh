@@ -36,10 +36,10 @@
   # after the middle "/" and the "/g". Its used both to generate new filenames and to
   # edit the contents of files.
 
-  for file in $THEME_DEST/*renamed_theme*
+  for file in $THEME_DEST/*ts_motif*
     do
       echo Renaming ${file}
-      newfile="$(echo ${file} | sed -e "s/renamed_theme/${THEME_NAME}/g")" ;
+      newfile="$(echo ${file} | sed -e "s/ts_motif/${THEME_NAME}/g")" ;
       mv $file $newfile
   done
 
@@ -51,30 +51,30 @@
         then
           echo Updating ${file}
           mv $file $file.child
-          sed "s/renamed_theme/${THEME_NAME}/g" $file.child > $file
+          sed "s/ts_motif/${THEME_NAME}/g" $file.child > $file
           rm $file.child
         fi  
       fi
   done
 
   # Rename & edit config files
-  echo Renaming \& updating config/install/renamed_theme.settings.yml
-  mv $THEME_DEST/config/install/renamed_theme.settings.yml $THEME_DEST/config/install/${THEME_NAME}.settings.yml
+  echo Renaming \& updating config/install/ts_motif.settings.yml
+  mv $THEME_DEST/config/install/ts_motif.settings.yml $THEME_DEST/config/install/${THEME_NAME}.settings.yml
 
   echo Renaming \& updating configs in config/optional/
-  for file in $THEME_DEST/config/optional/*renamed_theme*yml
+  for file in $THEME_DEST/config/optional/*ts_motif*yml
     do
-      newfile="$(echo ${file} | sed -e "s/renamed_theme/${THEME_NAME}/g")" ;
-      sed "s/renamed_theme/${THEME_NAME}/g" $file > $newfile
+      newfile="$(echo ${file} | sed -e "s/ts_motif/${THEME_NAME}/g")" ;
+      sed "s/ts_motif/${THEME_NAME}/g" $file > $newfile
       rm $file
   done
 
   # self modifying code
   echo Updating this script so it can be run again if you want to change the name again.
   mv $THEME_DEST/update_theme_name.sh $THEME_DEST/update_theme_name.child
-  sed "s/renamed_theme/${THEME_NAME}/g" update_theme_name.child | \
-  sed "s/renamed_theme/${THEME_NAME}/g" | \
-  sed "s/renamed_theme/${THEME_NAME}/g" >$THEME_DEST/update_theme_name.sh
+  sed "s/ts_motif/${THEME_NAME}/g" update_theme_name.child | \
+  sed "s/ts_motif/${THEME_NAME}/g" | \
+  sed "s/ts_motif/${THEME_NAME}/g" >$THEME_DEST/update_theme_name.sh
   chmod a+x $THEME_DEST/update_theme_name.sh
   rm $THEME_DEST/update_theme_name.child
 
